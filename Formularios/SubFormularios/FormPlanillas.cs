@@ -202,7 +202,16 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 
         private void txt_Empresa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (txt_Empresa.Text == "")
+            {
+                desactivarBoton(btn_agregar, Color.Silver);
+            }
+            else
+            {
+                activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
+                ActualizarInfoTabla();
 
+            }
         }
 
         private void Seleccionar(object sender, DataGridViewCellEventArgs e)
@@ -238,12 +247,26 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 
         private void soloNumeros(object sender, KeyPressEventArgs e)
         {
-
+            if (((e.KeyChar >= '0') & (e.KeyChar <= '9')) | (e.KeyChar == '\b'))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void soloNumerosReales(object sender, KeyPressEventArgs e)
         {
-
+            if (((e.KeyChar >= '0') & (e.KeyChar <= '9')) | (e.KeyChar == '\b') | (e.KeyChar.ToString() == "."))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void FormPlanillas_Load(object sender, EventArgs e)

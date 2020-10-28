@@ -18,9 +18,9 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
         }
         public bool Agregar(Servicio s)
         {
-            return conexion.ejecutarComandoSinRetorno("INSERT INTO Servicios VALUES ('"+s.Fecha+"', '"+s.Codigo+"','"+
-                 s.idTipo+"', '"+s.Vehiculo+"','"+s.Patente+"','"+s.Color+"','"+s.Desperfecto+"','"+s.Movil+", '"+s.Desde+"', '"+s.Hasta+"', '"+
-                 s.Km+"', '"+s.MontoCobrado+"', '"+s.Importe+"', '"+s.Observaciones+"', '"+s.idCliente+"', '"+s.Usuario+"' )");
+            return conexion.ejecutarComandoSinRetorno("INSERT INTO Servicio VALUES ('"+s.Fecha+"', '"+s.Codigo+"','"+
+                 s.idTipo+"', '"+s.Vehiculo+"','"+s.Patente+"','"+s.Color+"','"+s.Desperfecto+"','"+s.Movil+"', '"+s.Desde+"', '"+s.Hasta+"', '"+
+                 s.Km+"', '"+s.MontoCobrado+"', '"+s.Importe+"', '"+s.Observaciones+"', '"+s.Usuario+ "', '" + s.idCliente + "' )");
         }
         public bool Borrar(int id)
         {

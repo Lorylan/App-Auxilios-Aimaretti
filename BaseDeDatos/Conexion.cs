@@ -13,7 +13,7 @@ using System.Windows;
 
 namespace PuebaDeDiseñoAA.BaseDeDatos
 {
-    class Conexion
+    class Conexion 
     {
         private string cadenaConexion = "server=localhost\\SQLEXPRESS; database=ProyectoAA; integrated security=true";
         SqlConnection conexion;
