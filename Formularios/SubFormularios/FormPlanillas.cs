@@ -284,7 +284,6 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             else {
                 txt_Importe.Text = "";
             }
-
         }
     }
 }
