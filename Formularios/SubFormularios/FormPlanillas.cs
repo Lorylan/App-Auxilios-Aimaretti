@@ -18,6 +18,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         ServicioBD servicioBD;
         ClienteBD clienteBD;
         TarifaPactadaDB tarifaPactadaBD;
+        CombustibleBD combustibleBD;
         private void cargarOpciones()
         {
             DataSet dataset = clienteBD.MostrarInfo();
@@ -76,6 +77,37 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             datosServicios.Columns[14].HeaderText = "Observaciones";
             datosServicios.Columns[15].Visible = false; //usuario
             datosServicios.Columns.RemoveAt(datosServicios.Columns.Count - 1);
+            txt_cantidad_servicios.Text = datosServicios.Rows.Count.ToString();
+            string total_importe_servicio = servicioBD.CalcularTotal(txt_Empresa.Text);
+            string total_importe_combustible= combustibleBD.CalcularTotal(txt_Empresa.Text);
+            int total;
+            if ((total_importe_servicio.Equals("")) & (total_importe_combustible.Equals("")))
+            {
+                txt_importe_servicio.Text = "$0,00";
+                txt_total_servicio.Text = "$0,00";
+            }
+            else {
+                if (total_importe_servicio.Equals("") & (!total_importe_combustible.Equals("")))
+                {
+                    txt_total_servicio.Text = "$" + total_importe_combustible;
+                    txt_importe_servicio.Text = "$0,00";
+                }
+                else
+                {
+                    if (!total_importe_servicio.Equals("") & (total_importe_combustible.Equals("")))
+                    {
+                        txt_importe_servicio.Text = "$0,00";
+                        txt_total_servicio.Text = "$" + total_importe_servicio;
+                    }
+                    else {
+                        total = int.Parse(total_importe_servicio) - int.Parse(total_importe_combustible) ;
+                        txt_importe_servicio.Text = "$" + total_importe_servicio;
+                        txt_total_servicio.Text = "$" + total.ToString();
+                    }
+                        
+                }
+                    
+            }
             
         }
         private void vaciarTxt()
@@ -138,6 +170,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             servicioBD = new ServicioBD();
             clienteBD = new ClienteBD();
             tarifaPactadaBD = new TarifaPactadaDB();
+            combustibleBD = new CombustibleBD();
             cargarOpciones();
         }
 
@@ -311,5 +344,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
                
             }
         }
+
+       
     }
 }

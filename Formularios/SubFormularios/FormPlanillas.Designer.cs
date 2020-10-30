@@ -79,21 +79,8 @@
             this.listaServicios = new System.Windows.Forms.Label();
             this.txt_por = new System.Windows.Forms.ComboBox();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
-            this.panel_total = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_total = new System.Windows.Forms.Label();
-            this.txt_gasOil = new System.Windows.Forms.Label();
-            this.txt_servicios = new System.Windows.Forms.Label();
-            this.buttonRedondeado3 = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.filtrar = new System.Windows.Forms.Label();
             this.por = new System.Windows.Forms.Label();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.datosServicios = new System.Windows.Forms.DataGridView();
             this.txt_error = new System.Windows.Forms.Label();
             this.pb_error = new System.Windows.Forms.PictureBox();
@@ -102,11 +89,26 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.Label();
+            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.buttonRedondeado3 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.panel_total = new System.Windows.Forms.Panel();
+            this.txt_total_servicio = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txt_importe_servicio = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_cantidad_servicios = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_cargaServicios.SuspendLayout();
-            this.panel_total.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel_total.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_cargaServicios
@@ -694,134 +696,6 @@
             this.txt_filtrar.Size = new System.Drawing.Size(229, 26);
             this.txt_filtrar.TabIndex = 68;
             // 
-            // panel_total
-            // 
-            this.panel_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.panel_total.Controls.Add(this.label2);
-            this.panel_total.Controls.Add(this.label1);
-            this.panel_total.Controls.Add(this.txt_total);
-            this.panel_total.Controls.Add(this.txt_gasOil);
-            this.panel_total.Controls.Add(this.txt_servicios);
-            this.panel_total.Location = new System.Drawing.Point(528, 986);
-            this.panel_total.Name = "panel_total";
-            this.panel_total.Size = new System.Drawing.Size(650, 26);
-            this.panel_total.TabIndex = 72;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 54;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 53;
-            // 
-            // txt_total
-            // 
-            this.txt_total.AutoSize = true;
-            this.txt_total.BackColor = System.Drawing.Color.Transparent;
-            this.txt_total.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.ForeColor = System.Drawing.Color.White;
-            this.txt_total.Location = new System.Drawing.Point(514, 2);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(64, 20);
-            this.txt_total.TabIndex = 52;
-            this.txt_total.Text = "Total: $";
-            // 
-            // txt_gasOil
-            // 
-            this.txt_gasOil.AutoSize = true;
-            this.txt_gasOil.BackColor = System.Drawing.Color.Transparent;
-            this.txt_gasOil.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gasOil.ForeColor = System.Drawing.Color.White;
-            this.txt_gasOil.Location = new System.Drawing.Point(360, 2);
-            this.txt_gasOil.Name = "txt_gasOil";
-            this.txt_gasOil.Size = new System.Drawing.Size(76, 20);
-            this.txt_gasOil.TabIndex = 51;
-            this.txt_gasOil.Text = "Gas Oil: $";
-            // 
-            // txt_servicios
-            // 
-            this.txt_servicios.AutoSize = true;
-            this.txt_servicios.BackColor = System.Drawing.Color.Transparent;
-            this.txt_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_servicios.ForeColor = System.Drawing.Color.White;
-            this.txt_servicios.Location = new System.Drawing.Point(58, 2);
-            this.txt_servicios.Name = "txt_servicios";
-            this.txt_servicios.Size = new System.Drawing.Size(202, 20);
-            this.txt_servicios.TabIndex = 50;
-            this.txt_servicios.Text = "Servicios con un importe de:";
-            // 
-            // buttonRedondeado3
-            // 
-            this.buttonRedondeado3.BorderColor = System.Drawing.Color.Gold;
-            this.buttonRedondeado3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRedondeado3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.buttonRedondeado3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado3.Location = new System.Drawing.Point(381, 1073);
-            this.buttonRedondeado3.Name = "buttonRedondeado3";
-            this.buttonRedondeado3.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado3.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.buttonRedondeado3.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado3.Size = new System.Drawing.Size(112, 37);
-            this.buttonRedondeado3.TabIndex = 64;
-            this.buttonRedondeado3.Text = "Filtrar";
-            this.buttonRedondeado3.TextColor = System.Drawing.Color.White;
-            this.buttonRedondeado3.UseVisualStyleBackColor = true;
-            // 
-            // buttonRedondeado1
-            // 
-            this.buttonRedondeado1.BorderColor = System.Drawing.Color.Gold;
-            this.buttonRedondeado1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRedondeado1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.buttonRedondeado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado1.Location = new System.Drawing.Point(925, 1071);
-            this.buttonRedondeado1.Name = "buttonRedondeado1";
-            this.buttonRedondeado1.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado1.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.buttonRedondeado1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado1.Size = new System.Drawing.Size(112, 37);
-            this.buttonRedondeado1.TabIndex = 63;
-            this.buttonRedondeado1.Text = "Editar";
-            this.buttonRedondeado1.TextColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.UseVisualStyleBackColor = true;
-            // 
-            // buttonRedondeado2
-            // 
-            this.buttonRedondeado2.BorderColor = System.Drawing.Color.Gold;
-            this.buttonRedondeado2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRedondeado2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.buttonRedondeado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado2.Location = new System.Drawing.Point(1394, 617);
-            this.buttonRedondeado2.Name = "buttonRedondeado2";
-            this.buttonRedondeado2.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado2.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.buttonRedondeado2.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado2.Size = new System.Drawing.Size(112, 37);
-            this.buttonRedondeado2.TabIndex = 57;
-            this.buttonRedondeado2.Text = "Borrar";
-            this.buttonRedondeado2.TextColor = System.Drawing.Color.White;
-            this.buttonRedondeado2.UseVisualStyleBackColor = true;
-            // 
             // filtrar
             // 
             this.filtrar.AutoSize = true;
@@ -845,102 +719,6 @@
             this.por.Size = new System.Drawing.Size(32, 20);
             this.por.TabIndex = 78;
             this.por.Text = "Por";
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_editar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
-            this.btn_editar.ButtonColor = System.Drawing.Color.Black;
-            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_editar.FlatAppearance.BorderSize = 3;
-            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_editar.Location = new System.Drawing.Point(488, 288);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.btn_editar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_editar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_editar.Size = new System.Drawing.Size(123, 32);
-            this.btn_editar.TabIndex = 80;
-            this.btn_editar.Text = "Editar";
-            this.btn_editar.TextColor = System.Drawing.Color.White;
-            this.btn_editar.UseVisualStyleBackColor = false;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
-            // 
-            // btn_borrar
-            // 
-            this.btn_borrar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_borrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
-            this.btn_borrar.ButtonColor = System.Drawing.Color.Black;
-            this.btn_borrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_borrar.FlatAppearance.BorderSize = 3;
-            this.btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_borrar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_borrar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_borrar.Location = new System.Drawing.Point(632, 290);
-            this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
-            this.btn_borrar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
-            this.btn_borrar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_borrar.Size = new System.Drawing.Size(123, 30);
-            this.btn_borrar.TabIndex = 81;
-            this.btn_borrar.Text = "Borrar";
-            this.btn_borrar.TextColor = System.Drawing.Color.White;
-            this.btn_borrar.UseVisualStyleBackColor = false;
-            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancelar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
-            this.btn_cancelar.ButtonColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatAppearance.BorderSize = 3;
-            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cancelar.Location = new System.Drawing.Point(778, 290);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
-            this.btn_cancelar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
-            this.btn_cancelar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Size = new System.Drawing.Size(125, 30);
-            this.btn_cancelar.TabIndex = 82;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.TextColor = System.Drawing.Color.White;
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_agregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
-            this.btn_agregar.ButtonColor = System.Drawing.Color.Black;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_agregar.FlatAppearance.BorderSize = 3;
-            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_agregar.Location = new System.Drawing.Point(347, 288);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_agregar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_agregar.Size = new System.Drawing.Size(123, 32);
-            this.btn_agregar.TabIndex = 79;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.TextColor = System.Drawing.Color.White;
-            this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // datosServicios
             // 
@@ -1073,16 +851,260 @@
             this.Usuario.TabIndex = 32;
             this.Usuario.Text = "Usuario";
             // 
+            // btn_editar
+            // 
+            this.btn_editar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_editar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
+            this.btn_editar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_editar.FlatAppearance.BorderSize = 3;
+            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_editar.Location = new System.Drawing.Point(488, 288);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.btn_editar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_editar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_editar.Size = new System.Drawing.Size(123, 32);
+            this.btn_editar.TabIndex = 80;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.TextColor = System.Drawing.Color.White;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_borrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_borrar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_borrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_borrar.FlatAppearance.BorderSize = 3;
+            this.btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_borrar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_borrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_borrar.Location = new System.Drawing.Point(632, 290);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_borrar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
+            this.btn_borrar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_borrar.Size = new System.Drawing.Size(123, 30);
+            this.btn_borrar.TabIndex = 81;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.TextColor = System.Drawing.Color.White;
+            this.btn_borrar.UseVisualStyleBackColor = false;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cancelar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_cancelar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatAppearance.BorderSize = 3;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_cancelar.Location = new System.Drawing.Point(778, 290);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_cancelar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
+            this.btn_cancelar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_cancelar.Size = new System.Drawing.Size(125, 30);
+            this.btn_cancelar.TabIndex = 82;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextColor = System.Drawing.Color.White;
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
+            this.btn_agregar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatAppearance.BorderSize = 3;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.Location = new System.Drawing.Point(347, 288);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_agregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_agregar.Size = new System.Drawing.Size(123, 32);
+            this.btn_agregar.TabIndex = 79;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextColor = System.Drawing.Color.White;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // buttonRedondeado3
+            // 
+            this.buttonRedondeado3.BorderColor = System.Drawing.Color.Gold;
+            this.buttonRedondeado3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedondeado3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.buttonRedondeado3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado3.Location = new System.Drawing.Point(381, 1073);
+            this.buttonRedondeado3.Name = "buttonRedondeado3";
+            this.buttonRedondeado3.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado3.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonRedondeado3.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado3.Size = new System.Drawing.Size(112, 37);
+            this.buttonRedondeado3.TabIndex = 64;
+            this.buttonRedondeado3.Text = "Filtrar";
+            this.buttonRedondeado3.TextColor = System.Drawing.Color.White;
+            this.buttonRedondeado3.UseVisualStyleBackColor = true;
+            // 
+            // buttonRedondeado1
+            // 
+            this.buttonRedondeado1.BorderColor = System.Drawing.Color.Gold;
+            this.buttonRedondeado1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedondeado1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.buttonRedondeado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado1.Location = new System.Drawing.Point(925, 1071);
+            this.buttonRedondeado1.Name = "buttonRedondeado1";
+            this.buttonRedondeado1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonRedondeado1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado1.Size = new System.Drawing.Size(112, 37);
+            this.buttonRedondeado1.TabIndex = 63;
+            this.buttonRedondeado1.Text = "Editar";
+            this.buttonRedondeado1.TextColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.UseVisualStyleBackColor = true;
+            // 
+            // buttonRedondeado2
+            // 
+            this.buttonRedondeado2.BorderColor = System.Drawing.Color.Gold;
+            this.buttonRedondeado2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedondeado2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.buttonRedondeado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado2.Location = new System.Drawing.Point(1394, 617);
+            this.buttonRedondeado2.Name = "buttonRedondeado2";
+            this.buttonRedondeado2.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado2.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonRedondeado2.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado2.Size = new System.Drawing.Size(112, 37);
+            this.buttonRedondeado2.TabIndex = 57;
+            this.buttonRedondeado2.Text = "Borrar";
+            this.buttonRedondeado2.TextColor = System.Drawing.Color.White;
+            this.buttonRedondeado2.UseVisualStyleBackColor = true;
+            // 
+            // panel_total
+            // 
+            this.panel_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel_total.Controls.Add(this.txt_total_servicio);
+            this.panel_total.Controls.Add(this.label18);
+            this.panel_total.Controls.Add(this.txt_importe_servicio);
+            this.panel_total.Controls.Add(this.label17);
+            this.panel_total.Controls.Add(this.txt_cantidad_servicios);
+            this.panel_total.Controls.Add(this.label2);
+            this.panel_total.Location = new System.Drawing.Point(1016, 87);
+            this.panel_total.Name = "panel_total";
+            this.panel_total.Size = new System.Drawing.Size(272, 185);
+            this.panel_total.TabIndex = 85;
+            // 
+            // txt_total_servicio
+            // 
+            this.txt_total_servicio.Enabled = false;
+            this.txt_total_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_servicio.Location = new System.Drawing.Point(54, 148);
+            this.txt_total_servicio.Name = "txt_total_servicio";
+            this.txt_total_servicio.Size = new System.Drawing.Size(193, 28);
+            this.txt_total_servicio.TabIndex = 101;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(8, 122);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(149, 23);
+            this.label18.TabIndex = 100;
+            this.label18.Text = "Total (con Gas Oil)";
+            // 
+            // txt_importe_servicio
+            // 
+            this.txt_importe_servicio.Enabled = false;
+            this.txt_importe_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_importe_servicio.Location = new System.Drawing.Point(119, 69);
+            this.txt_importe_servicio.Name = "txt_importe_servicio";
+            this.txt_importe_servicio.Size = new System.Drawing.Size(144, 28);
+            this.txt_importe_servicio.TabIndex = 99;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(9, 77);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 20);
+            this.label17.TabIndex = 98;
+            this.label17.Text = "Importe total";
+            // 
+            // txt_cantidad_servicios
+            // 
+            this.txt_cantidad_servicios.Enabled = false;
+            this.txt_cantidad_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad_servicios.Location = new System.Drawing.Point(86, 17);
+            this.txt_cantidad_servicios.Name = "txt_cantidad_servicios";
+            this.txt_cantidad_servicios.Size = new System.Drawing.Size(177, 28);
+            this.txt_cantidad_servicios.TabIndex = 97;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "Cantidad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(1011, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(237, 26);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "Informacion  de Servicios";
+            // 
             // FormPlanillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1300, 1038);
+            this.Controls.Add(this.panel_total);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_error);
             this.Controls.Add(this.pb_error);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.datosServicios);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_borrar);
@@ -1090,7 +1112,6 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.por);
             this.Controls.Add(this.filtrar);
-            this.Controls.Add(this.panel_total);
             this.Controls.Add(this.txt_por);
             this.Controls.Add(this.txt_filtrar);
             this.Controls.Add(this.comboBox3);
@@ -1108,12 +1129,12 @@
             this.Load += new System.EventHandler(this.FormPlanillas_Load);
             this.panel_cargaServicios.ResumeLayout(false);
             this.panel_cargaServicios.PerformLayout();
-            this.panel_total.ResumeLayout(false);
-            this.panel_total.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel_total.ResumeLayout(false);
+            this.panel_total.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1152,10 +1173,6 @@
         private ButtonRedondeado buttonRedondeado1;
         private System.Windows.Forms.ComboBox txt_por;
         private System.Windows.Forms.TextBox txt_filtrar;
-        private System.Windows.Forms.Panel panel_total;
-        private System.Windows.Forms.Label txt_total;
-        private System.Windows.Forms.Label txt_gasOil;
-        private System.Windows.Forms.Label txt_servicios;
         private System.Windows.Forms.Label filtrar;
         private System.Windows.Forms.Label por;
         private ButtonRedondeado btn_editar;
@@ -1163,8 +1180,6 @@
         private ButtonRedondeado btn_cancelar;
         private ButtonRedondeado btn_agregar;
         private System.Windows.Forms.DataGridView datosServicios;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_movil;
         private System.Windows.Forms.Label movil;
         private System.Windows.Forms.TextBox txt_km;
@@ -1191,5 +1206,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Panel panel_total;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_cantidad_servicios;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_total_servicio;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_importe_servicio;
+        private System.Windows.Forms.Label label17;
     }
 }

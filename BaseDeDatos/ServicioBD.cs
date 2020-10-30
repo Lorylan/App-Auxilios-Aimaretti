@@ -38,5 +38,10 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
             SqlCommand sentencia = new SqlCommand("SELECT * From Servicio WHERE idCliente='"+empresa+"'");
             return conexion.EjecutarSentencia(sentencia);
         }
+
+        public string CalcularTotal(string idC)
+        {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Servicio WHERE idCliente='" + idC + "'");
+        }
     }
 }
