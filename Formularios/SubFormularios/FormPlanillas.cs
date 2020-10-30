@@ -279,10 +279,36 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             bool aux = tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, txt_tipo.Text);
             if (aux)
             {
-                txt_Importe.Text = tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                if (!txt_tipo.Text.Equals("Servicio con Km"))
+                {
+                    txt_Importe.Text = tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                }
             }
-            else {
+            else 
+            {
                 txt_Importe.Text = "";
+            }
+        }
+
+        private void txt_km_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_tipo.Text.Equals("Servicio con Km")) {
+                bool aux = tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                try
+                {
+                    if ((aux) & (int.Parse(txt_km.Text) > 0))
+                    {
+                        txt_Importe.Text = (int.Parse(tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text)) * int.Parse(txt_km.Text)).ToString();
+                    }
+                    else
+                    {
+                        txt_Importe.Text = "";
+                    }
+                }
+                catch {
+                    txt_Importe.Text = "";
+                }
+               
             }
         }
     }

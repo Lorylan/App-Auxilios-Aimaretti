@@ -349,6 +349,7 @@
             this.txt_km.Name = "txt_km";
             this.txt_km.Size = new System.Drawing.Size(82, 28);
             this.txt_km.TabIndex = 58;
+            this.txt_km.TextChanged += new System.EventHandler(this.txt_km_TextChanged);
             this.txt_km.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumerosReales);
             // 
             // txt_patente
