@@ -72,7 +72,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             datosServicios.Columns[9].HeaderText = "Desde";
             datosServicios.Columns[10].HeaderText = "Hasta";
             datosServicios.Columns[11].HeaderText = "Km";
-            datosServicios.Columns[12].HeaderText = "Monto cobrado";
+            datosServicios.Columns[12].HeaderText = "MontoCobrado";
             datosServicios.Columns[13].HeaderText = "Importe";
             datosServicios.Columns[14].HeaderText = "Observaciones";
             datosServicios.Columns[15].Visible = false; //usuario
@@ -238,9 +238,11 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             if (txt_Empresa.Text == "")
             {
                 desactivarBoton(btn_agregar, Color.Silver);
+                txt_filtrar.Text = "";
             }
             else
             {
+                txt_filtrar.Enabled = true;
                 activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
                 ActualizarInfoTabla();
 
@@ -345,6 +347,22 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             }
         }
 
-       
+        private void txt_filtrar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txt_filtrar.Text.Equals(""))
+                {
+                    ((DataTable)datosServicios.DataSource).DefaultView.RowFilter = txt_por.Text + " like '"+ txt_filtrar.Text + "%'";
+                }
+                else {
+                    ((DataTable)datosServicios.DataSource).DefaultView.RowFilter = null;
+                }
+            }
+            catch {
+                ((DataTable)datosServicios.DataSource).DefaultView.RowFilter = null;
+            }
+            
+        }
     }
 }

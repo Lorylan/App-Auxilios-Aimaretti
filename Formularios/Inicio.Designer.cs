@@ -37,8 +37,8 @@ namespace PuebaDeDiseñoAA
             this.btn_usuario = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.panel_general = new System.Windows.Forms.Panel();
-            this.btn_pagoCliente = new System.Windows.Forms.Button();
             this.panel_botonSeleccionado = new System.Windows.Forms.Panel();
+            this.btn_pagoCliente = new System.Windows.Forms.Button();
             this.btn_combustible = new System.Windows.Forms.Button();
             this.panel_formularios = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -149,9 +149,19 @@ namespace PuebaDeDiseñoAA
             this.panel_general.Size = new System.Drawing.Size(1077, 706);
             this.panel_general.TabIndex = 0;
             // 
+            // panel_botonSeleccionado
+            // 
+            this.panel_botonSeleccionado.BackColor = System.Drawing.Color.Gold;
+            this.panel_botonSeleccionado.Location = new System.Drawing.Point(0, 192);
+            this.panel_botonSeleccionado.Name = "panel_botonSeleccionado";
+            this.panel_botonSeleccionado.Size = new System.Drawing.Size(10, 37);
+            this.panel_botonSeleccionado.TabIndex = 50;
+            this.panel_botonSeleccionado.TabStop = true;
+            // 
             // btn_pagoCliente
             // 
             this.btn_pagoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btn_pagoCliente.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_pagoCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_pagoCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btn_pagoCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -164,19 +174,10 @@ namespace PuebaDeDiseñoAA
             this.btn_pagoCliente.TabIndex = 22;
             this.btn_pagoCliente.Text = "Pago Cliente";
             this.btn_pagoCliente.UseVisualStyleBackColor = false;
-            this.btn_pagoCliente.UseWaitCursor = true;
+            
             this.btn_pagoCliente.Click += new System.EventHandler(this.btn_pagoCliente_Click);
             this.btn_pagoCliente.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             this.btn_pagoCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttons_MouseMove);
-            // 
-            // panel_botonSeleccionado
-            // 
-            this.panel_botonSeleccionado.BackColor = System.Drawing.Color.Gold;
-            this.panel_botonSeleccionado.Location = new System.Drawing.Point(0, 192);
-            this.panel_botonSeleccionado.Name = "panel_botonSeleccionado";
-            this.panel_botonSeleccionado.Size = new System.Drawing.Size(10, 37);
-            this.panel_botonSeleccionado.TabIndex = 50;
-            this.panel_botonSeleccionado.TabStop = true;
             // 
             // btn_combustible
             // 
