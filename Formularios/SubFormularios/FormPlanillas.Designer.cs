@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_cargaServicios = new System.Windows.Forms.Panel();
             this.txt_color = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -90,11 +90,8 @@
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.Label();
             this.panel_total = new System.Windows.Forms.Panel();
-            this.txt_total_servicio = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txt_importe_servicio = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txt_cantidad_servicios = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -106,12 +103,21 @@
             this.buttonRedondeado3 = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_cantidad_servicios = new System.Windows.Forms.Label();
+            this.txt_importe_servicio = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_total_servicio = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel_cargaServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel_total.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_cargaServicios
@@ -278,7 +284,6 @@
             this.label5.Size = new System.Drawing.Size(15, 18);
             this.label5.TabIndex = 88;
             this.label5.Text = "*";
-            
             // 
             // label9
             // 
@@ -291,7 +296,6 @@
             this.label9.Size = new System.Drawing.Size(118, 20);
             this.label9.TabIndex = 87;
             this.label9.Text = "son obligatorios";
-          
             // 
             // txt_movil
             // 
@@ -300,7 +304,6 @@
             this.txt_movil.Name = "txt_movil";
             this.txt_movil.Size = new System.Drawing.Size(103, 28);
             this.txt_movil.TabIndex = 60;
-         
             // 
             // movil
             // 
@@ -313,13 +316,12 @@
             this.movil.Size = new System.Drawing.Size(45, 20);
             this.movil.TabIndex = 59;
             this.movil.Text = "Movil";
-
             // 
             // label7
             // 
-            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(190, 177);
@@ -327,7 +329,6 @@
             this.label7.Size = new System.Drawing.Size(15, 18);
             this.label7.TabIndex = 85;
             this.label7.Text = "*";
-          
             // 
             // txt_Fecha
             // 
@@ -337,11 +338,9 @@
             this.txt_Fecha.Name = "txt_Fecha";
             this.txt_Fecha.Size = new System.Drawing.Size(261, 28);
             this.txt_Fecha.TabIndex = 52;
-
             // 
             // label
             // 
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label.AutoSize = true;
             this.label.BackColor = System.Drawing.Color.Transparent;
             this.label.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,7 +350,6 @@
             this.label.Size = new System.Drawing.Size(188, 20);
             this.label.TabIndex = 86;
             this.label.Text = "Los campos marcados con \r\n";
-            
             // 
             // txt_observaciones
             // 
@@ -362,7 +360,6 @@
             this.txt_observaciones.Name = "txt_observaciones";
             this.txt_observaciones.Size = new System.Drawing.Size(746, 26);
             this.txt_observaciones.TabIndex = 51;
-            
             // 
             // txt_km
             // 
@@ -372,7 +369,6 @@
             this.txt_km.Name = "txt_km";
             this.txt_km.Size = new System.Drawing.Size(82, 28);
             this.txt_km.TabIndex = 58;
-        
             this.txt_km.TextChanged += new System.EventHandler(this.txt_km_TextChanged);
             this.txt_km.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumerosReales);
             // 
@@ -384,7 +380,6 @@
             this.txt_patente.Name = "txt_patente";
             this.txt_patente.Size = new System.Drawing.Size(141, 28);
             this.txt_patente.TabIndex = 50;
-          
             // 
             // txt_desperfecto
             // 
@@ -393,7 +388,6 @@
             this.txt_desperfecto.Name = "txt_desperfecto";
             this.txt_desperfecto.Size = new System.Drawing.Size(196, 28);
             this.txt_desperfecto.TabIndex = 56;
-         
             // 
             // txt_vehiculo
             // 
@@ -403,7 +397,6 @@
             this.txt_vehiculo.Name = "txt_vehiculo";
             this.txt_vehiculo.Size = new System.Drawing.Size(141, 28);
             this.txt_vehiculo.TabIndex = 48;
-           
             // 
             // km
             // 
@@ -416,7 +409,6 @@
             this.km.Size = new System.Drawing.Size(29, 20);
             this.km.TabIndex = 57;
             this.km.Text = "Km";
-            
             // 
             // vehiculo
             // 
@@ -429,7 +421,6 @@
             this.vehiculo.Size = new System.Drawing.Size(67, 20);
             this.vehiculo.TabIndex = 47;
             this.vehiculo.Text = "Vehiculo";
-        
             // 
             // patente
             // 
@@ -442,7 +433,6 @@
             this.patente.Size = new System.Drawing.Size(63, 20);
             this.patente.TabIndex = 49;
             this.patente.Text = "Patente";
-           
             // 
             // desperfecto
             // 
@@ -455,7 +445,6 @@
             this.desperfecto.Size = new System.Drawing.Size(97, 20);
             this.desperfecto.TabIndex = 55;
             this.desperfecto.Text = "Desperfecto";
-  
             // 
             // label3
             // 
@@ -468,7 +457,6 @@
             this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 53;
             this.label3.Text = "Color";
-          
             // 
             // txt_tipo
             // 
@@ -486,7 +474,6 @@
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(124, 28);
             this.txt_tipo.TabIndex = 42;
-         
             this.txt_tipo.SelectedIndexChanged += new System.EventHandler(this.txt_tipo_SelectedIndexChanged);
             // 
             // fecha
@@ -752,37 +739,37 @@
             this.datosServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datosServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datosServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.datosServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datosServicios.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datosServicios.DefaultCellStyle = dataGridViewCellStyle8;
             this.datosServicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.datosServicios.EnableHeadersVisualStyles = false;
             this.datosServicios.GridColor = System.Drawing.Color.Gold;
             this.datosServicios.Location = new System.Drawing.Point(12, 405);
             this.datosServicios.Name = "datosServicios";
             this.datosServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosServicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosServicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.datosServicios.RowHeadersVisible = false;
             this.datosServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.datosServicios.RowTemplate.Height = 23;
@@ -873,26 +860,12 @@
             // 
             // panel_total
             // 
-            this.panel_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.panel_total.Controls.Add(this.txt_total_servicio);
-            this.panel_total.Controls.Add(this.label18);
-            this.panel_total.Controls.Add(this.txt_importe_servicio);
-            this.panel_total.Controls.Add(this.label17);
+            this.panel_total.BackColor = System.Drawing.Color.Black;
             this.panel_total.Controls.Add(this.txt_cantidad_servicios);
-            this.panel_total.Controls.Add(this.label2);
-            this.panel_total.Location = new System.Drawing.Point(1016, 87);
+            this.panel_total.Location = new System.Drawing.Point(80, 14);
             this.panel_total.Name = "panel_total";
-            this.panel_total.Size = new System.Drawing.Size(272, 185);
+            this.panel_total.Size = new System.Drawing.Size(173, 25);
             this.panel_total.TabIndex = 85;
-            // 
-            // txt_total_servicio
-            // 
-            this.txt_total_servicio.Enabled = false;
-            this.txt_total_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_servicio.Location = new System.Drawing.Point(54, 148);
-            this.txt_total_servicio.Name = "txt_total_servicio";
-            this.txt_total_servicio.Size = new System.Drawing.Size(193, 28);
-            this.txt_total_servicio.TabIndex = 101;
             // 
             // label18
             // 
@@ -900,20 +873,11 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(8, 122);
+            this.label18.Location = new System.Drawing.Point(58, 118);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(149, 23);
             this.label18.TabIndex = 100;
             this.label18.Text = "Total (con Gas Oil)";
-            // 
-            // txt_importe_servicio
-            // 
-            this.txt_importe_servicio.Enabled = false;
-            this.txt_importe_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_importe_servicio.Location = new System.Drawing.Point(119, 69);
-            this.txt_importe_servicio.Name = "txt_importe_servicio";
-            this.txt_importe_servicio.Size = new System.Drawing.Size(144, 28);
-            this.txt_importe_servicio.TabIndex = 99;
             // 
             // label17
             // 
@@ -921,20 +885,11 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(9, 77);
+            this.label17.Location = new System.Drawing.Point(3, 64);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(104, 20);
             this.label17.TabIndex = 98;
             this.label17.Text = "Importe total";
-            // 
-            // txt_cantidad_servicios
-            // 
-            this.txt_cantidad_servicios.Enabled = false;
-            this.txt_cantidad_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad_servicios.Location = new System.Drawing.Point(86, 17);
-            this.txt_cantidad_servicios.Name = "txt_cantidad_servicios";
-            this.txt_cantidad_servicios.Size = new System.Drawing.Size(177, 28);
-            this.txt_cantidad_servicios.TabIndex = 97;
             // 
             // label2
             // 
@@ -942,7 +897,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 25);
+            this.label2.Location = new System.Drawing.Point(3, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 96;
@@ -952,9 +907,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(1011, 40);
+            this.label1.Location = new System.Drawing.Point(1011, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 26);
             this.label1.TabIndex = 86;
@@ -1138,6 +1094,74 @@
             this.buttonRedondeado2.TextColor = System.Drawing.Color.White;
             this.buttonRedondeado2.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.txt_total_servicio);
+            this.panel3.Location = new System.Drawing.Point(62, 144);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(140, 32);
+            this.panel3.TabIndex = 86;
+            // 
+            // txt_cantidad_servicios
+            // 
+            this.txt_cantidad_servicios.AutoSize = true;
+            this.txt_cantidad_servicios.BackColor = System.Drawing.Color.Transparent;
+            this.txt_cantidad_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad_servicios.ForeColor = System.Drawing.Color.White;
+            this.txt_cantidad_servicios.Location = new System.Drawing.Point(3, 2);
+            this.txt_cantidad_servicios.Name = "txt_cantidad_servicios";
+            this.txt_cantidad_servicios.Size = new System.Drawing.Size(18, 20);
+            this.txt_cantidad_servicios.TabIndex = 101;
+            this.txt_cantidad_servicios.Text = "0";
+            // 
+            // txt_importe_servicio
+            // 
+            this.txt_importe_servicio.AutoSize = true;
+            this.txt_importe_servicio.BackColor = System.Drawing.Color.Transparent;
+            this.txt_importe_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_importe_servicio.ForeColor = System.Drawing.Color.White;
+            this.txt_importe_servicio.Location = new System.Drawing.Point(3, 2);
+            this.txt_importe_servicio.Name = "txt_importe_servicio";
+            this.txt_importe_servicio.Size = new System.Drawing.Size(50, 20);
+            this.txt_importe_servicio.TabIndex = 101;
+            this.txt_importe_servicio.Text = "$0,00";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.txt_importe_servicio);
+            this.panel2.Location = new System.Drawing.Point(113, 61);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(140, 25);
+            this.panel2.TabIndex = 102;
+            // 
+            // txt_total_servicio
+            // 
+            this.txt_total_servicio.AutoSize = true;
+            this.txt_total_servicio.BackColor = System.Drawing.Color.Transparent;
+            this.txt_total_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_servicio.ForeColor = System.Drawing.Color.White;
+            this.txt_total_servicio.Location = new System.Drawing.Point(21, 9);
+            this.txt_total_servicio.Name = "txt_total_servicio";
+            this.txt_total_servicio.Size = new System.Drawing.Size(50, 20);
+            this.txt_total_servicio.TabIndex = 102;
+            this.txt_total_servicio.Text = "$0,00";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel_total);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Location = new System.Drawing.Point(1016, 69);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(272, 203);
+            this.panel4.TabIndex = 103;
+            // 
             // FormPlanillas
             // 
             this.AllowDrop = true;
@@ -1145,8 +1169,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1300, 1038);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.txt_por);
-            this.Controls.Add(this.panel_total);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_error);
@@ -1183,6 +1207,12 @@
             this.panel_total.ResumeLayout(false);
             this.panel_total.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1254,14 +1284,17 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Panel panel_total;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_cantidad_servicios;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_total_servicio;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txt_importe_servicio;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ComboBox txt_color;
         private System.Windows.Forms.ComboBox txt_por;
+        private System.Windows.Forms.Label txt_cantidad_servicios;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label txt_total_servicio;
+        private System.Windows.Forms.Label txt_importe_servicio;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }
