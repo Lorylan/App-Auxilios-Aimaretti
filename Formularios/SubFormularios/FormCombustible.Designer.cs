@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.txt_total);
             this.panel1.Location = new System.Drawing.Point(45, 395);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(131, 48);
+            this.panel1.Size = new System.Drawing.Size(131, 41);
             this.panel1.TabIndex = 20;
             // 
             // txt_total
@@ -88,7 +88,7 @@
             this.txt_total.BackColor = System.Drawing.Color.Transparent;
             this.txt_total.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total.ForeColor = System.Drawing.Color.White;
-            this.txt_total.Location = new System.Drawing.Point(12, 14);
+            this.txt_total.Location = new System.Drawing.Point(12, 9);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(50, 20);
             this.txt_total.TabIndex = 18;

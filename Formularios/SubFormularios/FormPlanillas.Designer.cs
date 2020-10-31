@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_cargaServicios = new System.Windows.Forms.Panel();
+            this.txt_color = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -41,7 +43,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_color = new System.Windows.Forms.ComboBox();
             this.txt_movil = new System.Windows.Forms.TextBox();
             this.movil = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,23 +78,9 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.listaServicios = new System.Windows.Forms.Label();
-            this.txt_por = new System.Windows.Forms.ComboBox();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
-            this.panel_total = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_total = new System.Windows.Forms.Label();
-            this.txt_gasOil = new System.Windows.Forms.Label();
-            this.txt_servicios = new System.Windows.Forms.Label();
-            this.buttonRedondeado3 = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.filtrar = new System.Windows.Forms.Label();
             this.por = new System.Windows.Forms.Label();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.datosServicios = new System.Windows.Forms.DataGridView();
             this.txt_error = new System.Windows.Forms.Label();
             this.pb_error = new System.Windows.Forms.PictureBox();
@@ -102,16 +89,41 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.Label();
+            this.panel_total = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txt_por = new System.Windows.Forms.ComboBox();
+            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.buttonRedondeado3 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_cantidad_servicios = new System.Windows.Forms.Label();
+            this.txt_importe_servicio = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_total_servicio = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel_cargaServicios.SuspendLayout();
-            this.panel_total.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel_total.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_cargaServicios
             // 
             this.panel_cargaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel_cargaServicios.Controls.Add(this.txt_color);
             this.panel_cargaServicios.Controls.Add(this.label16);
             this.panel_cargaServicios.Controls.Add(this.label15);
             this.panel_cargaServicios.Controls.Add(this.label14);
@@ -121,7 +133,6 @@
             this.panel_cargaServicios.Controls.Add(this.label8);
             this.panel_cargaServicios.Controls.Add(this.label5);
             this.panel_cargaServicios.Controls.Add(this.label9);
-            this.panel_cargaServicios.Controls.Add(this.txt_color);
             this.panel_cargaServicios.Controls.Add(this.txt_movil);
             this.panel_cargaServicios.Controls.Add(this.movil);
             this.panel_cargaServicios.Controls.Add(this.label7);
@@ -156,6 +167,27 @@
             this.panel_cargaServicios.Name = "panel_cargaServicios";
             this.panel_cargaServicios.Size = new System.Drawing.Size(985, 203);
             this.panel_cargaServicios.TabIndex = 45;
+            // 
+            // txt_color
+            // 
+            this.txt_color.AllowDrop = true;
+            this.txt_color.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_color.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_color.FormattingEnabled = true;
+            this.txt_color.Items.AddRange(new object[] {
+            "Azul",
+            "Beige",
+            "Blanco",
+            "Celeste",
+            "Gris",
+            "Morado",
+            "Rojo",
+            "Verde",
+            "Violeta"});
+            this.txt_color.Location = new System.Drawing.Point(725, 83);
+            this.txt_color.Name = "txt_color";
+            this.txt_color.Size = new System.Drawing.Size(127, 26);
+            this.txt_color.TabIndex = 87;
             // 
             // label16
             // 
@@ -265,22 +297,6 @@
             this.label9.TabIndex = 87;
             this.label9.Text = "son obligatorios";
             // 
-            // txt_color
-            // 
-            this.txt_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_color.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_color.FormattingEnabled = true;
-            this.txt_color.Items.AddRange(new object[] {
-            "Traslado",
-            "Mecanica",
-            "Extraccion",
-            "Servicios extras",
-            "Servicio con Km"});
-            this.txt_color.Location = new System.Drawing.Point(725, 83);
-            this.txt_color.Name = "txt_color";
-            this.txt_color.Size = new System.Drawing.Size(124, 28);
-            this.txt_color.TabIndex = 61;
-            // 
             // txt_movil
             // 
             this.txt_movil.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,6 +321,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(190, 177);
@@ -315,6 +332,7 @@
             // 
             // txt_Fecha
             // 
+            this.txt_Fecha.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_Fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Fecha.Location = new System.Drawing.Point(5, 31);
             this.txt_Fecha.Name = "txt_Fecha";
@@ -335,6 +353,7 @@
             // 
             // txt_observaciones
             // 
+            this.txt_observaciones.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_observaciones.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_observaciones.Location = new System.Drawing.Point(221, 135);
             this.txt_observaciones.Multiline = true;
@@ -344,15 +363,18 @@
             // 
             // txt_km
             // 
+            this.txt_km.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_km.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_km.Location = new System.Drawing.Point(392, 83);
             this.txt_km.Name = "txt_km";
             this.txt_km.Size = new System.Drawing.Size(82, 28);
             this.txt_km.TabIndex = 58;
+            this.txt_km.TextChanged += new System.EventHandler(this.txt_km_TextChanged);
             this.txt_km.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumerosReales);
             // 
             // txt_patente
             // 
+            this.txt_patente.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_patente.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patente.Location = new System.Drawing.Point(727, 30);
             this.txt_patente.Name = "txt_patente";
@@ -369,6 +391,7 @@
             // 
             // txt_vehiculo
             // 
+            this.txt_vehiculo.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_vehiculo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_vehiculo.Location = new System.Drawing.Point(571, 30);
             this.txt_vehiculo.Name = "txt_vehiculo";
@@ -437,6 +460,7 @@
             // 
             // txt_tipo
             // 
+            this.txt_tipo.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tipo.FormattingEnabled = true;
@@ -501,6 +525,7 @@
             // 
             // txt_codigo
             // 
+            this.txt_codigo.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_codigo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_codigo.Location = new System.Drawing.Point(280, 32);
             this.txt_codigo.Name = "txt_codigo";
@@ -534,6 +559,7 @@
             // 
             // txt_Importe
             // 
+            this.txt_Importe.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_Importe.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Importe.Location = new System.Drawing.Point(624, 83);
             this.txt_Importe.Name = "txt_Importe";
@@ -543,6 +569,7 @@
             // 
             // txt_desde
             // 
+            this.txt_desde.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_desde.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_desde.Location = new System.Drawing.Point(5, 83);
             this.txt_desde.Name = "txt_desde";
@@ -575,6 +602,7 @@
             // 
             // txt_hasta
             // 
+            this.txt_hasta.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_hasta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hasta.Location = new System.Drawing.Point(195, 83);
             this.txt_hasta.Name = "txt_hasta";
@@ -595,6 +623,7 @@
             // 
             // txt_montoCobrado
             // 
+            this.txt_montoCobrado.Cursor = System.Windows.Forms.Cursors.Default;
             this.txt_montoCobrado.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_montoCobrado.Location = new System.Drawing.Point(489, 83);
             this.txt_montoCobrado.Name = "txt_montoCobrado";
@@ -665,26 +694,6 @@
             this.listaServicios.TabIndex = 61;
             this.listaServicios.Text = "Lista de Servicios";
             // 
-            // txt_por
-            // 
-            this.txt_por.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_por.FormattingEnabled = true;
-            this.txt_por.Items.AddRange(new object[] {
-            "Fecha",
-            "Codigo",
-            "Tipo",
-            "Desde",
-            "Hasta",
-            "Monto cobrado",
-            "Vehiculo",
-            "Patente",
-            "Observaciones",
-            "Realizado por"});
-            this.txt_por.Location = new System.Drawing.Point(365, 986);
-            this.txt_por.Name = "txt_por";
-            this.txt_por.Size = new System.Drawing.Size(141, 26);
-            this.txt_por.TabIndex = 71;
-            // 
             // txt_filtrar
             // 
             this.txt_filtrar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
@@ -692,134 +701,7 @@
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(229, 26);
             this.txt_filtrar.TabIndex = 68;
-            // 
-            // panel_total
-            // 
-            this.panel_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.panel_total.Controls.Add(this.label2);
-            this.panel_total.Controls.Add(this.label1);
-            this.panel_total.Controls.Add(this.txt_total);
-            this.panel_total.Controls.Add(this.txt_gasOil);
-            this.panel_total.Controls.Add(this.txt_servicios);
-            this.panel_total.Location = new System.Drawing.Point(528, 986);
-            this.panel_total.Name = "panel_total";
-            this.panel_total.Size = new System.Drawing.Size(650, 26);
-            this.panel_total.TabIndex = 72;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 54;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 53;
-            // 
-            // txt_total
-            // 
-            this.txt_total.AutoSize = true;
-            this.txt_total.BackColor = System.Drawing.Color.Transparent;
-            this.txt_total.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.ForeColor = System.Drawing.Color.White;
-            this.txt_total.Location = new System.Drawing.Point(514, 2);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(64, 20);
-            this.txt_total.TabIndex = 52;
-            this.txt_total.Text = "Total: $";
-            // 
-            // txt_gasOil
-            // 
-            this.txt_gasOil.AutoSize = true;
-            this.txt_gasOil.BackColor = System.Drawing.Color.Transparent;
-            this.txt_gasOil.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gasOil.ForeColor = System.Drawing.Color.White;
-            this.txt_gasOil.Location = new System.Drawing.Point(360, 2);
-            this.txt_gasOil.Name = "txt_gasOil";
-            this.txt_gasOil.Size = new System.Drawing.Size(76, 20);
-            this.txt_gasOil.TabIndex = 51;
-            this.txt_gasOil.Text = "Gas Oil: $";
-            // 
-            // txt_servicios
-            // 
-            this.txt_servicios.AutoSize = true;
-            this.txt_servicios.BackColor = System.Drawing.Color.Transparent;
-            this.txt_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_servicios.ForeColor = System.Drawing.Color.White;
-            this.txt_servicios.Location = new System.Drawing.Point(58, 2);
-            this.txt_servicios.Name = "txt_servicios";
-            this.txt_servicios.Size = new System.Drawing.Size(202, 20);
-            this.txt_servicios.TabIndex = 50;
-            this.txt_servicios.Text = "Servicios con un importe de:";
-            // 
-            // buttonRedondeado3
-            // 
-            this.buttonRedondeado3.BorderColor = System.Drawing.Color.Gold;
-            this.buttonRedondeado3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRedondeado3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.buttonRedondeado3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado3.Location = new System.Drawing.Point(381, 1073);
-            this.buttonRedondeado3.Name = "buttonRedondeado3";
-            this.buttonRedondeado3.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado3.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.buttonRedondeado3.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado3.Size = new System.Drawing.Size(112, 37);
-            this.buttonRedondeado3.TabIndex = 64;
-            this.buttonRedondeado3.Text = "Filtrar";
-            this.buttonRedondeado3.TextColor = System.Drawing.Color.White;
-            this.buttonRedondeado3.UseVisualStyleBackColor = true;
-            // 
-            // buttonRedondeado1
-            // 
-            this.buttonRedondeado1.BorderColor = System.Drawing.Color.Gold;
-            this.buttonRedondeado1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRedondeado1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.buttonRedondeado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado1.Location = new System.Drawing.Point(925, 1071);
-            this.buttonRedondeado1.Name = "buttonRedondeado1";
-            this.buttonRedondeado1.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado1.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.buttonRedondeado1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado1.Size = new System.Drawing.Size(112, 37);
-            this.buttonRedondeado1.TabIndex = 63;
-            this.buttonRedondeado1.Text = "Editar";
-            this.buttonRedondeado1.TextColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.UseVisualStyleBackColor = true;
-            // 
-            // buttonRedondeado2
-            // 
-            this.buttonRedondeado2.BorderColor = System.Drawing.Color.Gold;
-            this.buttonRedondeado2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRedondeado2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.buttonRedondeado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.buttonRedondeado2.Location = new System.Drawing.Point(1394, 617);
-            this.buttonRedondeado2.Name = "buttonRedondeado2";
-            this.buttonRedondeado2.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado2.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.buttonRedondeado2.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttonRedondeado2.Size = new System.Drawing.Size(112, 37);
-            this.buttonRedondeado2.TabIndex = 57;
-            this.buttonRedondeado2.Text = "Borrar";
-            this.buttonRedondeado2.TextColor = System.Drawing.Color.White;
-            this.buttonRedondeado2.UseVisualStyleBackColor = true;
+            this.txt_filtrar.TextChanged += new System.EventHandler(this.txt_filtrar_TextChanged);
             // 
             // filtrar
             // 
@@ -844,6 +726,220 @@
             this.por.Size = new System.Drawing.Size(32, 20);
             this.por.TabIndex = 78;
             this.por.Text = "Por";
+            // 
+            // datosServicios
+            // 
+            this.datosServicios.AllowUserToAddRows = false;
+            this.datosServicios.AllowUserToDeleteRows = false;
+            this.datosServicios.AllowUserToOrderColumns = true;
+            this.datosServicios.AllowUserToResizeColumns = false;
+            this.datosServicios.AllowUserToResizeRows = false;
+            this.datosServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.datosServicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.datosServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datosServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datosServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.datosServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datosServicios.DefaultCellStyle = dataGridViewCellStyle8;
+            this.datosServicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.datosServicios.EnableHeadersVisualStyles = false;
+            this.datosServicios.GridColor = System.Drawing.Color.Gold;
+            this.datosServicios.Location = new System.Drawing.Point(12, 405);
+            this.datosServicios.Name = "datosServicios";
+            this.datosServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosServicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.datosServicios.RowHeadersVisible = false;
+            this.datosServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.datosServicios.RowTemplate.Height = 23;
+            this.datosServicios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.datosServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datosServicios.Size = new System.Drawing.Size(1121, 568);
+            this.datosServicios.TabIndex = 72;
+            this.datosServicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Seleccionar);
+            // 
+            // txt_error
+            // 
+            this.txt_error.AutoSize = true;
+            this.txt_error.BackColor = System.Drawing.Color.Transparent;
+            this.txt_error.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.txt_error.Location = new System.Drawing.Point(10, 14);
+            this.txt_error.Name = "txt_error";
+            this.txt_error.Size = new System.Drawing.Size(218, 20);
+            this.txt_error.TabIndex = 84;
+            this.txt_error.Text = "Completar campo/s faltante/s";
+            this.txt_error.Visible = false;
+            // 
+            // pb_error
+            // 
+            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_error.Location = new System.Drawing.Point(188, 37);
+            this.pb_error.Name = "pb_error";
+            this.pb_error.Size = new System.Drawing.Size(29, 26);
+            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_error.TabIndex = 83;
+            this.pb_error.TabStop = false;
+            this.pb_error.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(388, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 23);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Cliente:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txt_usuario);
+            this.panel1.Controls.Add(this.Usuario);
+            this.panel1.Location = new System.Drawing.Point(14, 279);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(231, 48);
+            this.panel1.TabIndex = 62;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(60, 270);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 18);
+            this.label13.TabIndex = 40;
+            // 
+            // txt_usuario
+            // 
+            this.txt_usuario.Enabled = false;
+            this.txt_usuario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_usuario.Location = new System.Drawing.Point(78, 9);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(141, 28);
+            this.txt_usuario.TabIndex = 33;
+            // 
+            // Usuario
+            // 
+            this.Usuario.AutoSize = true;
+            this.Usuario.BackColor = System.Drawing.Color.Transparent;
+            this.Usuario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario.ForeColor = System.Drawing.Color.White;
+            this.Usuario.Location = new System.Drawing.Point(6, 12);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(62, 20);
+            this.Usuario.TabIndex = 32;
+            this.Usuario.Text = "Usuario";
+            // 
+            // panel_total
+            // 
+            this.panel_total.BackColor = System.Drawing.Color.Black;
+            this.panel_total.Controls.Add(this.txt_cantidad_servicios);
+            this.panel_total.Location = new System.Drawing.Point(80, 14);
+            this.panel_total.Name = "panel_total";
+            this.panel_total.Size = new System.Drawing.Size(173, 25);
+            this.panel_total.TabIndex = 85;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(58, 118);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(149, 23);
+            this.label18.TabIndex = 100;
+            this.label18.Text = "Total (con Gas Oil)";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(3, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 20);
+            this.label17.TabIndex = 98;
+            this.label17.Text = "Importe total";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "Cantidad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(1011, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(237, 26);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "Informacion  de Servicios";
+            // 
+            // txt_por
+            // 
+            this.txt_por.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_por.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_por.FormattingEnabled = true;
+            this.txt_por.Items.AddRange(new object[] {
+            "Fecha",
+            "Codigo",
+            "Tipo",
+            "Vehiculo",
+            "Patente",
+            "Color",
+            "Desperfecto",
+            "Movil",
+            "Desde",
+            "Hasta",
+            "Km",
+            "MontoCobrado",
+            "Importe",
+            "Observaciones"});
+            this.txt_por.Location = new System.Drawing.Point(378, 985);
+            this.txt_por.Name = "txt_por";
+            this.txt_por.Size = new System.Drawing.Size(124, 28);
+            this.txt_por.TabIndex = 87;
             // 
             // btn_editar
             // 
@@ -941,147 +1037,145 @@
             this.btn_agregar.UseVisualStyleBackColor = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
-            // datosServicios
+            // buttonRedondeado3
             // 
-            this.datosServicios.AllowUserToAddRows = false;
-            this.datosServicios.AllowUserToDeleteRows = false;
-            this.datosServicios.AllowUserToOrderColumns = true;
-            this.datosServicios.AllowUserToResizeColumns = false;
-            this.datosServicios.AllowUserToResizeRows = false;
-            this.datosServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.datosServicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.datosServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datosServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datosServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.datosServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datosServicios.DefaultCellStyle = dataGridViewCellStyle2;
-            this.datosServicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.datosServicios.EnableHeadersVisualStyles = false;
-            this.datosServicios.GridColor = System.Drawing.Color.Gold;
-            this.datosServicios.Location = new System.Drawing.Point(12, 405);
-            this.datosServicios.Name = "datosServicios";
-            this.datosServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosServicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.datosServicios.RowHeadersVisible = false;
-            this.datosServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.datosServicios.RowTemplate.Height = 23;
-            this.datosServicios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.datosServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datosServicios.Size = new System.Drawing.Size(1121, 568);
-            this.datosServicios.TabIndex = 72;
-            this.datosServicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Seleccionar);
+            this.buttonRedondeado3.BorderColor = System.Drawing.Color.Gold;
+            this.buttonRedondeado3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedondeado3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.buttonRedondeado3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado3.Location = new System.Drawing.Point(381, 1073);
+            this.buttonRedondeado3.Name = "buttonRedondeado3";
+            this.buttonRedondeado3.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado3.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonRedondeado3.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado3.Size = new System.Drawing.Size(112, 37);
+            this.buttonRedondeado3.TabIndex = 64;
+            this.buttonRedondeado3.Text = "Filtrar";
+            this.buttonRedondeado3.TextColor = System.Drawing.Color.White;
+            this.buttonRedondeado3.UseVisualStyleBackColor = true;
             // 
-            // txt_error
+            // buttonRedondeado1
             // 
-            this.txt_error.AutoSize = true;
-            this.txt_error.BackColor = System.Drawing.Color.Transparent;
-            this.txt_error.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
-            this.txt_error.Location = new System.Drawing.Point(10, 14);
-            this.txt_error.Name = "txt_error";
-            this.txt_error.Size = new System.Drawing.Size(218, 20);
-            this.txt_error.TabIndex = 84;
-            this.txt_error.Text = "Completar campo/s faltante/s";
-            this.txt_error.Visible = false;
+            this.buttonRedondeado1.BorderColor = System.Drawing.Color.Gold;
+            this.buttonRedondeado1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedondeado1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.buttonRedondeado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado1.Location = new System.Drawing.Point(925, 1071);
+            this.buttonRedondeado1.Name = "buttonRedondeado1";
+            this.buttonRedondeado1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonRedondeado1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado1.Size = new System.Drawing.Size(112, 37);
+            this.buttonRedondeado1.TabIndex = 63;
+            this.buttonRedondeado1.Text = "Editar";
+            this.buttonRedondeado1.TextColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.UseVisualStyleBackColor = true;
             // 
-            // pb_error
+            // buttonRedondeado2
             // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
-            this.pb_error.Location = new System.Drawing.Point(188, 37);
-            this.pb_error.Name = "pb_error";
-            this.pb_error.Size = new System.Drawing.Size(29, 26);
-            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_error.TabIndex = 83;
-            this.pb_error.TabStop = false;
-            this.pb_error.Visible = false;
+            this.buttonRedondeado2.BorderColor = System.Drawing.Color.Gold;
+            this.buttonRedondeado2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedondeado2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.buttonRedondeado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.buttonRedondeado2.Location = new System.Drawing.Point(1394, 617);
+            this.buttonRedondeado2.Name = "buttonRedondeado2";
+            this.buttonRedondeado2.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado2.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonRedondeado2.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonRedondeado2.Size = new System.Drawing.Size(112, 37);
+            this.buttonRedondeado2.TabIndex = 57;
+            this.buttonRedondeado2.Text = "Borrar";
+            this.buttonRedondeado2.TextColor = System.Drawing.Color.White;
+            this.buttonRedondeado2.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // panel3
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(388, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 23);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Cliente:";
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.txt_total_servicio);
+            this.panel3.Location = new System.Drawing.Point(62, 144);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(140, 32);
+            this.panel3.TabIndex = 86;
             // 
-            // panel1
+            // txt_cantidad_servicios
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.txt_usuario);
-            this.panel1.Controls.Add(this.Usuario);
-            this.panel1.Location = new System.Drawing.Point(14, 279);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 48);
-            this.panel1.TabIndex = 62;
+            this.txt_cantidad_servicios.AutoSize = true;
+            this.txt_cantidad_servicios.BackColor = System.Drawing.Color.Transparent;
+            this.txt_cantidad_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad_servicios.ForeColor = System.Drawing.Color.White;
+            this.txt_cantidad_servicios.Location = new System.Drawing.Point(3, 2);
+            this.txt_cantidad_servicios.Name = "txt_cantidad_servicios";
+            this.txt_cantidad_servicios.Size = new System.Drawing.Size(18, 20);
+            this.txt_cantidad_servicios.TabIndex = 101;
+            this.txt_cantidad_servicios.Text = "0";
             // 
-            // label13
+            // txt_importe_servicio
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(60, 270);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 18);
-            this.label13.TabIndex = 40;
+            this.txt_importe_servicio.AutoSize = true;
+            this.txt_importe_servicio.BackColor = System.Drawing.Color.Transparent;
+            this.txt_importe_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_importe_servicio.ForeColor = System.Drawing.Color.White;
+            this.txt_importe_servicio.Location = new System.Drawing.Point(3, 2);
+            this.txt_importe_servicio.Name = "txt_importe_servicio";
+            this.txt_importe_servicio.Size = new System.Drawing.Size(50, 20);
+            this.txt_importe_servicio.TabIndex = 101;
+            this.txt_importe_servicio.Text = "$0,00";
             // 
-            // txt_usuario
+            // panel2
             // 
-            this.txt_usuario.Enabled = false;
-            this.txt_usuario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_usuario.Location = new System.Drawing.Point(78, 9);
-            this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(141, 28);
-            this.txt_usuario.TabIndex = 33;
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.txt_importe_servicio);
+            this.panel2.Location = new System.Drawing.Point(113, 61);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(140, 25);
+            this.panel2.TabIndex = 102;
             // 
-            // Usuario
+            // txt_total_servicio
             // 
-            this.Usuario.AutoSize = true;
-            this.Usuario.BackColor = System.Drawing.Color.Transparent;
-            this.Usuario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.ForeColor = System.Drawing.Color.White;
-            this.Usuario.Location = new System.Drawing.Point(6, 12);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(62, 20);
-            this.Usuario.TabIndex = 32;
-            this.Usuario.Text = "Usuario";
+            this.txt_total_servicio.AutoSize = true;
+            this.txt_total_servicio.BackColor = System.Drawing.Color.Transparent;
+            this.txt_total_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_servicio.ForeColor = System.Drawing.Color.White;
+            this.txt_total_servicio.Location = new System.Drawing.Point(21, 9);
+            this.txt_total_servicio.Name = "txt_total_servicio";
+            this.txt_total_servicio.Size = new System.Drawing.Size(50, 20);
+            this.txt_total_servicio.TabIndex = 102;
+            this.txt_total_servicio.Text = "$0,00";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel_total);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Location = new System.Drawing.Point(1016, 69);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(272, 203);
+            this.panel4.TabIndex = 103;
             // 
             // FormPlanillas
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1300, 1038);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.txt_por);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_error);
             this.Controls.Add(this.pb_error);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.datosServicios);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_borrar);
@@ -1089,8 +1183,6 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.por);
             this.Controls.Add(this.filtrar);
-            this.Controls.Add(this.panel_total);
-            this.Controls.Add(this.txt_por);
             this.Controls.Add(this.txt_filtrar);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.buttonRedondeado3);
@@ -1101,18 +1193,26 @@
             this.Controls.Add(this.txt_Empresa);
             this.Controls.Add(this.panel_cargaServicios);
             this.Controls.Add(this.cargaServicios);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPlanillas";
             this.Text = "FormPlanilla";
             this.Load += new System.EventHandler(this.FormPlanillas_Load);
             this.panel_cargaServicios.ResumeLayout(false);
             this.panel_cargaServicios.PerformLayout();
-            this.panel_total.ResumeLayout(false);
-            this.panel_total.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel_total.ResumeLayout(false);
+            this.panel_total.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1149,12 +1249,7 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label listaServicios;
         private ButtonRedondeado buttonRedondeado1;
-        private System.Windows.Forms.ComboBox txt_por;
         private System.Windows.Forms.TextBox txt_filtrar;
-        private System.Windows.Forms.Panel panel_total;
-        private System.Windows.Forms.Label txt_total;
-        private System.Windows.Forms.Label txt_gasOil;
-        private System.Windows.Forms.Label txt_servicios;
         private System.Windows.Forms.Label filtrar;
         private System.Windows.Forms.Label por;
         private ButtonRedondeado btn_editar;
@@ -1162,8 +1257,6 @@
         private ButtonRedondeado btn_cancelar;
         private ButtonRedondeado btn_agregar;
         private System.Windows.Forms.DataGridView datosServicios;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_movil;
         private System.Windows.Forms.Label movil;
         private System.Windows.Forms.TextBox txt_km;
@@ -1171,7 +1264,6 @@
         private System.Windows.Forms.TextBox txt_desperfecto;
         private System.Windows.Forms.Label desperfecto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox txt_color;
         private System.Windows.Forms.Label txt_error;
         private System.Windows.Forms.PictureBox pb_error;
         private System.Windows.Forms.Label label4;
@@ -1190,5 +1282,19 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Panel panel_total;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.ComboBox txt_color;
+        private System.Windows.Forms.ComboBox txt_por;
+        private System.Windows.Forms.Label txt_cantidad_servicios;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label txt_total_servicio;
+        private System.Windows.Forms.Label txt_importe_servicio;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

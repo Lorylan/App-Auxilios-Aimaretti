@@ -18,6 +18,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         ServicioBD servicioBD;
         ClienteBD clienteBD;
         TarifaPactadaDB tarifaPactadaBD;
+        CombustibleBD combustibleBD;
         private void cargarOpciones()
         {
             DataSet dataset = clienteBD.MostrarInfo();
@@ -71,11 +72,42 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             datosServicios.Columns[9].HeaderText = "Desde";
             datosServicios.Columns[10].HeaderText = "Hasta";
             datosServicios.Columns[11].HeaderText = "Km";
-            datosServicios.Columns[12].HeaderText = "Monto cobrado";
+            datosServicios.Columns[12].HeaderText = "MontoCobrado";
             datosServicios.Columns[13].HeaderText = "Importe";
             datosServicios.Columns[14].HeaderText = "Observaciones";
             datosServicios.Columns[15].Visible = false; //usuario
             datosServicios.Columns.RemoveAt(datosServicios.Columns.Count - 1);
+            txt_cantidad_servicios.Text = datosServicios.Rows.Count.ToString();
+            string total_importe_servicio = servicioBD.CalcularTotal(txt_Empresa.Text);
+            string total_importe_combustible= combustibleBD.CalcularTotal(txt_Empresa.Text);
+            int total;
+            if ((total_importe_servicio.Equals("")) & (total_importe_combustible.Equals("")))
+            {
+                txt_importe_servicio.Text = "$0,00";
+                txt_total_servicio.Text = "$0,00";
+            }
+            else {
+                if (total_importe_servicio.Equals("") & (!total_importe_combustible.Equals("")))
+                {
+                    txt_total_servicio.Text = "$" + total_importe_combustible;
+                    txt_importe_servicio.Text = "$0,00";
+                }
+                else
+                {
+                    if (!total_importe_servicio.Equals("") & (total_importe_combustible.Equals("")))
+                    {
+                        txt_importe_servicio.Text = "$0,00";
+                        txt_total_servicio.Text = "$" + total_importe_servicio;
+                    }
+                    else {
+                        total = int.Parse(total_importe_servicio) - int.Parse(total_importe_combustible) ;
+                        txt_importe_servicio.Text = "$" + total_importe_servicio;
+                        txt_total_servicio.Text = "$" + total.ToString();
+                    }
+                        
+                }
+                    
+            }
             
         }
         private void vaciarTxt()
@@ -138,6 +170,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             servicioBD = new ServicioBD();
             clienteBD = new ClienteBD();
             tarifaPactadaBD = new TarifaPactadaDB();
+            combustibleBD = new CombustibleBD();
             cargarOpciones();
         }
 
@@ -202,7 +235,18 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 
         private void txt_Empresa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (txt_Empresa.Text == "")
+            {
+                desactivarBoton(btn_agregar, Color.Silver);
+                txt_filtrar.Text = "";
+            }
+            else
+            {
+                txt_filtrar.Enabled = true;
+                activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
+                ActualizarInfoTabla();
 
+            }
         }
 
         private void Seleccionar(object sender, DataGridViewCellEventArgs e)
@@ -238,12 +282,26 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 
         private void soloNumeros(object sender, KeyPressEventArgs e)
         {
-
+            if (((e.KeyChar >= '0') & (e.KeyChar <= '9')) | (e.KeyChar == '\b'))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void soloNumerosReales(object sender, KeyPressEventArgs e)
         {
-
+            if (((e.KeyChar >= '0') & (e.KeyChar <= '9')) | (e.KeyChar == '\b') | (e.KeyChar.ToString() == "."))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void FormPlanillas_Load(object sender, EventArgs e)
@@ -256,12 +314,55 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             bool aux = tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, txt_tipo.Text);
             if (aux)
             {
-                txt_Importe.Text = tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                if (!txt_tipo.Text.Equals("Servicio con Km"))
+                {
+                    txt_Importe.Text = tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                }
             }
-            else {
+            else 
+            {
                 txt_Importe.Text = "";
             }
+        }
 
+        private void txt_km_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_tipo.Text.Equals("Servicio con Km")) {
+                bool aux = tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                try
+                {
+                    if ((aux) & (int.Parse(txt_km.Text) > 0))
+                    {
+                        txt_Importe.Text = (int.Parse(tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text)) * int.Parse(txt_km.Text)).ToString();
+                    }
+                    else
+                    {
+                        txt_Importe.Text = "";
+                    }
+                }
+                catch {
+                    txt_Importe.Text = "";
+                }
+               
+            }
+        }
+
+        private void txt_filtrar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txt_filtrar.Text.Equals(""))
+                {
+                    ((DataTable)datosServicios.DataSource).DefaultView.RowFilter = txt_por.Text + " like '"+ txt_filtrar.Text + "%'";
+                }
+                else {
+                    ((DataTable)datosServicios.DataSource).DefaultView.RowFilter = null;
+                }
+            }
+            catch {
+                ((DataTable)datosServicios.DataSource).DefaultView.RowFilter = null;
+            }
+            
         }
     }
 }
