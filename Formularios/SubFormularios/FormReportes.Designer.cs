@@ -145,19 +145,19 @@
             // 
             this.btn_examinar.BackColor = System.Drawing.Color.Transparent;
             this.btn_examinar.BorderColor = System.Drawing.Color.Gold;
-            this.btn_examinar.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_examinar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_examinar.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btn_examinar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btn_examinar.FlatAppearance.BorderSize = 3;
             this.btn_examinar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
             this.btn_examinar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btn_examinar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_examinar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_examinar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_examinar.Location = new System.Drawing.Point(189, 164);
+            this.btn_examinar.Location = new System.Drawing.Point(183, 164);
             this.btn_examinar.Name = "btn_examinar";
             this.btn_examinar.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_examinar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_examinar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_examinar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btn_examinar.Size = new System.Drawing.Size(85, 29);
             this.btn_examinar.TabIndex = 75;
             this.btn_examinar.Text = "Examinar";

@@ -32,5 +32,10 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
             SqlCommand sentencia = new SqlCommand("SELECT * From Cliente");
             return conexion.EjecutarSentencia(sentencia);
         }
+        public DataSet Mostrar_info_de(String nombre_empresa)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * From Cliente WHERE NombreEmpresa='"+nombre_empresa+"'");
+            return conexion.EjecutarSentencia(sentencia);
+        }
     }
 }
