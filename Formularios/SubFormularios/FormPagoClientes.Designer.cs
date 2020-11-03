@@ -31,6 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cliente = new System.Windows.Forms.Label();
             this.txt_Empresa = new System.Windows.Forms.ComboBox();
             this.panel_CargaCliente = new System.Windows.Forms.Panel();
@@ -57,14 +60,28 @@
             this.cuentaBancaria = new System.Windows.Forms.Label();
             this.detalle_del_cliente = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_opciones = new System.Windows.Forms.ComboBox();
-            this.opcionPago = new System.Windows.Forms.Label();
-            this.txt_Fecha = new System.Windows.Forms.DateTimePicker();
+            this.txt_opcion_pago = new System.Windows.Forms.ComboBox();
+            this.opciones_pago = new System.Windows.Forms.Label();
+            this.txt_detalle = new System.Windows.Forms.TextBox();
+            this.detalle = new System.Windows.Forms.Label();
+            this.txt_fecha = new System.Windows.Forms.DateTimePicker();
             this.fecha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nro_cuenta = new System.Windows.Forms.TextBox();
+            this.nro_cuenta = new System.Windows.Forms.Label();
+            this.txt_banco = new System.Windows.Forms.TextBox();
+            this.banco = new System.Windows.Forms.Label();
+            this.txt_nro = new System.Windows.Forms.TextBox();
+            this.nro = new System.Windows.Forms.Label();
+            this.txt_monto = new System.Windows.Forms.TextBox();
+            this.monto = new System.Windows.Forms.Label();
+            this.txt_Fecha_c = new System.Windows.Forms.DateTimePicker();
+            this.fecha_c = new System.Windows.Forms.Label();
+            this.txt_comprobante_nro = new System.Windows.Forms.TextBox();
             this.nroComprobante = new System.Windows.Forms.Label();
             this.carga_de_pago = new System.Windows.Forms.Label();
             this.datos_cliente = new System.Windows.Forms.DataGridView();
+            this.datosPago = new System.Windows.Forms.DataGridView();
+            this.listado_pagos = new System.Windows.Forms.Label();
             this.panel_CargaCliente.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -75,6 +92,7 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datos_cliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosPago)).BeginInit();
             this.SuspendLayout();
             // 
             // cliente
@@ -118,7 +136,7 @@
             this.panel_CargaCliente.Controls.Add(this.telefono);
             this.panel_CargaCliente.Controls.Add(this.cuentaBancaria);
             this.panel_CargaCliente.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_CargaCliente.Location = new System.Drawing.Point(48, 83);
+            this.panel_CargaCliente.Location = new System.Drawing.Point(45, 68);
             this.panel_CargaCliente.Name = "panel_CargaCliente";
             this.panel_CargaCliente.Size = new System.Drawing.Size(942, 128);
             this.panel_CargaCliente.TabIndex = 65;
@@ -360,7 +378,7 @@
             this.detalle_del_cliente.BackColor = System.Drawing.Color.Transparent;
             this.detalle_del_cliente.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalle_del_cliente.ForeColor = System.Drawing.Color.Gold;
-            this.detalle_del_cliente.Location = new System.Drawing.Point(17, 51);
+            this.detalle_del_cliente.Location = new System.Drawing.Point(17, 36);
             this.detalle_del_cliente.Name = "detalle_del_cliente";
             this.detalle_del_cliente.Size = new System.Drawing.Size(201, 29);
             this.detalle_del_cliente.TabIndex = 66;
@@ -369,50 +387,82 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.txt_opciones);
-            this.panel1.Controls.Add(this.opcionPago);
-            this.panel1.Controls.Add(this.txt_Fecha);
+            this.panel1.Controls.Add(this.txt_opcion_pago);
+            this.panel1.Controls.Add(this.opciones_pago);
+            this.panel1.Controls.Add(this.txt_detalle);
+            this.panel1.Controls.Add(this.detalle);
+            this.panel1.Controls.Add(this.txt_fecha);
             this.panel1.Controls.Add(this.fecha);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_nro_cuenta);
+            this.panel1.Controls.Add(this.nro_cuenta);
+            this.panel1.Controls.Add(this.txt_banco);
+            this.panel1.Controls.Add(this.banco);
+            this.panel1.Controls.Add(this.txt_nro);
+            this.panel1.Controls.Add(this.nro);
+            this.panel1.Controls.Add(this.txt_monto);
+            this.panel1.Controls.Add(this.monto);
+            this.panel1.Controls.Add(this.txt_Fecha_c);
+            this.panel1.Controls.Add(this.fecha_c);
+            this.panel1.Controls.Add(this.txt_comprobante_nro);
             this.panel1.Controls.Add(this.nroComprobante);
             this.panel1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(48, 270);
+            this.panel1.Location = new System.Drawing.Point(48, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(668, 73);
+            this.panel1.Size = new System.Drawing.Size(939, 208);
             this.panel1.TabIndex = 66;
             // 
-            // txt_opciones
+            // txt_opcion_pago
             // 
-            this.txt_opciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_opciones.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_opciones.FormattingEnabled = true;
-            this.txt_opciones.Items.AddRange(new object[] {
+            this.txt_opcion_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_opcion_pago.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_opcion_pago.FormattingEnabled = true;
+            this.txt_opcion_pago.Items.AddRange(new object[] {
             "Efectivo",
-            "Transferencia bancaria"});
-            this.txt_opciones.Location = new System.Drawing.Point(512, 30);
-            this.txt_opciones.Name = "txt_opciones";
-            this.txt_opciones.Size = new System.Drawing.Size(124, 28);
-            this.txt_opciones.TabIndex = 56;
+            "Trasnferencia bancaria"});
+            this.txt_opcion_pago.Location = new System.Drawing.Point(771, 32);
+            this.txt_opcion_pago.Name = "txt_opcion_pago";
+            this.txt_opcion_pago.Size = new System.Drawing.Size(154, 26);
+            this.txt_opcion_pago.TabIndex = 72;
             // 
-            // opcionPago
+            // opciones_pago
             // 
-            this.opcionPago.AutoSize = true;
-            this.opcionPago.BackColor = System.Drawing.Color.Transparent;
-            this.opcionPago.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opcionPago.ForeColor = System.Drawing.Color.White;
-            this.opcionPago.Location = new System.Drawing.Point(509, 9);
-            this.opcionPago.Name = "opcionPago";
-            this.opcionPago.Size = new System.Drawing.Size(114, 20);
-            this.opcionPago.TabIndex = 55;
-            this.opcionPago.Text = "Opcion de pago";
+            this.opciones_pago.AutoSize = true;
+            this.opciones_pago.BackColor = System.Drawing.Color.Transparent;
+            this.opciones_pago.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opciones_pago.ForeColor = System.Drawing.Color.White;
+            this.opciones_pago.Location = new System.Drawing.Point(767, 9);
+            this.opciones_pago.Name = "opciones_pago";
+            this.opciones_pago.Size = new System.Drawing.Size(136, 23);
+            this.opciones_pago.TabIndex = 73;
+            this.opciones_pago.Text = "Opciones de pago";
             // 
-            // txt_Fecha
+            // txt_detalle
             // 
-            this.txt_Fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fecha.Location = new System.Drawing.Point(223, 29);
-            this.txt_Fecha.Name = "txt_Fecha";
-            this.txt_Fecha.Size = new System.Drawing.Size(275, 28);
-            this.txt_Fecha.TabIndex = 54;
+            this.txt_detalle.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_detalle.Location = new System.Drawing.Point(8, 163);
+            this.txt_detalle.Name = "txt_detalle";
+            this.txt_detalle.Size = new System.Drawing.Size(917, 26);
+            this.txt_detalle.TabIndex = 66;
+            // 
+            // detalle
+            // 
+            this.detalle.AutoSize = true;
+            this.detalle.BackColor = System.Drawing.Color.Transparent;
+            this.detalle.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detalle.ForeColor = System.Drawing.Color.White;
+            this.detalle.Location = new System.Drawing.Point(4, 140);
+            this.detalle.Name = "detalle";
+            this.detalle.Size = new System.Drawing.Size(59, 20);
+            this.detalle.TabIndex = 65;
+            this.detalle.Text = "Detalle";
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fecha.Location = new System.Drawing.Point(658, 96);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(267, 28);
+            this.txt_fecha.TabIndex = 64;
             // 
             // fecha
             // 
@@ -420,19 +470,119 @@
             this.fecha.BackColor = System.Drawing.Color.Transparent;
             this.fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.ForeColor = System.Drawing.Color.White;
-            this.fecha.Location = new System.Drawing.Point(219, 9);
+            this.fecha.Location = new System.Drawing.Point(654, 73);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(50, 20);
-            this.fecha.TabIndex = 53;
+            this.fecha.TabIndex = 63;
             this.fecha.Text = "Fecha";
             // 
-            // textBox1
+            // txt_nro_cuenta
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(7, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 26);
-            this.textBox1.TabIndex = 35;
+            this.txt_nro_cuenta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_nro_cuenta.Location = new System.Drawing.Point(441, 96);
+            this.txt_nro_cuenta.Name = "txt_nro_cuenta";
+            this.txt_nro_cuenta.Size = new System.Drawing.Size(189, 26);
+            this.txt_nro_cuenta.TabIndex = 62;
+            // 
+            // nro_cuenta
+            // 
+            this.nro_cuenta.AutoSize = true;
+            this.nro_cuenta.BackColor = System.Drawing.Color.Transparent;
+            this.nro_cuenta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nro_cuenta.ForeColor = System.Drawing.Color.White;
+            this.nro_cuenta.Location = new System.Drawing.Point(437, 73);
+            this.nro_cuenta.Name = "nro_cuenta";
+            this.nro_cuenta.Size = new System.Drawing.Size(95, 20);
+            this.nro_cuenta.TabIndex = 61;
+            this.nro_cuenta.Text = "Nroº Cuenta";
+            // 
+            // txt_banco
+            // 
+            this.txt_banco.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_banco.Location = new System.Drawing.Point(224, 96);
+            this.txt_banco.Name = "txt_banco";
+            this.txt_banco.Size = new System.Drawing.Size(189, 26);
+            this.txt_banco.TabIndex = 60;
+            // 
+            // banco
+            // 
+            this.banco.AutoSize = true;
+            this.banco.BackColor = System.Drawing.Color.Transparent;
+            this.banco.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.banco.ForeColor = System.Drawing.Color.White;
+            this.banco.Location = new System.Drawing.Point(220, 73);
+            this.banco.Name = "banco";
+            this.banco.Size = new System.Drawing.Size(50, 20);
+            this.banco.TabIndex = 59;
+            this.banco.Text = "Banco";
+            // 
+            // txt_nro
+            // 
+            this.txt_nro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_nro.Location = new System.Drawing.Point(8, 96);
+            this.txt_nro.Name = "txt_nro";
+            this.txt_nro.Size = new System.Drawing.Size(189, 26);
+            this.txt_nro.TabIndex = 58;
+            // 
+            // nro
+            // 
+            this.nro.AutoSize = true;
+            this.nro.BackColor = System.Drawing.Color.Transparent;
+            this.nro.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nro.ForeColor = System.Drawing.Color.White;
+            this.nro.Location = new System.Drawing.Point(4, 73);
+            this.nro.Name = "nro";
+            this.nro.Size = new System.Drawing.Size(42, 20);
+            this.nro.TabIndex = 57;
+            this.nro.Text = "Nro°";
+            // 
+            // txt_monto
+            // 
+            this.txt_monto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_monto.Location = new System.Drawing.Point(578, 32);
+            this.txt_monto.Name = "txt_monto";
+            this.txt_monto.Size = new System.Drawing.Size(172, 26);
+            this.txt_monto.TabIndex = 56;
+            // 
+            // monto
+            // 
+            this.monto.AutoSize = true;
+            this.monto.BackColor = System.Drawing.Color.Transparent;
+            this.monto.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monto.ForeColor = System.Drawing.Color.White;
+            this.monto.Location = new System.Drawing.Point(574, 9);
+            this.monto.Name = "monto";
+            this.monto.Size = new System.Drawing.Size(53, 20);
+            this.monto.TabIndex = 55;
+            this.monto.Text = "Monto";
+            // 
+            // txt_Fecha_c
+            // 
+            this.txt_Fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fecha_c.Location = new System.Drawing.Point(286, 32);
+            this.txt_Fecha_c.Name = "txt_Fecha_c";
+            this.txt_Fecha_c.Size = new System.Drawing.Size(275, 28);
+            this.txt_Fecha_c.TabIndex = 54;
+            // 
+            // fecha_c
+            // 
+            this.fecha_c.AutoSize = true;
+            this.fecha_c.BackColor = System.Drawing.Color.Transparent;
+            this.fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha_c.ForeColor = System.Drawing.Color.White;
+            this.fecha_c.Location = new System.Drawing.Point(282, 9);
+            this.fecha_c.Name = "fecha_c";
+            this.fecha_c.Size = new System.Drawing.Size(50, 20);
+            this.fecha_c.TabIndex = 53;
+            this.fecha_c.Text = "Fecha";
+            // 
+            // txt_comprobante_nro
+            // 
+            this.txt_comprobante_nro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_comprobante_nro.Location = new System.Drawing.Point(7, 32);
+            this.txt_comprobante_nro.Name = "txt_comprobante_nro";
+            this.txt_comprobante_nro.Size = new System.Drawing.Size(263, 26);
+            this.txt_comprobante_nro.TabIndex = 35;
             // 
             // nroComprobante
             // 
@@ -452,7 +602,7 @@
             this.carga_de_pago.BackColor = System.Drawing.Color.Transparent;
             this.carga_de_pago.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carga_de_pago.ForeColor = System.Drawing.Color.Gold;
-            this.carga_de_pago.Location = new System.Drawing.Point(17, 238);
+            this.carga_de_pago.Location = new System.Drawing.Point(12, 217);
             this.carga_de_pago.Name = "carga_de_pago";
             this.carga_de_pago.Size = new System.Drawing.Size(149, 29);
             this.carga_de_pago.TabIndex = 67;
@@ -490,7 +640,7 @@
             this.datos_cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.datos_cliente.EnableHeadersVisualStyles = false;
             this.datos_cliente.GridColor = System.Drawing.Color.Gold;
-            this.datos_cliente.Location = new System.Drawing.Point(792, 299);
+            this.datos_cliente.Location = new System.Drawing.Point(393, 217);
             this.datos_cliente.Name = "datos_cliente";
             this.datos_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -510,12 +660,78 @@
             this.datos_cliente.TabIndex = 71;
             this.datos_cliente.Visible = false;
             // 
+            // datosPago
+            // 
+            this.datosPago.AllowUserToAddRows = false;
+            this.datosPago.AllowUserToDeleteRows = false;
+            this.datosPago.AllowUserToOrderColumns = true;
+            this.datosPago.AllowUserToResizeColumns = false;
+            this.datosPago.AllowUserToResizeRows = false;
+            this.datosPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datosPago.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.datosPago.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datosPago.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datosPago.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosPago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.datosPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datosPago.DefaultCellStyle = dataGridViewCellStyle5;
+            this.datosPago.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.datosPago.EnableHeadersVisualStyles = false;
+            this.datosPago.GridColor = System.Drawing.Color.Gold;
+            this.datosPago.Location = new System.Drawing.Point(45, 559);
+            this.datosPago.Name = "datosPago";
+            this.datosPago.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosPago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.datosPago.RowHeadersVisible = false;
+            this.datosPago.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.datosPago.RowTemplate.Height = 23;
+            this.datosPago.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.datosPago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datosPago.Size = new System.Drawing.Size(939, 427);
+            this.datosPago.TabIndex = 72;
+            // 
+            // listado_pagos
+            // 
+            this.listado_pagos.AutoSize = true;
+            this.listado_pagos.BackColor = System.Drawing.Color.Transparent;
+            this.listado_pagos.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listado_pagos.ForeColor = System.Drawing.Color.Gold;
+            this.listado_pagos.Location = new System.Drawing.Point(17, 504);
+            this.listado_pagos.Name = "listado_pagos";
+            this.listado_pagos.Size = new System.Drawing.Size(176, 29);
+            this.listado_pagos.TabIndex = 73;
+            this.listado_pagos.Text = "Listado de pagos";
+            this.listado_pagos.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormPagoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1018, 817);
+            this.ClientSize = new System.Drawing.Size(1018, 1044);
+            this.Controls.Add(this.listado_pagos);
+            this.Controls.Add(this.datosPago);
             this.Controls.Add(this.datos_cliente);
             this.Controls.Add(this.carga_de_pago);
             this.Controls.Add(this.panel1);
@@ -525,7 +741,7 @@
             this.Controls.Add(this.txt_Empresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPagoClientes";
-            this.Text = "FormPagoClientes";
+            this.Text = "Detalle";
             this.panel_CargaCliente.ResumeLayout(false);
             this.panel_CargaCliente.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -545,6 +761,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datos_cliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosPago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,11 +790,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label nroComprobante;
         private System.Windows.Forms.Label carga_de_pago;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker txt_Fecha;
-        private System.Windows.Forms.Label fecha;
-        private System.Windows.Forms.ComboBox txt_opciones;
-        private System.Windows.Forms.Label opcionPago;
+        private System.Windows.Forms.TextBox txt_comprobante_nro;
+        private System.Windows.Forms.DateTimePicker txt_Fecha_c;
+        private System.Windows.Forms.Label fecha_c;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
@@ -586,5 +801,21 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView datos_cliente;
+        private System.Windows.Forms.TextBox txt_monto;
+        private System.Windows.Forms.Label monto;
+        private System.Windows.Forms.TextBox txt_nro;
+        private System.Windows.Forms.Label nro;
+        private System.Windows.Forms.TextBox txt_detalle;
+        private System.Windows.Forms.Label detalle;
+        private System.Windows.Forms.DateTimePicker txt_fecha;
+        private System.Windows.Forms.Label fecha;
+        private System.Windows.Forms.TextBox txt_nro_cuenta;
+        private System.Windows.Forms.Label nro_cuenta;
+        private System.Windows.Forms.TextBox txt_banco;
+        private System.Windows.Forms.Label banco;
+        private System.Windows.Forms.ComboBox txt_opcion_pago;
+        private System.Windows.Forms.Label opciones_pago;
+        private System.Windows.Forms.DataGridView datosPago;
+        private System.Windows.Forms.Label listado_pagos;
     }
 }
