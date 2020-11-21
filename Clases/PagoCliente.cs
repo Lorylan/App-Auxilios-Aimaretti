@@ -11,6 +11,7 @@ namespace PuebaDeDiseñoAA.Clases
         public String ComprobanteNro { get; set; }
         public DateTime FechaC { get; set; }
         public String Monto { get; set; }
+        public String Tipo { get; set; }
         public String Nro { get; set; }
         public String Banco { get; set; }
         public String NroCuenta { get; set; }
@@ -21,7 +22,7 @@ namespace PuebaDeDiseñoAA.Clases
 
 
         public PagoCliente(String com_nro, DateTime fc, String m, String nro, String b,String nro_c,
-            DateTime fecha, String d, String idC) {
+            DateTime fecha, String d, String idC, String t) {
             idUsuario = Program.nombreUsuario;
             idCliente = idC;
             Detalle = d;
@@ -32,6 +33,7 @@ namespace PuebaDeDiseñoAA.Clases
             Monto = m;
             FechaC = fc;
             ComprobanteNro = com_nro;
+            Tipo = t;
         }
 
     }
