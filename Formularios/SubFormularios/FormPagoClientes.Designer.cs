@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cliente = new System.Windows.Forms.Label();
             this.txt_Empresa = new System.Windows.Forms.ComboBox();
             this.panel_CargaCliente = new System.Windows.Forms.Panel();
@@ -79,9 +79,13 @@
             this.txt_comprobante_nro = new System.Windows.Forms.TextBox();
             this.nroComprobante = new System.Windows.Forms.Label();
             this.carga_de_pago = new System.Windows.Forms.Label();
-            this.datos_cliente = new System.Windows.Forms.DataGridView();
-            this.datosPago = new System.Windows.Forms.DataGridView();
+            this.datos_pago = new System.Windows.Forms.DataGridView();
             this.listado_pagos = new System.Windows.Forms.Label();
+            this.datos_cliente = new System.Windows.Forms.DataGridView();
+            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.panel_CargaCliente.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -91,8 +95,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datos_cliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosPago)).BeginInit();
             this.SuspendLayout();
             // 
             // cliente
@@ -387,6 +391,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.datos_cliente);
             this.panel1.Controls.Add(this.txt_opcion_pago);
             this.panel1.Controls.Add(this.opciones_pago);
             this.panel1.Controls.Add(this.txt_detalle);
@@ -406,9 +411,9 @@
             this.panel1.Controls.Add(this.txt_comprobante_nro);
             this.panel1.Controls.Add(this.nroComprobante);
             this.panel1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(48, 265);
+            this.panel1.Location = new System.Drawing.Point(48, 258);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 208);
+            this.panel1.Size = new System.Drawing.Size(939, 231);
             this.panel1.TabIndex = 66;
             // 
             // txt_opcion_pago
@@ -419,10 +424,11 @@
             this.txt_opcion_pago.Items.AddRange(new object[] {
             "Efectivo",
             "Trasnferencia bancaria"});
-            this.txt_opcion_pago.Location = new System.Drawing.Point(771, 32);
+            this.txt_opcion_pago.Location = new System.Drawing.Point(466, 10);
             this.txt_opcion_pago.Name = "txt_opcion_pago";
-            this.txt_opcion_pago.Size = new System.Drawing.Size(154, 26);
+            this.txt_opcion_pago.Size = new System.Drawing.Size(181, 26);
             this.txt_opcion_pago.TabIndex = 72;
+            this.txt_opcion_pago.SelectedIndexChanged += new System.EventHandler(this.txt_opcion_pago_SelectedIndexChanged);
             // 
             // opciones_pago
             // 
@@ -430,7 +436,7 @@
             this.opciones_pago.BackColor = System.Drawing.Color.Transparent;
             this.opciones_pago.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opciones_pago.ForeColor = System.Drawing.Color.White;
-            this.opciones_pago.Location = new System.Drawing.Point(767, 9);
+            this.opciones_pago.Location = new System.Drawing.Point(315, 9);
             this.opciones_pago.Name = "opciones_pago";
             this.opciones_pago.Size = new System.Drawing.Size(136, 23);
             this.opciones_pago.TabIndex = 73;
@@ -439,7 +445,7 @@
             // txt_detalle
             // 
             this.txt_detalle.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_detalle.Location = new System.Drawing.Point(8, 163);
+            this.txt_detalle.Location = new System.Drawing.Point(7, 188);
             this.txt_detalle.Name = "txt_detalle";
             this.txt_detalle.Size = new System.Drawing.Size(917, 26);
             this.txt_detalle.TabIndex = 66;
@@ -450,7 +456,7 @@
             this.detalle.BackColor = System.Drawing.Color.Transparent;
             this.detalle.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalle.ForeColor = System.Drawing.Color.White;
-            this.detalle.Location = new System.Drawing.Point(4, 140);
+            this.detalle.Location = new System.Drawing.Point(3, 165);
             this.detalle.Name = "detalle";
             this.detalle.Size = new System.Drawing.Size(59, 20);
             this.detalle.TabIndex = 65;
@@ -459,7 +465,7 @@
             // txt_fecha
             // 
             this.txt_fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.Location = new System.Drawing.Point(658, 96);
+            this.txt_fecha.Location = new System.Drawing.Point(657, 136);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(267, 28);
             this.txt_fecha.TabIndex = 64;
@@ -470,7 +476,7 @@
             this.fecha.BackColor = System.Drawing.Color.Transparent;
             this.fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.ForeColor = System.Drawing.Color.White;
-            this.fecha.Location = new System.Drawing.Point(654, 73);
+            this.fecha.Location = new System.Drawing.Point(659, 113);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(50, 20);
             this.fecha.TabIndex = 63;
@@ -478,8 +484,9 @@
             // 
             // txt_nro_cuenta
             // 
+            this.txt_nro_cuenta.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txt_nro_cuenta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_nro_cuenta.Location = new System.Drawing.Point(441, 96);
+            this.txt_nro_cuenta.Location = new System.Drawing.Point(440, 136);
             this.txt_nro_cuenta.Name = "txt_nro_cuenta";
             this.txt_nro_cuenta.Size = new System.Drawing.Size(189, 26);
             this.txt_nro_cuenta.TabIndex = 62;
@@ -490,7 +497,7 @@
             this.nro_cuenta.BackColor = System.Drawing.Color.Transparent;
             this.nro_cuenta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nro_cuenta.ForeColor = System.Drawing.Color.White;
-            this.nro_cuenta.Location = new System.Drawing.Point(437, 73);
+            this.nro_cuenta.Location = new System.Drawing.Point(442, 113);
             this.nro_cuenta.Name = "nro_cuenta";
             this.nro_cuenta.Size = new System.Drawing.Size(95, 20);
             this.nro_cuenta.TabIndex = 61;
@@ -499,7 +506,7 @@
             // txt_banco
             // 
             this.txt_banco.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_banco.Location = new System.Drawing.Point(224, 96);
+            this.txt_banco.Location = new System.Drawing.Point(223, 136);
             this.txt_banco.Name = "txt_banco";
             this.txt_banco.Size = new System.Drawing.Size(189, 26);
             this.txt_banco.TabIndex = 60;
@@ -510,7 +517,7 @@
             this.banco.BackColor = System.Drawing.Color.Transparent;
             this.banco.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.banco.ForeColor = System.Drawing.Color.White;
-            this.banco.Location = new System.Drawing.Point(220, 73);
+            this.banco.Location = new System.Drawing.Point(225, 113);
             this.banco.Name = "banco";
             this.banco.Size = new System.Drawing.Size(50, 20);
             this.banco.TabIndex = 59;
@@ -519,7 +526,7 @@
             // txt_nro
             // 
             this.txt_nro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_nro.Location = new System.Drawing.Point(8, 96);
+            this.txt_nro.Location = new System.Drawing.Point(7, 136);
             this.txt_nro.Name = "txt_nro";
             this.txt_nro.Size = new System.Drawing.Size(189, 26);
             this.txt_nro.TabIndex = 58;
@@ -530,7 +537,7 @@
             this.nro.BackColor = System.Drawing.Color.Transparent;
             this.nro.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nro.ForeColor = System.Drawing.Color.White;
-            this.nro.Location = new System.Drawing.Point(4, 73);
+            this.nro.Location = new System.Drawing.Point(9, 113);
             this.nro.Name = "nro";
             this.nro.Size = new System.Drawing.Size(42, 20);
             this.nro.TabIndex = 57;
@@ -539,7 +546,7 @@
             // txt_monto
             // 
             this.txt_monto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_monto.Location = new System.Drawing.Point(578, 32);
+            this.txt_monto.Location = new System.Drawing.Point(752, 79);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(172, 26);
             this.txt_monto.TabIndex = 56;
@@ -550,7 +557,7 @@
             this.monto.BackColor = System.Drawing.Color.Transparent;
             this.monto.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monto.ForeColor = System.Drawing.Color.White;
-            this.monto.Location = new System.Drawing.Point(574, 9);
+            this.monto.Location = new System.Drawing.Point(748, 51);
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(53, 20);
             this.monto.TabIndex = 55;
@@ -559,7 +566,7 @@
             // txt_Fecha_c
             // 
             this.txt_Fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fecha_c.Location = new System.Drawing.Point(286, 32);
+            this.txt_Fecha_c.Location = new System.Drawing.Point(352, 67);
             this.txt_Fecha_c.Name = "txt_Fecha_c";
             this.txt_Fecha_c.Size = new System.Drawing.Size(275, 28);
             this.txt_Fecha_c.TabIndex = 54;
@@ -570,7 +577,7 @@
             this.fecha_c.BackColor = System.Drawing.Color.Transparent;
             this.fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_c.ForeColor = System.Drawing.Color.White;
-            this.fecha_c.Location = new System.Drawing.Point(282, 9);
+            this.fecha_c.Location = new System.Drawing.Point(362, 44);
             this.fecha_c.Name = "fecha_c";
             this.fecha_c.Size = new System.Drawing.Size(50, 20);
             this.fecha_c.TabIndex = 53;
@@ -579,7 +586,7 @@
             // txt_comprobante_nro
             // 
             this.txt_comprobante_nro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_comprobante_nro.Location = new System.Drawing.Point(7, 32);
+            this.txt_comprobante_nro.Location = new System.Drawing.Point(9, 72);
             this.txt_comprobante_nro.Name = "txt_comprobante_nro";
             this.txt_comprobante_nro.Size = new System.Drawing.Size(263, 26);
             this.txt_comprobante_nro.TabIndex = 35;
@@ -590,7 +597,7 @@
             this.nroComprobante.BackColor = System.Drawing.Color.Transparent;
             this.nroComprobante.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nroComprobante.ForeColor = System.Drawing.Color.White;
-            this.nroComprobante.Location = new System.Drawing.Point(3, 9);
+            this.nroComprobante.Location = new System.Drawing.Point(17, 51);
             this.nroComprobante.Name = "nroComprobante";
             this.nroComprobante.Size = new System.Drawing.Size(194, 20);
             this.nroComprobante.TabIndex = 16;
@@ -608,6 +615,69 @@
             this.carga_de_pago.TabIndex = 67;
             this.carga_de_pago.Text = "Carga de pago";
             // 
+            // datos_pago
+            // 
+            this.datos_pago.AllowUserToAddRows = false;
+            this.datos_pago.AllowUserToDeleteRows = false;
+            this.datos_pago.AllowUserToOrderColumns = true;
+            this.datos_pago.AllowUserToResizeColumns = false;
+            this.datos_pago.AllowUserToResizeRows = false;
+            this.datos_pago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datos_pago.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.datos_pago.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datos_pago.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datos_pago.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.datos_pago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datos_pago.DefaultCellStyle = dataGridViewCellStyle11;
+            this.datos_pago.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.datos_pago.EnableHeadersVisualStyles = false;
+            this.datos_pago.GridColor = System.Drawing.Color.Gold;
+            this.datos_pago.Location = new System.Drawing.Point(45, 608);
+            this.datos_pago.Name = "datos_pago";
+            this.datos_pago.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.datos_pago.RowHeadersVisible = false;
+            this.datos_pago.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.datos_pago.RowTemplate.Height = 23;
+            this.datos_pago.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.datos_pago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datos_pago.Size = new System.Drawing.Size(939, 409);
+            this.datos_pago.TabIndex = 72;
+            // 
+            // listado_pagos
+            // 
+            this.listado_pagos.AutoSize = true;
+            this.listado_pagos.BackColor = System.Drawing.Color.Transparent;
+            this.listado_pagos.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listado_pagos.ForeColor = System.Drawing.Color.Gold;
+            this.listado_pagos.Location = new System.Drawing.Point(17, 567);
+            this.listado_pagos.Name = "listado_pagos";
+            this.listado_pagos.Size = new System.Drawing.Size(176, 29);
+            this.listado_pagos.TabIndex = 73;
+            this.listado_pagos.Text = "Listado de pagos";
+            // 
             // datos_cliente
             // 
             this.datos_cliente.AllowUserToAddRows = false;
@@ -620,109 +690,141 @@
             this.datos_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datos_cliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datos_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.datos_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datos_cliente.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datos_cliente.DefaultCellStyle = dataGridViewCellStyle8;
             this.datos_cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.datos_cliente.EnableHeadersVisualStyles = false;
             this.datos_cliente.GridColor = System.Drawing.Color.Gold;
-            this.datos_cliente.Location = new System.Drawing.Point(393, 217);
+            this.datos_cliente.Location = new System.Drawing.Point(15, -252);
             this.datos_cliente.Name = "datos_cliente";
             this.datos_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.datos_cliente.RowHeadersVisible = false;
             this.datos_cliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.datos_cliente.RowTemplate.Height = 23;
             this.datos_cliente.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.datos_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datos_cliente.Size = new System.Drawing.Size(84, 32);
-            this.datos_cliente.TabIndex = 71;
+            this.datos_cliente.Size = new System.Drawing.Size(116, 17);
+            this.datos_cliente.TabIndex = 74;
             this.datos_cliente.Visible = false;
             // 
-            // datosPago
+            // btn_editar
             // 
-            this.datosPago.AllowUserToAddRows = false;
-            this.datosPago.AllowUserToDeleteRows = false;
-            this.datosPago.AllowUserToOrderColumns = true;
-            this.datosPago.AllowUserToResizeColumns = false;
-            this.datosPago.AllowUserToResizeRows = false;
-            this.datosPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.datosPago.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.datosPago.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datosPago.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datosPago.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosPago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.datosPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datosPago.DefaultCellStyle = dataGridViewCellStyle5;
-            this.datosPago.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.datosPago.EnableHeadersVisualStyles = false;
-            this.datosPago.GridColor = System.Drawing.Color.Gold;
-            this.datosPago.Location = new System.Drawing.Point(45, 559);
-            this.datosPago.Name = "datosPago";
-            this.datosPago.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosPago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.datosPago.RowHeadersVisible = false;
-            this.datosPago.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.datosPago.RowTemplate.Height = 23;
-            this.datosPago.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.datosPago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datosPago.Size = new System.Drawing.Size(939, 427);
-            this.datosPago.TabIndex = 72;
+            this.btn_editar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_editar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
+            this.btn_editar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_editar.FlatAppearance.BorderSize = 3;
+            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.btn_editar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_editar.Location = new System.Drawing.Point(376, 506);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.btn_editar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_editar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_editar.Size = new System.Drawing.Size(123, 32);
+            this.btn_editar.TabIndex = 75;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.TextColor = System.Drawing.Color.White;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
-            // listado_pagos
+            // btn_borrar
             // 
-            this.listado_pagos.AutoSize = true;
-            this.listado_pagos.BackColor = System.Drawing.Color.Transparent;
-            this.listado_pagos.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listado_pagos.ForeColor = System.Drawing.Color.Gold;
-            this.listado_pagos.Location = new System.Drawing.Point(17, 504);
-            this.listado_pagos.Name = "listado_pagos";
-            this.listado_pagos.Size = new System.Drawing.Size(176, 29);
-            this.listado_pagos.TabIndex = 73;
-            this.listado_pagos.Text = "Listado de pagos";
-            this.listado_pagos.Click += new System.EventHandler(this.label1_Click);
+            this.btn_borrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_borrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_borrar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_borrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_borrar.FlatAppearance.BorderSize = 3;
+            this.btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_borrar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.btn_borrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_borrar.Location = new System.Drawing.Point(520, 508);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_borrar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
+            this.btn_borrar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_borrar.Size = new System.Drawing.Size(123, 30);
+            this.btn_borrar.TabIndex = 76;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.TextColor = System.Drawing.Color.White;
+            this.btn_borrar.UseVisualStyleBackColor = false;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cancelar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_cancelar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatAppearance.BorderSize = 3;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.btn_cancelar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_cancelar.Location = new System.Drawing.Point(666, 508);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.btn_cancelar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
+            this.btn_cancelar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_cancelar.Size = new System.Drawing.Size(125, 30);
+            this.btn_cancelar.TabIndex = 77;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextColor = System.Drawing.Color.White;
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
+            this.btn_agregar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatAppearance.BorderSize = 3;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.Location = new System.Drawing.Point(228, 506);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_agregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_agregar.Size = new System.Drawing.Size(123, 32);
+            this.btn_agregar.TabIndex = 74;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextColor = System.Drawing.Color.White;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // FormPagoClientes
             // 
@@ -730,9 +832,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1018, 1044);
+            this.Controls.Add(this.btn_editar);
+            this.Controls.Add(this.btn_borrar);
+            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.listado_pagos);
-            this.Controls.Add(this.datosPago);
-            this.Controls.Add(this.datos_cliente);
+            this.Controls.Add(this.datos_pago);
             this.Controls.Add(this.carga_de_pago);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.detalle_del_cliente);
@@ -760,8 +865,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datos_cliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosPago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,7 +905,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView datos_cliente;
         private System.Windows.Forms.TextBox txt_monto;
         private System.Windows.Forms.Label monto;
         private System.Windows.Forms.TextBox txt_nro;
@@ -815,7 +919,12 @@
         private System.Windows.Forms.Label banco;
         private System.Windows.Forms.ComboBox txt_opcion_pago;
         private System.Windows.Forms.Label opciones_pago;
-        private System.Windows.Forms.DataGridView datosPago;
+        private System.Windows.Forms.DataGridView datos_pago;
         private System.Windows.Forms.Label listado_pagos;
+        private System.Windows.Forms.DataGridView datos_cliente;
+        private ButtonRedondeado btn_editar;
+        private ButtonRedondeado btn_borrar;
+        private ButtonRedondeado btn_cancelar;
+        private ButtonRedondeado btn_agregar;
     }
 }

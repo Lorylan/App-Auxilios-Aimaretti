@@ -14,6 +14,7 @@ namespace PuebaDeDiseñoAA.Clases
         public string Importe { get; set; }
         public string idCliente { get; set; }
         public string Usuario { get; set; }
+  
         public int id;
         public Combustible(DateTime fecha, string l, string im, string idC) {
             Fecha = fecha;

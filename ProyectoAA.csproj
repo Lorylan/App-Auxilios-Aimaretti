@@ -72,6 +72,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Combustible.cs" />
     <Compile Include="Clases\Encriptador.cs" />
+    <Compile Include="Clases\PagoCliente.cs" />
     <Compile Include="Clases\Personal.cs" />
     <Compile Include="Clases\Servicio.cs" />
     <Compile Include="Clases\TarifaPactada.cs" />
