@@ -62,6 +62,7 @@
     <Compile Include="BaseDeDatos\ClienteBD.cs" />
     <Compile Include="BaseDeDatos\CombustibleBD.cs" />
     <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="BaseDeDatos\PagoClienteBD.cs" />
     <Compile Include="BaseDeDatos\PersonalDB.cs" />
     <Compile Include="BaseDeDatos\ServicioBD.cs" />
     <Compile Include="BaseDeDatos\TarifaPactadaDB.cs" />
