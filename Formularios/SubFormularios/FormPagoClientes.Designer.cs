@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cliente = new System.Windows.Forms.Label();
             this.txt_Empresa = new System.Windows.Forms.ComboBox();
             this.panel_CargaCliente = new System.Windows.Forms.Panel();
@@ -60,6 +60,7 @@
             this.cuentaBancaria = new System.Windows.Forms.Label();
             this.detalle_del_cliente = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.datos_cliente = new System.Windows.Forms.DataGridView();
             this.txt_opcion_pago = new System.Windows.Forms.ComboBox();
             this.opciones_pago = new System.Windows.Forms.Label();
             this.txt_detalle = new System.Windows.Forms.TextBox();
@@ -81,7 +82,18 @@
             this.carga_de_pago = new System.Windows.Forms.Label();
             this.datos_pago = new System.Windows.Forms.DataGridView();
             this.listado_pagos = new System.Windows.Forms.Label();
-            this.datos_cliente = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_error = new System.Windows.Forms.Label();
+            this.pb_error = new System.Windows.Forms.PictureBox();
+            this.obligatorio2 = new System.Windows.Forms.Label();
+            this.obligatorio3 = new System.Windows.Forms.Label();
+            this.obligatorio = new System.Windows.Forms.Label();
+            this.obligatorio1 = new System.Windows.Forms.Label();
             this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
@@ -95,8 +107,9 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datos_pago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datos_cliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             this.SuspendLayout();
             // 
             // cliente
@@ -391,6 +404,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.obligatorio1);
+            this.panel1.Controls.Add(this.obligatorio);
+            this.panel1.Controls.Add(this.obligatorio3);
+            this.panel1.Controls.Add(this.obligatorio2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.datos_cliente);
             this.panel1.Controls.Add(this.txt_opcion_pago);
             this.panel1.Controls.Add(this.opciones_pago);
@@ -413,8 +436,60 @@
             this.panel1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(48, 258);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 231);
+            this.panel1.Size = new System.Drawing.Size(939, 257);
             this.panel1.TabIndex = 66;
+            // 
+            // datos_cliente
+            // 
+            this.datos_cliente.AllowUserToAddRows = false;
+            this.datos_cliente.AllowUserToDeleteRows = false;
+            this.datos_cliente.AllowUserToOrderColumns = true;
+            this.datos_cliente.AllowUserToResizeColumns = false;
+            this.datos_cliente.AllowUserToResizeRows = false;
+            this.datos_cliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datos_cliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.datos_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datos_cliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datos_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datos_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datos_cliente.DefaultCellStyle = dataGridViewCellStyle2;
+            this.datos_cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.datos_cliente.EnableHeadersVisualStyles = false;
+            this.datos_cliente.GridColor = System.Drawing.Color.Gold;
+            this.datos_cliente.Location = new System.Drawing.Point(15, -252);
+            this.datos_cliente.Name = "datos_cliente";
+            this.datos_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.datos_cliente.RowHeadersVisible = false;
+            this.datos_cliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.datos_cliente.RowTemplate.Height = 23;
+            this.datos_cliente.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.datos_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datos_cliente.Size = new System.Drawing.Size(116, 17);
+            this.datos_cliente.TabIndex = 74;
+            this.datos_cliente.Visible = false;
             // 
             // txt_opcion_pago
             // 
@@ -627,37 +702,37 @@
             this.datos_pago.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datos_pago.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datos_pago.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_pago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datos_pago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datos_pago.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datos_pago.DefaultCellStyle = dataGridViewCellStyle5;
             this.datos_pago.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.datos_pago.EnableHeadersVisualStyles = false;
             this.datos_pago.GridColor = System.Drawing.Color.Gold;
             this.datos_pago.Location = new System.Drawing.Point(45, 608);
             this.datos_pago.Name = "datos_pago";
             this.datos_pago.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_pago.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.datos_pago.RowHeadersVisible = false;
             this.datos_pago.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.datos_pago.RowTemplate.Height = 23;
@@ -678,57 +753,153 @@
             this.listado_pagos.TabIndex = 73;
             this.listado_pagos.Text = "Listado de pagos";
             // 
-            // datos_cliente
+            // label8
             // 
-            this.datos_cliente.AllowUserToAddRows = false;
-            this.datos_cliente.AllowUserToDeleteRows = false;
-            this.datos_cliente.AllowUserToOrderColumns = true;
-            this.datos_cliente.AllowUserToResizeColumns = false;
-            this.datos_cliente.AllowUserToResizeRows = false;
-            this.datos_cliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.datos_cliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.datos_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datos_cliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datos_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.datos_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datos_cliente.DefaultCellStyle = dataGridViewCellStyle8;
-            this.datos_cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.datos_cliente.EnableHeadersVisualStyles = false;
-            this.datos_cliente.GridColor = System.Drawing.Color.Gold;
-            this.datos_cliente.Location = new System.Drawing.Point(15, -252);
-            this.datos_cliente.Name = "datos_cliente";
-            this.datos_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.datos_cliente.RowHeadersVisible = false;
-            this.datos_cliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.datos_cliente.RowTemplate.Height = 23;
-            this.datos_cliente.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.datos_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datos_cliente.Size = new System.Drawing.Size(116, 17);
-            this.datos_cliente.TabIndex = 74;
-            this.datos_cliente.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label8.Location = new System.Drawing.Point(197, 228);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 18);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.LightGray;
+            this.label9.Location = new System.Drawing.Point(218, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 20);
+            this.label9.TabIndex = 77;
+            this.label9.Text = "son obligatorios";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.LightGray;
+            this.label.Location = new System.Drawing.Point(11, 228);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(188, 20);
+            this.label.TabIndex = 75;
+            this.label.Text = "Los campos marcados con \r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(217, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 18);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label2.Location = new System.Drawing.Point(411, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 18);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(807, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 18);
+            this.label3.TabIndex = 80;
+            this.label3.Text = "*";
+            // 
+            // txt_error
+            // 
+            this.txt_error.AutoSize = true;
+            this.txt_error.BackColor = System.Drawing.Color.Transparent;
+            this.txt_error.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
+            this.txt_error.Location = new System.Drawing.Point(199, 224);
+            this.txt_error.Name = "txt_error";
+            this.txt_error.Size = new System.Drawing.Size(218, 20);
+            this.txt_error.TabIndex = 79;
+            this.txt_error.Text = "Completar campo/s faltante/s";
+            this.txt_error.Visible = false;
+            // 
+            // pb_error
+            // 
+            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_error.Location = new System.Drawing.Point(164, 220);
+            this.pb_error.Name = "pb_error";
+            this.pb_error.Size = new System.Drawing.Size(29, 26);
+            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_error.TabIndex = 78;
+            this.pb_error.TabStop = false;
+            this.pb_error.Visible = false;
+            // 
+            // obligatorio2
+            // 
+            this.obligatorio2.AutoSize = true;
+            this.obligatorio2.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio2.Location = new System.Drawing.Point(281, 115);
+            this.obligatorio2.Name = "obligatorio2";
+            this.obligatorio2.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio2.TabIndex = 81;
+            this.obligatorio2.Text = "*";
+            this.obligatorio2.Visible = false;
+            // 
+            // obligatorio3
+            // 
+            this.obligatorio3.AutoSize = true;
+            this.obligatorio3.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio3.Location = new System.Drawing.Point(55, 113);
+            this.obligatorio3.Name = "obligatorio3";
+            this.obligatorio3.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio3.TabIndex = 82;
+            this.obligatorio3.Text = "*";
+            this.obligatorio3.Visible = false;
+            // 
+            // obligatorio
+            // 
+            this.obligatorio.AutoSize = true;
+            this.obligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio.Location = new System.Drawing.Point(715, 113);
+            this.obligatorio.Name = "obligatorio";
+            this.obligatorio.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio.TabIndex = 83;
+            this.obligatorio.Text = "*";
+            this.obligatorio.Visible = false;
+            // 
+            // obligatorio1
+            // 
+            this.obligatorio1.AutoSize = true;
+            this.obligatorio1.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio1.Location = new System.Drawing.Point(543, 115);
+            this.obligatorio1.Name = "obligatorio1";
+            this.obligatorio1.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio1.TabIndex = 84;
+            this.obligatorio1.Text = "*";
+            this.obligatorio1.Visible = false;
             // 
             // btn_editar
             // 
@@ -742,7 +913,7 @@
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_editar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_editar.Location = new System.Drawing.Point(376, 506);
+            this.btn_editar.Location = new System.Drawing.Point(374, 521);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_editar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -766,7 +937,7 @@
             this.btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_borrar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_borrar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_borrar.Location = new System.Drawing.Point(520, 508);
+            this.btn_borrar.Location = new System.Drawing.Point(518, 523);
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
             this.btn_borrar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
@@ -790,7 +961,7 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_cancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cancelar.Location = new System.Drawing.Point(666, 508);
+            this.btn_cancelar.Location = new System.Drawing.Point(664, 523);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
             this.btn_cancelar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
@@ -814,7 +985,7 @@
             this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_agregar.Location = new System.Drawing.Point(228, 506);
+            this.btn_agregar.Location = new System.Drawing.Point(226, 521);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -832,6 +1003,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1018, 1044);
+            this.Controls.Add(this.txt_error);
+            this.Controls.Add(this.pb_error);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.btn_cancelar);
@@ -865,8 +1038,9 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datos_pago)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datos_cliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -926,5 +1100,17 @@
         private ButtonRedondeado btn_borrar;
         private ButtonRedondeado btn_cancelar;
         private ButtonRedondeado btn_agregar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label txt_error;
+        private System.Windows.Forms.PictureBox pb_error;
+        private System.Windows.Forms.Label obligatorio1;
+        private System.Windows.Forms.Label obligatorio;
+        private System.Windows.Forms.Label obligatorio3;
+        private System.Windows.Forms.Label obligatorio2;
     }
 }

@@ -17,6 +17,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
     {
         CombustibleBD combustibleBD;
         ClienteBD clienteBD;
+
         
         private void cargarOpciones() {
 

@@ -14,6 +14,14 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
     public partial class FormPagoClientes : Form{
         ClienteBD clienteBD;
 
+        private void visibilidad_obligatorio(Boolean bol)
+        {
+            obligatorio.Visible = bol;
+            obligatorio1.Visible = bol;
+            obligatorio2.Visible = bol;
+            obligatorio3.Visible = bol;
+        }
+
         private void diseable_campos() {
             txt_detalle.Enabled = false;
             txt_detalle.BackColor = Color.Silver;
@@ -51,9 +59,10 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             desactivarBotones(new ButtonRedondeado[] { btn_agregar, btn_borrar, btn_editar, btn_cancelar }, Color.Silver);
             txt_Empresa.BackColor = Color.White;
             diseable_campos();
+            visibilidad_obligatorio(false);
             cargarOpciones();
         }
-        private void cargar_datos() {
+        private void cargar_datos_empresa() {
             datos_cliente.DataSource = clienteBD.Mostrar_info_de(txt_Empresa.Text).Tables[0];
             txt_cuit.Text = datos_cliente.Rows[0].Cells[1].Value.ToString();
             txt_email.Text = datos_cliente.Rows[0].Cells[2].Value.ToString();
@@ -65,7 +74,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private void txt_Empresa_SelectedIndexChanged(object sender, EventArgs e){
             if (!sender.ToString().Equals("")) {
-                cargar_datos();
+                cargar_datos_empresa();
                 activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
 
             }
@@ -95,12 +104,15 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         private void txt_opcion_pago_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (txt_opcion_pago.Text.Equals("Efectivo")){
+                visibilidad_obligatorio(false);
                 diseable_campos();
                 txt_detalle.Enabled = true;
                 txt_detalle.BackColor = Color.White;
+                
             }
             else {
                 diseable_campos();
+                visibilidad_obligatorio(true);
                 txt_fecha.Enabled = true;
                 txt_fecha.BackColor = Color.White;
                 txt_nro_cuenta.Enabled = true;
