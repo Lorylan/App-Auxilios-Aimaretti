@@ -66,8 +66,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private bool InfoValidaCliente()
         {
-            if ((txt_nombreEmpresa.Text == "") | (txt_cuit.Text == "") | (txt_domicilio.Text == "")
-                | (txt_cuentaBancaria.Text == "") | (txt_email.Text == "") | (txt_telefono.Text == ""))
+            if ((txt_nombreEmpresa.Text.Trim().Equals("") | (txt_cuit.Text.Trim().Equals("")) | (txt_domicilio.Text.Trim().Equals(""))
+                | (txt_cuentaBancaria.Text.Trim().Equals("")) | (txt_email.Text.Trim().Equals("")) | (txt_telefono.Text.Trim().Equals(""))))
             {
                 return false;
             }
@@ -77,7 +77,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             }
         }
         private bool InfoValidaTp() {
-            if ((txt_tipo.Text != "") & (txt_importe.Text != ""))
+            if ((!txt_tipo.Text.Trim().Equals("")) & (!txt_importe.Text.Trim().Equals("")))
             {
                 return true;
             }

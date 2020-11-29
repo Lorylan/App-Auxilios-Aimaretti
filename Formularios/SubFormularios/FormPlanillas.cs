@@ -36,8 +36,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private bool InfoValida()
         {
-            if ((txt_codigo.Text == "") | (txt_tipo.Text == "") | (txt_desde.Text == "")| (txt_hasta.Text == "") 
-                | (txt_km.Text == "") | (txt_montoCobrado.Text == "") | (txt_Importe.Text == "")
+            if ((txt_codigo.Text.Trim().Equals("")) | (txt_tipo.Text.Trim().Equals("")) | (txt_desde.Text.Trim().Equals("")) | (txt_hasta.Text.Trim().Equals("")) 
+                | (txt_km.Text.Trim().Equals("")) | (txt_montoCobrado.Text.Trim().Equals("")) | (txt_Importe.Text.Trim().Equals(""))
                 )
             {
                 return false;

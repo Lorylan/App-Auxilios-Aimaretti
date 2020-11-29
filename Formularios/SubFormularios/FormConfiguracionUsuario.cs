@@ -51,7 +51,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         private void btn_cambiarContraseña_Click(object sender, EventArgs e)
         {
             sacarMensajeError(new Label[] { txt_errorCc,txt_errorContraseña,txt_errorContraseñaActual,txt_exitoContrseña}, pb_errorCc);
-            if ((txt_ContraseñaActual.Text == "") | (txt_NuevaContraseña.Text == "") | (txt_NuevaContraseña2.Text == ""))
+            if ((txt_ContraseñaActual.Text.Trim().Equals("")) | (txt_NuevaContraseña.Text.Trim().Equals("")) | (txt_NuevaContraseña2.Text.Trim().Equals("")))
             {
                 mostrarMensajeError(txt_errorCc, pb_errorCc);
             }
@@ -88,7 +88,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             txt_errorCuenta.Visible = false;
             txt_errorContraseñaDistintas.Visible = false;
             sacarMensajeError(new Label[]{txt_errorCuenta,txt_exitoCuenta,txt_errorContraseñaDistintas,txt_errorCcuenta}, pb_errorCcuenta);
-            if ((txt_nombre.Text == "") | (txt_contraseña.Text == "") | (txt_repertirContraseña.Text == "")) {
+            if ((txt_nombre.Text.Trim().Equals("")) | (txt_contraseña.Text.Trim().Equals("")) | (txt_repertirContraseña.Text.Trim().Equals(""))) {
                 mostrarMensajeError(txt_errorCcuenta, pb_errorCcuenta);
             }
             else{

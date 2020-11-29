@@ -126,8 +126,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
                     txt_telefono.Text, txt_email.Text, categoriaRegistro);
         }
         private bool InfoValida() {
-            if ((txt_apellido.Text == "") | (txt_categoriaRegistro.SelectedItems.Count == 0) | (txt_documento.Text == "")
-                | (txt_email.Text == "") | (txt_nombre.Text == "") | (txt_telefono.Text == ""))
+            if ((txt_apellido.Text.Trim().Equals("")) | (txt_categoriaRegistro.SelectedItems.Count == 0) | (txt_documento.Text.Trim().Equals(""))
+                | (txt_email.Text.Trim().Equals("")) | (txt_nombre.Text.Trim().Equals("")) | (txt_telefono.Text.Trim().Equals("")))
             {
                 return false;
             } 

@@ -35,7 +35,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private bool InfoValida()
         {
-            if ((txt_importe.Text == "") | (txt_litros.Text == ""))
+            if ((txt_importe.Text.Trim().Equals("")) | (txt_litros.Text.Trim().Equals("")))
             {
                 return false;
             }
