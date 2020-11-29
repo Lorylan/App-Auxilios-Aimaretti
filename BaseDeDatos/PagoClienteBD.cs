@@ -39,7 +39,7 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
         }
         public DataSet MostrarInfo()
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From PegoCliente");
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente");
             return conexion.EjecutarSentencia(sentencia);
         }
     }

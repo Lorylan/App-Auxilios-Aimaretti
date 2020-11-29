@@ -60,6 +60,16 @@
             this.cuentaBancaria = new System.Windows.Forms.Label();
             this.detalle_del_cliente = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.obligatorio1 = new System.Windows.Forms.Label();
+            this.obligatorio = new System.Windows.Forms.Label();
+            this.obligatorio3 = new System.Windows.Forms.Label();
+            this.obligatorio2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.datos_cliente = new System.Windows.Forms.DataGridView();
             this.txt_opcion_pago = new System.Windows.Forms.ComboBox();
             this.opciones_pago = new System.Windows.Forms.Label();
@@ -82,18 +92,8 @@
             this.carga_de_pago = new System.Windows.Forms.Label();
             this.datos_pago = new System.Windows.Forms.DataGridView();
             this.listado_pagos = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
             this.pb_error = new System.Windows.Forms.PictureBox();
-            this.obligatorio2 = new System.Windows.Forms.Label();
-            this.obligatorio3 = new System.Windows.Forms.Label();
-            this.obligatorio = new System.Windows.Forms.Label();
-            this.obligatorio1 = new System.Windows.Forms.Label();
             this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
@@ -439,6 +439,130 @@
             this.panel1.Size = new System.Drawing.Size(939, 257);
             this.panel1.TabIndex = 66;
             // 
+            // obligatorio1
+            // 
+            this.obligatorio1.AutoSize = true;
+            this.obligatorio1.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio1.Location = new System.Drawing.Point(492, 115);
+            this.obligatorio1.Name = "obligatorio1";
+            this.obligatorio1.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio1.TabIndex = 84;
+            this.obligatorio1.Text = "*";
+            this.obligatorio1.Visible = false;
+            // 
+            // obligatorio
+            // 
+            this.obligatorio.AutoSize = true;
+            this.obligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio.Location = new System.Drawing.Point(692, 115);
+            this.obligatorio.Name = "obligatorio";
+            this.obligatorio.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio.TabIndex = 83;
+            this.obligatorio.Text = "*";
+            this.obligatorio.Visible = false;
+            // 
+            // obligatorio3
+            // 
+            this.obligatorio3.AutoSize = true;
+            this.obligatorio3.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio3.Location = new System.Drawing.Point(125, 113);
+            this.obligatorio3.Name = "obligatorio3";
+            this.obligatorio3.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio3.TabIndex = 82;
+            this.obligatorio3.Text = "*";
+            this.obligatorio3.Visible = false;
+            // 
+            // obligatorio2
+            // 
+            this.obligatorio2.AutoSize = true;
+            this.obligatorio2.BackColor = System.Drawing.Color.Transparent;
+            this.obligatorio2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.obligatorio2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.obligatorio2.Location = new System.Drawing.Point(243, 115);
+            this.obligatorio2.Name = "obligatorio2";
+            this.obligatorio2.Size = new System.Drawing.Size(15, 18);
+            this.obligatorio2.TabIndex = 81;
+            this.obligatorio2.Text = "*";
+            this.obligatorio2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(795, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 18);
+            this.label3.TabIndex = 80;
+            this.label3.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label2.Location = new System.Drawing.Point(406, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 18);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(205, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 18);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label8.Location = new System.Drawing.Point(197, 228);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 18);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.LightGray;
+            this.label9.Location = new System.Drawing.Point(218, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 20);
+            this.label9.TabIndex = 77;
+            this.label9.Text = "son obligatorios";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.LightGray;
+            this.label.Location = new System.Drawing.Point(11, 228);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(188, 20);
+            this.label.TabIndex = 75;
+            this.label.Text = "Los campos marcados con \r\n";
+            // 
             // datos_cliente
             // 
             this.datos_cliente.AllowUserToAddRows = false;
@@ -498,7 +622,7 @@
             this.txt_opcion_pago.FormattingEnabled = true;
             this.txt_opcion_pago.Items.AddRange(new object[] {
             "Efectivo",
-            "Trasnferencia bancaria"});
+            "Transferencia bancaria"});
             this.txt_opcion_pago.Location = new System.Drawing.Point(466, 10);
             this.txt_opcion_pago.Name = "txt_opcion_pago";
             this.txt_opcion_pago.Size = new System.Drawing.Size(181, 26);
@@ -520,9 +644,9 @@
             // txt_detalle
             // 
             this.txt_detalle.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_detalle.Location = new System.Drawing.Point(7, 188);
+            this.txt_detalle.Location = new System.Drawing.Point(15, 188);
             this.txt_detalle.Name = "txt_detalle";
-            this.txt_detalle.Size = new System.Drawing.Size(917, 26);
+            this.txt_detalle.Size = new System.Drawing.Size(909, 26);
             this.txt_detalle.TabIndex = 66;
             // 
             // detalle
@@ -531,7 +655,7 @@
             this.detalle.BackColor = System.Drawing.Color.Transparent;
             this.detalle.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalle.ForeColor = System.Drawing.Color.White;
-            this.detalle.Location = new System.Drawing.Point(3, 165);
+            this.detalle.Location = new System.Drawing.Point(11, 165);
             this.detalle.Name = "detalle";
             this.detalle.Size = new System.Drawing.Size(59, 20);
             this.detalle.TabIndex = 65;
@@ -540,9 +664,9 @@
             // txt_fecha
             // 
             this.txt_fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.Location = new System.Drawing.Point(657, 136);
+            this.txt_fecha.Location = new System.Drawing.Point(640, 136);
             this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(267, 28);
+            this.txt_fecha.Size = new System.Drawing.Size(284, 28);
             this.txt_fecha.TabIndex = 64;
             // 
             // fecha
@@ -551,7 +675,7 @@
             this.fecha.BackColor = System.Drawing.Color.Transparent;
             this.fecha.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.ForeColor = System.Drawing.Color.White;
-            this.fecha.Location = new System.Drawing.Point(659, 113);
+            this.fecha.Location = new System.Drawing.Point(636, 113);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(50, 20);
             this.fecha.TabIndex = 63;
@@ -561,10 +685,11 @@
             // 
             this.txt_nro_cuenta.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txt_nro_cuenta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_nro_cuenta.Location = new System.Drawing.Point(440, 136);
+            this.txt_nro_cuenta.Location = new System.Drawing.Point(395, 136);
             this.txt_nro_cuenta.Name = "txt_nro_cuenta";
-            this.txt_nro_cuenta.Size = new System.Drawing.Size(189, 26);
+            this.txt_nro_cuenta.Size = new System.Drawing.Size(222, 26);
             this.txt_nro_cuenta.TabIndex = 62;
+            this.txt_nro_cuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solo_numero_barra_guion);
             // 
             // nro_cuenta
             // 
@@ -572,7 +697,7 @@
             this.nro_cuenta.BackColor = System.Drawing.Color.Transparent;
             this.nro_cuenta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nro_cuenta.ForeColor = System.Drawing.Color.White;
-            this.nro_cuenta.Location = new System.Drawing.Point(442, 113);
+            this.nro_cuenta.Location = new System.Drawing.Point(391, 113);
             this.nro_cuenta.Name = "nro_cuenta";
             this.nro_cuenta.Size = new System.Drawing.Size(95, 20);
             this.nro_cuenta.TabIndex = 61;
@@ -581,7 +706,7 @@
             // txt_banco
             // 
             this.txt_banco.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_banco.Location = new System.Drawing.Point(223, 136);
+            this.txt_banco.Location = new System.Drawing.Point(191, 136);
             this.txt_banco.Name = "txt_banco";
             this.txt_banco.Size = new System.Drawing.Size(189, 26);
             this.txt_banco.TabIndex = 60;
@@ -592,7 +717,7 @@
             this.banco.BackColor = System.Drawing.Color.Transparent;
             this.banco.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.banco.ForeColor = System.Drawing.Color.White;
-            this.banco.Location = new System.Drawing.Point(225, 113);
+            this.banco.Location = new System.Drawing.Point(187, 113);
             this.banco.Name = "banco";
             this.banco.Size = new System.Drawing.Size(50, 20);
             this.banco.TabIndex = 59;
@@ -601,10 +726,11 @@
             // txt_nro
             // 
             this.txt_nro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_nro.Location = new System.Drawing.Point(7, 136);
+            this.txt_nro.Location = new System.Drawing.Point(13, 136);
             this.txt_nro.Name = "txt_nro";
-            this.txt_nro.Size = new System.Drawing.Size(189, 26);
+            this.txt_nro.Size = new System.Drawing.Size(157, 26);
             this.txt_nro.TabIndex = 58;
+            this.txt_nro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solo_numero_barra_guion);
             // 
             // nro
             // 
@@ -614,17 +740,18 @@
             this.nro.ForeColor = System.Drawing.Color.White;
             this.nro.Location = new System.Drawing.Point(9, 113);
             this.nro.Name = "nro";
-            this.nro.Size = new System.Drawing.Size(42, 20);
+            this.nro.Size = new System.Drawing.Size(115, 20);
             this.nro.TabIndex = 57;
-            this.nro.Text = "Nro°";
+            this.nro.Text = "Nro° de cheque";
             // 
             // txt_monto
             // 
             this.txt_monto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_monto.Location = new System.Drawing.Point(752, 79);
+            this.txt_monto.Location = new System.Drawing.Point(740, 72);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(172, 26);
             this.txt_monto.TabIndex = 56;
+            this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solo_monto);
             // 
             // monto
             // 
@@ -632,7 +759,7 @@
             this.monto.BackColor = System.Drawing.Color.Transparent;
             this.monto.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monto.ForeColor = System.Drawing.Color.White;
-            this.monto.Location = new System.Drawing.Point(748, 51);
+            this.monto.Location = new System.Drawing.Point(736, 51);
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(53, 20);
             this.monto.TabIndex = 55;
@@ -641,7 +768,7 @@
             // txt_Fecha_c
             // 
             this.txt_Fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fecha_c.Location = new System.Drawing.Point(352, 67);
+            this.txt_Fecha_c.Location = new System.Drawing.Point(354, 72);
             this.txt_Fecha_c.Name = "txt_Fecha_c";
             this.txt_Fecha_c.Size = new System.Drawing.Size(275, 28);
             this.txt_Fecha_c.TabIndex = 54;
@@ -652,7 +779,7 @@
             this.fecha_c.BackColor = System.Drawing.Color.Transparent;
             this.fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_c.ForeColor = System.Drawing.Color.White;
-            this.fecha_c.Location = new System.Drawing.Point(362, 44);
+            this.fecha_c.Location = new System.Drawing.Point(350, 51);
             this.fecha_c.Name = "fecha_c";
             this.fecha_c.Size = new System.Drawing.Size(50, 20);
             this.fecha_c.TabIndex = 53;
@@ -661,10 +788,11 @@
             // txt_comprobante_nro
             // 
             this.txt_comprobante_nro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_comprobante_nro.Location = new System.Drawing.Point(9, 72);
+            this.txt_comprobante_nro.Location = new System.Drawing.Point(15, 74);
             this.txt_comprobante_nro.Name = "txt_comprobante_nro";
-            this.txt_comprobante_nro.Size = new System.Drawing.Size(263, 26);
+            this.txt_comprobante_nro.Size = new System.Drawing.Size(259, 26);
             this.txt_comprobante_nro.TabIndex = 35;
+            this.txt_comprobante_nro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solo_numero_barra_guion);
             // 
             // nroComprobante
             // 
@@ -672,7 +800,7 @@
             this.nroComprobante.BackColor = System.Drawing.Color.Transparent;
             this.nroComprobante.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nroComprobante.ForeColor = System.Drawing.Color.White;
-            this.nroComprobante.Location = new System.Drawing.Point(17, 51);
+            this.nroComprobante.Location = new System.Drawing.Point(11, 51);
             this.nroComprobante.Name = "nroComprobante";
             this.nroComprobante.Size = new System.Drawing.Size(194, 20);
             this.nroComprobante.TabIndex = 16;
@@ -753,78 +881,6 @@
             this.listado_pagos.TabIndex = 73;
             this.listado_pagos.Text = "Listado de pagos";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(197, 228);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 18);
-            this.label8.TabIndex = 76;
-            this.label8.Text = "*";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.LightGray;
-            this.label9.Location = new System.Drawing.Point(218, 228);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 20);
-            this.label9.TabIndex = 77;
-            this.label9.Text = "son obligatorios";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.BackColor = System.Drawing.Color.Transparent;
-            this.label.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.LightGray;
-            this.label.Location = new System.Drawing.Point(11, 228);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(188, 20);
-            this.label.TabIndex = 75;
-            this.label.Text = "Los campos marcados con \r\n";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(217, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 18);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(411, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 18);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(807, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 18);
-            this.label3.TabIndex = 80;
-            this.label3.Text = "*";
-            // 
             // txt_error
             // 
             this.txt_error.AutoSize = true;
@@ -848,58 +904,6 @@
             this.pb_error.TabIndex = 78;
             this.pb_error.TabStop = false;
             this.pb_error.Visible = false;
-            // 
-            // obligatorio2
-            // 
-            this.obligatorio2.AutoSize = true;
-            this.obligatorio2.BackColor = System.Drawing.Color.Transparent;
-            this.obligatorio2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.obligatorio2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.obligatorio2.Location = new System.Drawing.Point(281, 115);
-            this.obligatorio2.Name = "obligatorio2";
-            this.obligatorio2.Size = new System.Drawing.Size(15, 18);
-            this.obligatorio2.TabIndex = 81;
-            this.obligatorio2.Text = "*";
-            this.obligatorio2.Visible = false;
-            // 
-            // obligatorio3
-            // 
-            this.obligatorio3.AutoSize = true;
-            this.obligatorio3.BackColor = System.Drawing.Color.Transparent;
-            this.obligatorio3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.obligatorio3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.obligatorio3.Location = new System.Drawing.Point(55, 113);
-            this.obligatorio3.Name = "obligatorio3";
-            this.obligatorio3.Size = new System.Drawing.Size(15, 18);
-            this.obligatorio3.TabIndex = 82;
-            this.obligatorio3.Text = "*";
-            this.obligatorio3.Visible = false;
-            // 
-            // obligatorio
-            // 
-            this.obligatorio.AutoSize = true;
-            this.obligatorio.BackColor = System.Drawing.Color.Transparent;
-            this.obligatorio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.obligatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.obligatorio.Location = new System.Drawing.Point(715, 113);
-            this.obligatorio.Name = "obligatorio";
-            this.obligatorio.Size = new System.Drawing.Size(15, 18);
-            this.obligatorio.TabIndex = 83;
-            this.obligatorio.Text = "*";
-            this.obligatorio.Visible = false;
-            // 
-            // obligatorio1
-            // 
-            this.obligatorio1.AutoSize = true;
-            this.obligatorio1.BackColor = System.Drawing.Color.Transparent;
-            this.obligatorio1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.obligatorio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.obligatorio1.Location = new System.Drawing.Point(543, 115);
-            this.obligatorio1.Name = "obligatorio1";
-            this.obligatorio1.Size = new System.Drawing.Size(15, 18);
-            this.obligatorio1.TabIndex = 84;
-            this.obligatorio1.Text = "*";
-            this.obligatorio1.Visible = false;
             // 
             // btn_editar
             // 
