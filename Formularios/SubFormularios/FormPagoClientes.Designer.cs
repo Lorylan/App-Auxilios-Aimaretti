@@ -868,6 +868,7 @@
             this.datos_pago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datos_pago.Size = new System.Drawing.Size(939, 409);
             this.datos_pago.TabIndex = 72;
+            this.datos_pago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Seleccionar);
             // 
             // listado_pagos
             // 

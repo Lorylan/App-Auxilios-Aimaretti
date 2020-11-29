@@ -67,12 +67,12 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private bool InfoValida()
         {
-            if ((txt_comprobante_nro.Text.Equals("")) | (txt_monto.Text.Equals("")) | (txt_comprobante_nro.Text.Equals("")))
+            if ((txt_comprobante_nro.Text.Trim().Equals("")) | (txt_monto.Text.Trim().Equals("")) | (txt_comprobante_nro.Text.Trim().Equals("")))
             {
                 return false;
             }
-            if (txt_opcion_pago.Text.Equals("Transferencia bancaria") && ((txt_nro.Equals("")) |
-                (txt_banco.Text.Equals("")) | (txt_nro_cuenta.Text.Equals(""))))
+            if (txt_opcion_pago.Text.Trim().Equals("Transferencia bancaria") && ((txt_nro.Text.Trim().Equals("")) |
+                (txt_banco.Text.Trim().Equals("")) | (txt_nro_cuenta.Text.Trim().Equals(""))))
             {
                 return false;
             }
@@ -104,7 +104,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             else {
                 return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value, txt_monto.Text, 
                     txt_nro.Text,txt_banco.Text,txt_nro_cuenta.Text,
-                    txt_fecha.Value, txt_detalle.Text, txt_Empresa.Text, "Efectivo");
+                    txt_fecha.Value, txt_detalle.Text, txt_Empresa.Text, "" +
+                    "Transferencia bancaria");
             }
             
         }
@@ -127,11 +128,21 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             datos_pago.Columns[5].HeaderText = "Nro. de cuenta";
             datos_pago.Columns[6].HeaderText = "Fecha";
             datos_pago.Columns[7].HeaderText = "Detalle";
-            datos_pago.Columns.RemoveAt(datos_pago.Columns.Count - 3);
-            datos_pago.Columns.RemoveAt(datos_pago.Columns.Count - 2);
-            datos_pago.Columns.RemoveAt(datos_pago.Columns.Count - 1);
+            datos_pago.Columns[8].Visible = false;
+            datos_pago.Columns[9].Visible = false;
+            datos_pago.Columns[10].Visible = false;
         }
-
+        private void desactivarBoton(ButtonRedondeado b, Color c)
+        {
+            b.Enabled = false;
+            b.BorderColor = c;
+        }
+        private void activarBorrarEditarCancelar()
+        {
+            activarBoton(btn_editar, Color.FromArgb(251, 229, 0));
+            activarBoton(btn_cancelar, Color.FromArgb(230, 54, 104));
+            activarBoton(btn_borrar, Color.FromArgb(230, 54, 104));
+        }
         public FormPagoClientes(){
             clienteBD = new ClienteBD();
             pagoClienteBD = new PagoClienteBD();
@@ -142,7 +153,6 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             visibilidad_obligatorio(false);
             cargarOpciones();
         }
-
        
         private void txt_Empresa_SelectedIndexChanged(object sender, EventArgs e){
             if (!sender.ToString().Equals("")) {
@@ -170,17 +180,46 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-
+            if (btn_editar.Enabled == true)
+            {
+                txt_opcion_pago.Enabled = true;
+                int i = datos_pago.CurrentRow.Index;
+                string comprobante = datos_pago.Rows[i].Cells[0].Value.ToString();
+                pagoClienteBD.Modificar(RecuperarInfo(),comprobante );
+                actualizarTablaVaciarTxt();
+                vaciarTxt();
+                activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
+                desactivarBotones(new ButtonRedondeado[] { btn_borrar, btn_cancelar, btn_editar }, Color.Silver);
+            }
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-
+            if (btn_borrar.Enabled == true)
+            {
+                txt_opcion_pago.Enabled = true;
+                PagoCliente pc = RecuperarInfo();
+                ConfirmarBorrado form = new ConfirmarBorrado(new string[] { "Nro. Comprobante:" + pc.ComprobanteNro, "Monto: $" +pc.Monto });
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    int i = datos_pago.CurrentRow.Index;
+                    pagoClienteBD.Borrar(datos_pago.Rows[i].Cells[0].Value.ToString());
+                    actualizarTablaVaciarTxt();
+                    activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
+                    desactivarBotones(new ButtonRedondeado[] { btn_borrar, btn_cancelar, btn_editar }, Color.Silver);
+                }
+            }
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
+            if (btn_cancelar.Enabled == true)
+            {
+                txt_opcion_pago.Enabled = true;
+                vaciarTxt();
+                activarBoton(btn_agregar, Color.FromArgb(251, 229, 0));
+                desactivarBotones(new ButtonRedondeado[] { btn_borrar, btn_cancelar, btn_editar }, Color.Silver);
+            }
         }
 
         private void txt_opcion_pago_SelectedIndexChanged(object sender, EventArgs e)
@@ -228,6 +267,29 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             {
                 e.Handled = true;
             }
+        }
+
+        private void Seleccionar(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int i = e.RowIndex;
+                txt_comprobante_nro.Text = datos_pago.Rows[i].Cells[0].Value.ToString();
+                txt_Fecha_c.Text = datos_pago.Rows[i].Cells[1].Value.ToString();
+                txt_monto.Text = datos_pago.Rows[i].Cells[2].Value.ToString();
+                txt_nro.Text = datos_pago.Rows[i].Cells[3].Value.ToString();
+                txt_banco.Text = datos_pago.Rows[i].Cells[4].Value.ToString();
+                txt_nro_cuenta.Text = datos_pago.Rows[i].Cells[5].Value.ToString();
+                txt_fecha.Text = datos_pago.Rows[i].Cells[6].Value.ToString();
+                txt_detalle.Text = datos_pago.Rows[i].Cells[7].Value.ToString();
+                string buscar = datos_pago.Rows[i].Cells[10].Value.ToString().Trim();
+                int id_item = txt_opcion_pago.Items.IndexOf(buscar);
+                txt_opcion_pago.SelectedIndex = id_item;
+                activarBorrarEditarCancelar();
+                desactivarBoton(btn_agregar, Color.Silver);
+                txt_opcion_pago.Enabled = false;
+            }
+            catch { }
         }
     }
 }

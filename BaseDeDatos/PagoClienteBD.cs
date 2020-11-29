@@ -25,10 +25,10 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
                 + "' , '" + pc.NroCuenta + "' , '" + pc.Fecha + "' , '" + pc.Detalle + "' , '" + pc.idCliente
                 + "', '" + pc.idUsuario + "' , '" + pc.Tipo+ "')" );
         }
-        public bool Borrar(PagoCliente pc)
+        public bool Borrar(String comprobante)
         {
             return conexion.ejecutarComandoSinRetorno("DELETE From PagoCliente WHERE ComprobanteNro='" 
-                + pc.ComprobanteNro + "'");
+                + comprobante + "'");
         }
         public bool Modificar(PagoCliente pc, string comprobante)
         {
