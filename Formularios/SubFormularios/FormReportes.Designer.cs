@@ -341,7 +341,7 @@
             this.datos_vistaPrevia.RowTemplate.Height = 23;
             this.datos_vistaPrevia.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.datos_vistaPrevia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datos_vistaPrevia.Size = new System.Drawing.Size(920, 669);
+            this.datos_vistaPrevia.Size = new System.Drawing.Size(920, 863);
             this.datos_vistaPrevia.TabIndex = 79;
             // 
             // comboBox1

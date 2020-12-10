@@ -1,4 +1,5 @@
 ﻿using PuebaDeDiseñoAA.Clases;
+using PuebaDeDiseñoAA.BaseDeDatos;
 using PuebaDeDiseñoAA.Formularios.SubFormularios;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,9 @@ namespace PuebaDeDiseñoAA
 {
     public partial class Inicio : Form
     {
+        private PagoClienteBD pagoClienteBD;
+        private String pago_hoy = "";
+        private string pago_recordatorio = "";
 
         private void desactivarBoton(ButtonRedondeado b, Color c)
         {
@@ -54,11 +58,50 @@ namespace PuebaDeDiseñoAA
             BotonSeleccionado(p);
             abrirFormulario(formaularioNuevo);
         }
+        public bool hayAlarma() {
+            pagoClienteBD = new PagoClienteBD();
+            datos_pago_hoy.DataSource = pagoClienteBD.ObtenerInfoDe(DateTime.Now.Date).Tables[0];
+            datos_pago_recordatorio.DataSource = pagoClienteBD.ObtenerInfoDee(DateTime.Now.AddDays(-1).Date, DateTime.Now.AddDays(-2).Date).Tables[0];
+            if (datos_pago_hoy.Rows.Count != 0) 
+            {
+                for (int i = 0; i < datos_pago_hoy.Rows.Count; i++) {
+                    pago_hoy += "Cliente: " +datos_pago_hoy.Rows[i].Cells[8].Value.ToString()+"-";
+                    pago_hoy += "Nro cheque: "+ datos_pago_hoy.Rows[i].Cells[3].Value.ToString()+"-";
+                    pago_hoy += "Monto: " + datos_pago_hoy.Rows[i].Cells[2].Value.ToString();
+                    pago_hoy += "\n";
+                }
+                if ((datos_pago_recordatorio.Rows.Count == 0)) {
+                    pago_recordatorio = "No hay pagos para recordar";
+                    return true;
+                }
+            }
+            if (datos_pago_recordatorio.Rows.Count != 0) {
+                
+                for (int i = 0; i < datos_pago_recordatorio.Rows.Count; i++)
+                {
+                    pago_recordatorio += "Cliente: " + datos_pago_recordatorio.Rows[i].Cells[8].Value.ToString()+"-";
+                    pago_recordatorio += "Nro cheque: " + datos_pago_recordatorio.Rows[i].Cells[3].Value.ToString()+"-";
+                    pago_recordatorio += "Monto: " + datos_pago_recordatorio.Rows[i].Cells[2].Value.ToString();
+                    pago_recordatorio += "\n";
+                }
+                if ((datos_pago_hoy.Rows.Count == 0))
+                {
+                    pago_hoy = "No hay pagos para la fecha de hoy";
+                }
+                return true;
+
+            }
+            return false;
+        }
         /* -------------------------------------------------------------------*/
         public Inicio()
         {
             InitializeComponent();
-           
+            notificacion.ShowBalloonTip(100,"Titulo","Esto es una notificacion", ToolTipIcon.Info);
+            if (hayAlarma()) {
+                Recordatorio recordatorio = new Recordatorio(pago_hoy, pago_recordatorio);
+                recordatorio.ShowDialog();
+            }
         }
         /*--------------------------------------- Botones Menu -----------------------------------*/
         
@@ -119,8 +162,12 @@ namespace PuebaDeDiseñoAA
         private void Inicio_Load(object sender, EventArgs e)
         {
             ArreglaTamañoPantalla(new Point(0, 0), Screen.PrimaryScreen.WorkingArea.Size, false, true);
+           
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

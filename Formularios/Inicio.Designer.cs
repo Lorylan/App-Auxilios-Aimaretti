@@ -31,8 +31,15 @@ namespace PuebaDeDiseñoAA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
             Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.btn_usuario = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
@@ -49,12 +56,18 @@ namespace PuebaDeDiseñoAA
             this.btn_planillas = new System.Windows.Forms.Button();
             this.pictureBox_cerrar = new System.Windows.Forms.PictureBox();
             this.panel_logo = new System.Windows.Forms.Panel();
+            this.notificacion = new System.Windows.Forms.NotifyIcon(this.components);
+            this.datos_pago_hoy = new System.Windows.Forms.DataGridView();
+            this.datos_pago_recordatorio = new System.Windows.Forms.DataGridView();
             bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel_general.SuspendLayout();
             this.panel_formularios.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago_hoy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago_recordatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuSeparator1
@@ -157,6 +170,7 @@ namespace PuebaDeDiseñoAA
             this.panel_botonSeleccionado.Size = new System.Drawing.Size(10, 37);
             this.panel_botonSeleccionado.TabIndex = 50;
             this.panel_botonSeleccionado.TabStop = true;
+            this.panel_botonSeleccionado.Visible = false;
             // 
             // btn_pagoCliente
             // 
@@ -174,7 +188,6 @@ namespace PuebaDeDiseñoAA
             this.btn_pagoCliente.TabIndex = 22;
             this.btn_pagoCliente.Text = "Pago Cliente";
             this.btn_pagoCliente.UseVisualStyleBackColor = false;
-            
             this.btn_pagoCliente.Click += new System.EventHandler(this.btn_pagoCliente_Click);
             this.btn_pagoCliente.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             this.btn_pagoCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttons_MouseMove);
@@ -215,11 +228,14 @@ namespace PuebaDeDiseñoAA
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.panel1.BackgroundImage = global::PuebaDeDiseñoAA.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.datos_pago_recordatorio);
+            this.panel1.Controls.Add(this.datos_pago_hoy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(851, 663);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel_separarMenuA
             // 
@@ -328,6 +344,118 @@ namespace PuebaDeDiseñoAA
             this.panel_logo.Size = new System.Drawing.Size(181, 124);
             this.panel_logo.TabIndex = 0;
             // 
+            // notificacion
+            // 
+            this.notificacion.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notificacion.BalloonTipText = "aaaaaaaaaaaaaa";
+            this.notificacion.BalloonTipTitle = "aaaaaaaaaaaaaaaa";
+            this.notificacion.Text = "aaaaaaaaaaaaaaaaaaa";
+            this.notificacion.Visible = true;
+            // 
+            // datos_pago_hoy
+            // 
+            this.datos_pago_hoy.AllowUserToAddRows = false;
+            this.datos_pago_hoy.AllowUserToDeleteRows = false;
+            this.datos_pago_hoy.AllowUserToOrderColumns = true;
+            this.datos_pago_hoy.AllowUserToResizeColumns = false;
+            this.datos_pago_hoy.AllowUserToResizeRows = false;
+            this.datos_pago_hoy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datos_pago_hoy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.datos_pago_hoy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datos_pago_hoy.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datos_pago_hoy.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago_hoy.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.datos_pago_hoy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datos_pago_hoy.DefaultCellStyle = dataGridViewCellStyle5;
+            this.datos_pago_hoy.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.datos_pago_hoy.EnableHeadersVisualStyles = false;
+            this.datos_pago_hoy.GridColor = System.Drawing.Color.Gold;
+            this.datos_pago_hoy.Location = new System.Drawing.Point(142, 149);
+            this.datos_pago_hoy.Name = "datos_pago_hoy";
+            this.datos_pago_hoy.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago_hoy.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.datos_pago_hoy.RowHeadersVisible = false;
+            this.datos_pago_hoy.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.datos_pago_hoy.RowTemplate.Height = 23;
+            this.datos_pago_hoy.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.datos_pago_hoy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datos_pago_hoy.Size = new System.Drawing.Size(226, 23);
+            this.datos_pago_hoy.TabIndex = 73;
+            this.datos_pago_hoy.Visible = false;
+            // 
+            // datos_pago_recordatorio
+            // 
+            this.datos_pago_recordatorio.AllowUserToAddRows = false;
+            this.datos_pago_recordatorio.AllowUserToDeleteRows = false;
+            this.datos_pago_recordatorio.AllowUserToOrderColumns = true;
+            this.datos_pago_recordatorio.AllowUserToResizeColumns = false;
+            this.datos_pago_recordatorio.AllowUserToResizeRows = false;
+            this.datos_pago_recordatorio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datos_pago_recordatorio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.datos_pago_recordatorio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datos_pago_recordatorio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datos_pago_recordatorio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago_recordatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datos_pago_recordatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datos_pago_recordatorio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.datos_pago_recordatorio.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.datos_pago_recordatorio.EnableHeadersVisualStyles = false;
+            this.datos_pago_recordatorio.GridColor = System.Drawing.Color.Gold;
+            this.datos_pago_recordatorio.Location = new System.Drawing.Point(195, 192);
+            this.datos_pago_recordatorio.Name = "datos_pago_recordatorio";
+            this.datos_pago_recordatorio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datos_pago_recordatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.datos_pago_recordatorio.RowHeadersVisible = false;
+            this.datos_pago_recordatorio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.datos_pago_recordatorio.RowTemplate.Height = 23;
+            this.datos_pago_recordatorio.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.datos_pago_recordatorio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datos_pago_recordatorio.Size = new System.Drawing.Size(228, 54);
+            this.datos_pago_recordatorio.TabIndex = 74;
+            this.datos_pago_recordatorio.Visible = false;
+            // 
             // Inicio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -343,8 +471,11 @@ namespace PuebaDeDiseñoAA
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.panel_general.ResumeLayout(false);
             this.panel_formularios.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago_hoy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_pago_recordatorio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,5 +496,8 @@ namespace PuebaDeDiseñoAA
         private System.Windows.Forms.Button btn_reportes;
         private System.Windows.Forms.Button btn_planillas;
         private System.Windows.Forms.Button btn_pagoCliente;
+        private System.Windows.Forms.NotifyIcon notificacion;
+        private System.Windows.Forms.DataGridView datos_pago_recordatorio;
+        private System.Windows.Forms.DataGridView datos_pago_hoy;
     }
 }

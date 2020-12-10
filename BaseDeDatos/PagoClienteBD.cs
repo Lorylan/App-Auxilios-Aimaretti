@@ -42,5 +42,17 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
             SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente");
             return conexion.EjecutarSentencia(sentencia);
         }
+        public DataSet ObtenerInfoDe(DateTime fecha)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente WHERE Fecha='"+fecha+"'");
+            DataSet data = conexion.EjecutarSentencia(sentencia);
+            return data;
+        }
+        public DataSet ObtenerInfoDee(DateTime fecha, DateTime fecha2)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente WHERE Fecha='"+fecha +"' OR Fecha='"+fecha2+"'");
+            DataSet data = conexion.EjecutarSentencia(sentencia);
+            return data;
+        }
     }
 }

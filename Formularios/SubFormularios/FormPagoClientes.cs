@@ -59,6 +59,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             foreach (DataRow row in dataset.Tables[0].Rows){
                 txt_Empresa.Items.Add((string)row["NombreEmpresa"]);
             }
+            
         }
         private void mostrarMensajeError()
         {
@@ -102,9 +103,9 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
                     DateTime.MinValue,txt_detalle.Text,txt_Empresa.Text,"Efectivo");
             }
             else {
-                return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value, txt_monto.Text, 
+                return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.Date, txt_monto.Text, 
                     txt_nro.Text,txt_banco.Text,txt_nro_cuenta.Text,
-                    txt_fecha.Value, txt_detalle.Text, txt_Empresa.Text, "" +
+                    txt_fecha.Value.Date, txt_detalle.Text, txt_Empresa.Text, "" +
                     "Transferencia bancaria");
             }
             
