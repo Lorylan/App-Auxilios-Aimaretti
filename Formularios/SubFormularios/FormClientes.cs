@@ -218,13 +218,13 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             {
                 if (InfoValidaTp())
                 {
-                    sacarMensajeError(txt_errortp, pb_errortp);
+                    sacarMensajeError(txt_error, pb_error);
                     tarifaPactadaDB.Agregar(RecuperarInfoTp());
                     actualizarTablaVaciarTxtTp();
                 }
                 else
                 {
-                    mostrarMensajeErrorCliente(txt_errortp, pb_errortp);
+                    mostrarMensajeErrorCliente(txt_error, pb_error);
                 }
             }
         }

@@ -33,9 +33,9 @@
             this.txt_confirmacion = new System.Windows.Forms.Label();
             this.btn_confirmar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_pagos_recordatorio = new System.Windows.Forms.Label();
             this.panel_datos = new System.Windows.Forms.Panel();
             this.txt_pagos_hoy = new System.Windows.Forms.Label();
-            this.txt_pagos_recordatorio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_datos.SuspendLayout();
@@ -91,7 +91,7 @@
             this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_confirmar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_confirmar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_confirmar.Location = new System.Drawing.Point(332, 445);
+            this.btn_confirmar.Location = new System.Drawing.Point(303, 445);
             this.btn_confirmar.Name = "btn_confirmar";
             this.btn_confirmar.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_confirmar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -113,6 +113,15 @@
             this.panel2.Size = new System.Drawing.Size(632, 128);
             this.panel2.TabIndex = 80;
             // 
+            // txt_pagos_recordatorio
+            // 
+            this.txt_pagos_recordatorio.AutoSize = true;
+            this.txt_pagos_recordatorio.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.txt_pagos_recordatorio.Location = new System.Drawing.Point(16, 13);
+            this.txt_pagos_recordatorio.Name = "txt_pagos_recordatorio";
+            this.txt_pagos_recordatorio.Size = new System.Drawing.Size(0, 23);
+            this.txt_pagos_recordatorio.TabIndex = 1;
+            // 
             // panel_datos
             // 
             this.panel_datos.AutoScroll = true;
@@ -132,15 +141,6 @@
             this.txt_pagos_hoy.Name = "txt_pagos_hoy";
             this.txt_pagos_hoy.Size = new System.Drawing.Size(0, 23);
             this.txt_pagos_hoy.TabIndex = 0;
-            // 
-            // txt_pagos_recordatorio
-            // 
-            this.txt_pagos_recordatorio.AutoSize = true;
-            this.txt_pagos_recordatorio.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.txt_pagos_recordatorio.Location = new System.Drawing.Point(16, 13);
-            this.txt_pagos_recordatorio.Name = "txt_pagos_recordatorio";
-            this.txt_pagos_recordatorio.Size = new System.Drawing.Size(0, 23);
-            this.txt_pagos_recordatorio.TabIndex = 1;
             // 
             // Recordatorio
             // 

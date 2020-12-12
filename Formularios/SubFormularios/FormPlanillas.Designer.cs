@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_cargaServicios = new System.Windows.Forms.Panel();
             this.txt_color = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -83,13 +83,13 @@
             this.por = new System.Windows.Forms.Label();
             this.datosServicios = new System.Windows.Forms.DataGridView();
             this.txt_error = new System.Windows.Forms.Label();
-            this.pb_error = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.Label();
             this.panel_total = new System.Windows.Forms.Panel();
+            this.txt_cantidad_servicios = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -104,14 +104,12 @@
             this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_cantidad_servicios = new System.Windows.Forms.Label();
+            this.txt_total_servicio = new System.Windows.Forms.Label();
             this.txt_importe_servicio = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_total_servicio = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel_cargaServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel_total.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -739,37 +737,37 @@
             this.datosServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datosServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datosServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datosServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datosServicios.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datosServicios.DefaultCellStyle = dataGridViewCellStyle2;
             this.datosServicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.datosServicios.EnableHeadersVisualStyles = false;
             this.datosServicios.GridColor = System.Drawing.Color.Gold;
             this.datosServicios.Location = new System.Drawing.Point(12, 405);
             this.datosServicios.Name = "datosServicios";
             this.datosServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosServicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosServicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datosServicios.RowHeadersVisible = false;
             this.datosServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.datosServicios.RowTemplate.Height = 23;
@@ -791,17 +789,6 @@
             this.txt_error.TabIndex = 84;
             this.txt_error.Text = "Completar campo/s faltante/s";
             this.txt_error.Visible = false;
-            // 
-            // pb_error
-            // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
-            this.pb_error.Location = new System.Drawing.Point(188, 37);
-            this.pb_error.Name = "pb_error";
-            this.pb_error.Size = new System.Drawing.Size(29, 26);
-            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_error.TabIndex = 83;
-            this.pb_error.TabStop = false;
-            this.pb_error.Visible = false;
             // 
             // label4
             // 
@@ -866,6 +853,18 @@
             this.panel_total.Name = "panel_total";
             this.panel_total.Size = new System.Drawing.Size(173, 25);
             this.panel_total.TabIndex = 85;
+            // 
+            // txt_cantidad_servicios
+            // 
+            this.txt_cantidad_servicios.AutoSize = true;
+            this.txt_cantidad_servicios.BackColor = System.Drawing.Color.Transparent;
+            this.txt_cantidad_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad_servicios.ForeColor = System.Drawing.Color.White;
+            this.txt_cantidad_servicios.Location = new System.Drawing.Point(3, 2);
+            this.txt_cantidad_servicios.Name = "txt_cantidad_servicios";
+            this.txt_cantidad_servicios.Size = new System.Drawing.Size(18, 20);
+            this.txt_cantidad_servicios.TabIndex = 101;
+            this.txt_cantidad_servicios.Text = "0";
             // 
             // label18
             // 
@@ -1103,17 +1102,17 @@
             this.panel3.Size = new System.Drawing.Size(140, 32);
             this.panel3.TabIndex = 86;
             // 
-            // txt_cantidad_servicios
+            // txt_total_servicio
             // 
-            this.txt_cantidad_servicios.AutoSize = true;
-            this.txt_cantidad_servicios.BackColor = System.Drawing.Color.Transparent;
-            this.txt_cantidad_servicios.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad_servicios.ForeColor = System.Drawing.Color.White;
-            this.txt_cantidad_servicios.Location = new System.Drawing.Point(3, 2);
-            this.txt_cantidad_servicios.Name = "txt_cantidad_servicios";
-            this.txt_cantidad_servicios.Size = new System.Drawing.Size(18, 20);
-            this.txt_cantidad_servicios.TabIndex = 101;
-            this.txt_cantidad_servicios.Text = "0";
+            this.txt_total_servicio.AutoSize = true;
+            this.txt_total_servicio.BackColor = System.Drawing.Color.Transparent;
+            this.txt_total_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_servicio.ForeColor = System.Drawing.Color.White;
+            this.txt_total_servicio.Location = new System.Drawing.Point(21, 9);
+            this.txt_total_servicio.Name = "txt_total_servicio";
+            this.txt_total_servicio.Size = new System.Drawing.Size(50, 20);
+            this.txt_total_servicio.TabIndex = 102;
+            this.txt_total_servicio.Text = "$0,00";
             // 
             // txt_importe_servicio
             // 
@@ -1135,18 +1134,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 25);
             this.panel2.TabIndex = 102;
-            // 
-            // txt_total_servicio
-            // 
-            this.txt_total_servicio.AutoSize = true;
-            this.txt_total_servicio.BackColor = System.Drawing.Color.Transparent;
-            this.txt_total_servicio.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_servicio.ForeColor = System.Drawing.Color.White;
-            this.txt_total_servicio.Location = new System.Drawing.Point(21, 9);
-            this.txt_total_servicio.Name = "txt_total_servicio";
-            this.txt_total_servicio.Size = new System.Drawing.Size(50, 20);
-            this.txt_total_servicio.TabIndex = 102;
-            this.txt_total_servicio.Text = "$0,00";
             // 
             // panel4
             // 
@@ -1174,7 +1161,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_error);
-            this.Controls.Add(this.pb_error);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.datosServicios);
             this.Controls.Add(this.btn_editar);
@@ -1201,7 +1187,6 @@
             this.panel_cargaServicios.ResumeLayout(false);
             this.panel_cargaServicios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel_total.ResumeLayout(false);
@@ -1265,7 +1250,6 @@
         private System.Windows.Forms.Label desperfecto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label txt_error;
-        private System.Windows.Forms.PictureBox pb_error;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_cargaPersonal = new System.Windows.Forms.Panel();
             this.txt_categoriaRegistro = new System.Windows.Forms.ListBox();
             this.txt_documento = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@
             this.documento = new System.Windows.Forms.Label();
             this.cargaPersonal = new System.Windows.Forms.Label();
             this.listadoPersonal = new System.Windows.Forms.Label();
-            this.pb_error = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
             this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
@@ -64,9 +63,10 @@
             this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.datosPersonal = new System.Windows.Forms.DataGridView();
+            this.pb_error = new System.Windows.Forms.PictureBox();
             this.panel_cargaPersonal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_cargaPersonal
@@ -386,17 +386,6 @@
             this.listadoPersonal.TabIndex = 43;
             this.listadoPersonal.Text = "Listado de personal";
             // 
-            // pb_error
-            // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
-            this.pb_error.Location = new System.Drawing.Point(199, 12);
-            this.pb_error.Name = "pb_error";
-            this.pb_error.Size = new System.Drawing.Size(29, 26);
-            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_error.TabIndex = 58;
-            this.pb_error.TabStop = false;
-            this.pb_error.Visible = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -412,7 +401,7 @@
             this.txt_error.BackColor = System.Drawing.Color.Transparent;
             this.txt_error.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
-            this.txt_error.Location = new System.Drawing.Point(16, 38);
+            this.txt_error.Location = new System.Drawing.Point(12, 40);
             this.txt_error.Name = "txt_error";
             this.txt_error.Size = new System.Drawing.Size(218, 20);
             this.txt_error.TabIndex = 67;
@@ -527,37 +516,37 @@
             this.datosPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datosPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datosPersonal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datosPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datosPersonal.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datosPersonal.DefaultCellStyle = dataGridViewCellStyle5;
             this.datosPersonal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.datosPersonal.EnableHeadersVisualStyles = false;
             this.datosPersonal.GridColor = System.Drawing.Color.Gold;
             this.datosPersonal.Location = new System.Drawing.Point(374, 65);
             this.datosPersonal.Name = "datosPersonal";
             this.datosPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datosPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datosPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.datosPersonal.RowHeadersVisible = false;
             this.datosPersonal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.datosPersonal.RowTemplate.Height = 23;
@@ -567,16 +556,27 @@
             this.datosPersonal.TabIndex = 71;
             this.datosPersonal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Seleccionar);
             // 
+            // pb_error
+            // 
+            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_error.Location = new System.Drawing.Point(199, 12);
+            this.pb_error.Name = "pb_error";
+            this.pb_error.Size = new System.Drawing.Size(29, 26);
+            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_error.TabIndex = 86;
+            this.pb_error.TabStop = false;
+            this.pb_error.Visible = false;
+            // 
             // FormPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1020, 826);
+            this.Controls.Add(this.pb_error);
             this.Controls.Add(this.datosPersonal);
             this.Controls.Add(this.txt_error);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.pb_error);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.btn_cancelar);
@@ -589,8 +589,8 @@
             this.Text = "FormReporteVazquez";
             this.panel_cargaPersonal.ResumeLayout(false);
             this.panel_cargaPersonal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,10 +626,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_documento;
-        private System.Windows.Forms.PictureBox pb_error;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label txt_error;
         private System.Windows.Forms.ListBox txt_categoriaRegistro;
         private System.Windows.Forms.DataGridView datosPersonal;
+        private System.Windows.Forms.PictureBox pb_error;
     }
 }

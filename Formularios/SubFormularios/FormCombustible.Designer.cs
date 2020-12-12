@@ -297,17 +297,7 @@
             this.txt_error.TabIndex = 69;
             this.txt_error.Text = "Completar campo/s faltante/s";
             this.txt_error.Visible = false;
-            // 
-            // pb_error
-            // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
-            this.pb_error.Location = new System.Drawing.Point(207, 78);
-            this.pb_error.Name = "pb_error";
-            this.pb_error.Size = new System.Drawing.Size(29, 26);
-            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_error.TabIndex = 68;
-            this.pb_error.TabStop = false;
-            this.pb_error.Visible = false;
+            
             // 
             // datosCombustible
             // 

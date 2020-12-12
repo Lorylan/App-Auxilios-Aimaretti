@@ -38,6 +38,14 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
         public string CalcularTotal(string idC) {
             return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='"+idC+"'");
         }
+        public DataTable MostrarDesdeHasta(DateTime desde, DateTime hasta) {
+            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where Fecha >='"+desde+"' AND Fecha <='"+hasta+"'");
+            return conexion.EjecutarSentencia(sentencia).Tables[0];
+        }
+
+        public string CalcularSubTotal(DateTime desde, DateTime hasta) {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE Fecha >='" + desde + "' AND Fecha <='" + hasta + "'");
+        }
 
     }
 }

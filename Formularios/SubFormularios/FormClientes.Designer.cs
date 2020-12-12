@@ -64,7 +64,6 @@
             this.nombreEmpresa = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pb_errortp = new System.Windows.Forms.PictureBox();
             this.txt_importe = new System.Windows.Forms.TextBox();
             this.Importe = new System.Windows.Forms.Label();
             this.panel_Tp = new System.Windows.Forms.Panel();
@@ -88,7 +87,6 @@
             this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.datosCliente)).BeginInit();
             this.panel_CargaCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_errortp)).BeginInit();
             this.panel_Tp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTarifaPactada)).BeginInit();
@@ -490,17 +488,6 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Carga de clientes";
             // 
-            // pb_errortp
-            // 
-            this.pb_errortp.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
-            this.pb_errortp.Location = new System.Drawing.Point(931, 14);
-            this.pb_errortp.Name = "pb_errortp";
-            this.pb_errortp.Size = new System.Drawing.Size(29, 26);
-            this.pb_errortp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_errortp.TabIndex = 68;
-            this.pb_errortp.TabStop = false;
-            this.pb_errortp.Visible = false;
-            // 
             // txt_importe
             // 
             this.txt_importe.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -899,7 +886,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel_Tp);
             this.Controls.Add(this.btn_editar);
-            this.Controls.Add(this.pb_errortp);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.panel_CargaCliente);
@@ -913,7 +899,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosCliente)).EndInit();
             this.panel_CargaCliente.ResumeLayout(false);
             this.panel_CargaCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_errortp)).EndInit();
             this.panel_Tp.ResumeLayout(false);
             this.panel_Tp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_error)).EndInit();
@@ -958,7 +943,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label txt_error;
-        private System.Windows.Forms.PictureBox pb_errortp;
         private System.Windows.Forms.Label Importe;
         private System.Windows.Forms.TextBox txt_importe;
         private System.Windows.Forms.Panel panel_Tp;

@@ -50,12 +50,12 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         private void mostrarMensajeError()
         {
             txt_error.Visible = true;
-            pb_error.Visible = true;
+            
         }
         private void sacarMensajeError()
         {
             txt_error.Visible = false;
-            pb_error.Visible = false;
+            
         }
         private void ActualizarInfoTabla()
         {

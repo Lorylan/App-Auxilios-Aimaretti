@@ -28,32 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.txt_empresa = new System.Windows.Forms.ComboBox();
             this.txt_desde = new System.Windows.Forms.DateTimePicker();
             this.txt_hasta = new System.Windows.Forms.DateTimePicker();
             this.desde = new System.Windows.Forms.Label();
             this.hasta = new System.Windows.Forms.Label();
-            this.guardarEn = new System.Windows.Forms.Label();
-            this.txt_guardarEn = new System.Windows.Forms.TextBox();
             this.panel_cargaReporte = new System.Windows.Forms.Panel();
-            this.btn_examinar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_genrarReporte = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_vistaPrevia = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.datosReporte = new System.Windows.Forms.Label();
-            this.vistaPrevia = new System.Windows.Forms.Label();
-            this.panel_total = new System.Windows.Forms.Panel();
-            this.txt_total = new System.Windows.Forms.Label();
-            this.txt_gasOil = new System.Windows.Forms.Label();
-            this.txt_servicios = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.datos_vistaPrevia = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tipo_de_reporte = new System.Windows.Forms.ComboBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.reportecombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.combustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_cargaReporte.SuspendLayout();
-            this.panel_total.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datos_vistaPrevia)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combustibleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_empresa
@@ -61,36 +60,36 @@
             this.txt_empresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_empresa.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.txt_empresa.FormattingEnabled = true;
-            this.txt_empresa.Location = new System.Drawing.Point(12, 12);
+            this.txt_empresa.Location = new System.Drawing.Point(25, 57);
             this.txt_empresa.Name = "txt_empresa";
             this.txt_empresa.Size = new System.Drawing.Size(188, 28);
             this.txt_empresa.TabIndex = 44;
             // 
             // txt_desde
             // 
-            this.txt_desde.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_desde.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_desde.Location = new System.Drawing.Point(16, 38);
             this.txt_desde.Name = "txt_desde";
-            this.txt_desde.Size = new System.Drawing.Size(242, 26);
+            this.txt_desde.Size = new System.Drawing.Size(274, 28);
             this.txt_desde.TabIndex = 46;
             // 
             // txt_hasta
             // 
-            this.txt_hasta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_hasta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hasta.Location = new System.Drawing.Point(16, 99);
             this.txt_hasta.Name = "txt_hasta";
-            this.txt_hasta.Size = new System.Drawing.Size(242, 26);
+            this.txt_hasta.Size = new System.Drawing.Size(274, 28);
             this.txt_hasta.TabIndex = 47;
             // 
             // desde
             // 
             this.desde.AutoSize = true;
             this.desde.BackColor = System.Drawing.Color.Transparent;
-            this.desde.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desde.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.desde.ForeColor = System.Drawing.Color.White;
             this.desde.Location = new System.Drawing.Point(12, 17);
             this.desde.Name = "desde";
-            this.desde.Size = new System.Drawing.Size(99, 18);
+            this.desde.Size = new System.Drawing.Size(112, 20);
             this.desde.TabIndex = 48;
             this.desde.Text = "Desde la fecha";
             // 
@@ -98,33 +97,13 @@
             // 
             this.hasta.AutoSize = true;
             this.hasta.BackColor = System.Drawing.Color.Transparent;
-            this.hasta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hasta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.hasta.ForeColor = System.Drawing.Color.White;
             this.hasta.Location = new System.Drawing.Point(13, 78);
             this.hasta.Name = "hasta";
-            this.hasta.Size = new System.Drawing.Size(43, 18);
+            this.hasta.Size = new System.Drawing.Size(51, 20);
             this.hasta.TabIndex = 49;
             this.hasta.Text = "Hasta";
-            // 
-            // guardarEn
-            // 
-            this.guardarEn.AutoSize = true;
-            this.guardarEn.BackColor = System.Drawing.Color.Transparent;
-            this.guardarEn.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guardarEn.ForeColor = System.Drawing.Color.White;
-            this.guardarEn.Location = new System.Drawing.Point(12, 143);
-            this.guardarEn.Name = "guardarEn";
-            this.guardarEn.Size = new System.Drawing.Size(82, 18);
-            this.guardarEn.TabIndex = 51;
-            this.guardarEn.Text = "Guardar en..";
-            // 
-            // txt_guardarEn
-            // 
-            this.txt_guardarEn.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_guardarEn.Location = new System.Drawing.Point(15, 164);
-            this.txt_guardarEn.Name = "txt_guardarEn";
-            this.txt_guardarEn.Size = new System.Drawing.Size(162, 26);
-            this.txt_guardarEn.TabIndex = 52;
             // 
             // panel_cargaReporte
             // 
@@ -133,82 +112,10 @@
             this.panel_cargaReporte.Controls.Add(this.txt_desde);
             this.panel_cargaReporte.Controls.Add(this.hasta);
             this.panel_cargaReporte.Controls.Add(this.txt_hasta);
-            this.panel_cargaReporte.Controls.Add(this.btn_examinar);
-            this.panel_cargaReporte.Controls.Add(this.guardarEn);
-            this.panel_cargaReporte.Controls.Add(this.txt_guardarEn);
-            this.panel_cargaReporte.Location = new System.Drawing.Point(12, 124);
+            this.panel_cargaReporte.Location = new System.Drawing.Point(20, 271);
             this.panel_cargaReporte.Name = "panel_cargaReporte";
-            this.panel_cargaReporte.Size = new System.Drawing.Size(274, 202);
+            this.panel_cargaReporte.Size = new System.Drawing.Size(302, 147);
             this.panel_cargaReporte.TabIndex = 57;
-            // 
-            // btn_examinar
-            // 
-            this.btn_examinar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_examinar.BorderColor = System.Drawing.Color.Gold;
-            this.btn_examinar.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btn_examinar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btn_examinar.FlatAppearance.BorderSize = 3;
-            this.btn_examinar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_examinar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_examinar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_examinar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.btn_examinar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_examinar.Location = new System.Drawing.Point(183, 164);
-            this.btn_examinar.Name = "btn_examinar";
-            this.btn_examinar.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.btn_examinar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_examinar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btn_examinar.Size = new System.Drawing.Size(85, 29);
-            this.btn_examinar.TabIndex = 75;
-            this.btn_examinar.Text = "Examinar";
-            this.btn_examinar.TextColor = System.Drawing.Color.White;
-            this.btn_examinar.UseVisualStyleBackColor = false;
-            // 
-            // btn_genrarReporte
-            // 
-            this.btn_genrarReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btn_genrarReporte.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
-            this.btn_genrarReporte.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_genrarReporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_genrarReporte.FlatAppearance.BorderSize = 3;
-            this.btn_genrarReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_genrarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_genrarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_genrarReporte.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.btn_genrarReporte.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_genrarReporte.Location = new System.Drawing.Point(27, 332);
-            this.btn_genrarReporte.Name = "btn_genrarReporte";
-            this.btn_genrarReporte.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.btn_genrarReporte.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_genrarReporte.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_genrarReporte.Size = new System.Drawing.Size(145, 29);
-            this.btn_genrarReporte.TabIndex = 77;
-            this.btn_genrarReporte.Text = "Generar reporte";
-            this.btn_genrarReporte.TextColor = System.Drawing.Color.White;
-            this.btn_genrarReporte.UseVisualStyleBackColor = false;
-            // 
-            // btn_vistaPrevia
-            // 
-            this.btn_vistaPrevia.BackColor = System.Drawing.Color.Transparent;
-            this.btn_vistaPrevia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
-            this.btn_vistaPrevia.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_vistaPrevia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_vistaPrevia.FlatAppearance.BorderSize = 3;
-            this.btn_vistaPrevia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_vistaPrevia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_vistaPrevia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_vistaPrevia.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.btn_vistaPrevia.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_vistaPrevia.Location = new System.Drawing.Point(27, 383);
-            this.btn_vistaPrevia.Name = "btn_vistaPrevia";
-            this.btn_vistaPrevia.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.btn_vistaPrevia.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_vistaPrevia.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_vistaPrevia.Size = new System.Drawing.Size(145, 29);
-            this.btn_vistaPrevia.TabIndex = 76;
-            this.btn_vistaPrevia.Text = "Vista previa";
-            this.btn_vistaPrevia.TextColor = System.Drawing.Color.White;
-            this.btn_vistaPrevia.UseVisualStyleBackColor = false;
             // 
             // datosReporte
             // 
@@ -216,70 +123,11 @@
             this.datosReporte.BackColor = System.Drawing.Color.Transparent;
             this.datosReporte.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosReporte.ForeColor = System.Drawing.Color.Gold;
-            this.datosReporte.Location = new System.Drawing.Point(12, 78);
+            this.datosReporte.Location = new System.Drawing.Point(20, 242);
             this.datosReporte.Name = "datosReporte";
             this.datosReporte.Size = new System.Drawing.Size(167, 26);
             this.datosReporte.TabIndex = 59;
             this.datosReporte.Text = "Datos del reporte";
-            // 
-            // vistaPrevia
-            // 
-            this.vistaPrevia.AutoSize = true;
-            this.vistaPrevia.BackColor = System.Drawing.Color.Transparent;
-            this.vistaPrevia.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vistaPrevia.ForeColor = System.Drawing.Color.Gold;
-            this.vistaPrevia.Location = new System.Drawing.Point(330, 78);
-            this.vistaPrevia.Name = "vistaPrevia";
-            this.vistaPrevia.Size = new System.Drawing.Size(113, 26);
-            this.vistaPrevia.TabIndex = 58;
-            this.vistaPrevia.Text = "Vista previa";
-            // 
-            // panel_total
-            // 
-            this.panel_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel_total.Controls.Add(this.txt_total);
-            this.panel_total.Controls.Add(this.txt_gasOil);
-            this.panel_total.Controls.Add(this.txt_servicios);
-            this.panel_total.Location = new System.Drawing.Point(17, 487);
-            this.panel_total.Name = "panel_total";
-            this.panel_total.Size = new System.Drawing.Size(202, 109);
-            this.panel_total.TabIndex = 59;
-            // 
-            // txt_total
-            // 
-            this.txt_total.AutoSize = true;
-            this.txt_total.BackColor = System.Drawing.Color.Transparent;
-            this.txt_total.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.ForeColor = System.Drawing.Color.White;
-            this.txt_total.Location = new System.Drawing.Point(25, 81);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(57, 18);
-            this.txt_total.TabIndex = 52;
-            this.txt_total.Text = "Total: $";
-            // 
-            // txt_gasOil
-            // 
-            this.txt_gasOil.AutoSize = true;
-            this.txt_gasOil.BackColor = System.Drawing.Color.Transparent;
-            this.txt_gasOil.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gasOil.ForeColor = System.Drawing.Color.White;
-            this.txt_gasOil.Location = new System.Drawing.Point(25, 45);
-            this.txt_gasOil.Name = "txt_gasOil";
-            this.txt_gasOil.Size = new System.Drawing.Size(69, 18);
-            this.txt_gasOil.TabIndex = 51;
-            this.txt_gasOil.Text = "Gas Oil: $";
-            // 
-            // txt_servicios
-            // 
-            this.txt_servicios.AutoSize = true;
-            this.txt_servicios.BackColor = System.Drawing.Color.Transparent;
-            this.txt_servicios.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_servicios.ForeColor = System.Drawing.Color.White;
-            this.txt_servicios.Location = new System.Drawing.Point(25, 11);
-            this.txt_servicios.Name = "txt_servicios";
-            this.txt_servicios.Size = new System.Drawing.Size(81, 18);
-            this.txt_servicios.TabIndex = 50;
-            this.txt_servicios.Text = "Servicios: $";
             // 
             // label5
             // 
@@ -293,96 +141,139 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Total";
             // 
-            // datos_vistaPrevia
+            // tipo_de_reporte
             // 
-            this.datos_vistaPrevia.AllowUserToAddRows = false;
-            this.datos_vistaPrevia.AllowUserToDeleteRows = false;
-            this.datos_vistaPrevia.AllowUserToOrderColumns = true;
-            this.datos_vistaPrevia.AllowUserToResizeColumns = false;
-            this.datos_vistaPrevia.AllowUserToResizeRows = false;
-            this.datos_vistaPrevia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.datos_vistaPrevia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.datos_vistaPrevia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datos_vistaPrevia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datos_vistaPrevia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_vistaPrevia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.datos_vistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datos_vistaPrevia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.datos_vistaPrevia.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.datos_vistaPrevia.EnableHeadersVisualStyles = false;
-            this.datos_vistaPrevia.GridColor = System.Drawing.Color.Gold;
-            this.datos_vistaPrevia.Location = new System.Drawing.Point(326, 107);
-            this.datos_vistaPrevia.Name = "datos_vistaPrevia";
-            this.datos_vistaPrevia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datos_vistaPrevia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.datos_vistaPrevia.RowHeadersVisible = false;
-            this.datos_vistaPrevia.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.datos_vistaPrevia.RowTemplate.Height = 23;
-            this.datos_vistaPrevia.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.datos_vistaPrevia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datos_vistaPrevia.Size = new System.Drawing.Size(920, 863);
-            this.datos_vistaPrevia.TabIndex = 79;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.tipo_de_reporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipo_de_reporte.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.tipo_de_reporte.FormattingEnabled = true;
+            this.tipo_de_reporte.Items.AddRange(new object[] {
             "Servicio",
             "Combustible",
             "Pagos clientes"});
-            this.comboBox1.Location = new System.Drawing.Point(219, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 28);
-            this.comboBox1.TabIndex = 80;
+            this.tipo_de_reporte.Location = new System.Drawing.Point(25, 147);
+            this.tipo_de_reporte.Name = "tipo_de_reporte";
+            this.tipo_de_reporte.Size = new System.Drawing.Size(188, 28);
+            this.tipo_de_reporte.TabIndex = 80;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "datos_combustible";
+            reportDataSource3.Value = this.combustibleBindingSource;
+            reportDataSource4.Name = "datos_reporte";
+            reportDataSource4.Value = this.reportecombustibleBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_combustible.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(958, 1044);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.btn_agregar);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.datosReporte);
+            this.panel1.Controls.Add(this.panel_cargaReporte);
+            this.panel1.Controls.Add(this.tipo_de_reporte);
+            this.panel1.Controls.Add(this.txt_empresa);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(336, 1044);
+            this.panel1.TabIndex = 81;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
+            this.btn_agregar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatAppearance.BorderSize = 3;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.Location = new System.Drawing.Point(73, 433);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_agregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_agregar.Size = new System.Drawing.Size(186, 32);
+            this.btn_agregar.TabIndex = 82;
+            this.btn_agregar.Text = "Generar reporte";
+            this.btn_agregar.TextColor = System.Drawing.Color.White;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(21, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Tipo de reporte";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(21, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Elija una empresa";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.reportViewer1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(342, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(958, 1044);
+            this.panel2.TabIndex = 82;
+            // 
+            // reportecombustibleBindingSource
+            // 
+            this.reportecombustibleBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_combustible);
+            // 
+            // combustibleBindingSource
+            // 
+            this.combustibleBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.Combustible);
             // 
             // FormReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 1044);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.datos_vistaPrevia);
-            this.Controls.Add(this.btn_genrarReporte);
-            this.Controls.Add(this.btn_vistaPrevia);
-            this.Controls.Add(this.panel_total);
-            this.Controls.Add(this.vistaPrevia);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.datosReporte);
-            this.Controls.Add(this.panel_cargaReporte);
-            this.Controls.Add(this.txt_empresa);
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormReportes";
             this.Text = "FormPlanillaVazquez";
             this.Load += new System.EventHandler(this.FormReportes_Load);
             this.panel_cargaReporte.ResumeLayout(false);
             this.panel_cargaReporte.PerformLayout();
-            this.panel_total.ResumeLayout(false);
-            this.panel_total.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datos_vistaPrevia)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combustibleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,20 +286,17 @@
         private System.Windows.Forms.DateTimePicker txt_hasta;
         private System.Windows.Forms.Label desde;
         private System.Windows.Forms.Label hasta;
-        private System.Windows.Forms.Label guardarEn;
-        private System.Windows.Forms.TextBox txt_guardarEn;
         private System.Windows.Forms.Panel panel_cargaReporte;
         private System.Windows.Forms.Label datosReporte;
-        private System.Windows.Forms.Label vistaPrevia;
-        private System.Windows.Forms.Panel panel_total;
-        private System.Windows.Forms.Label txt_total;
-        private System.Windows.Forms.Label txt_gasOil;
-        private System.Windows.Forms.Label txt_servicios;
         private System.Windows.Forms.Label label5;
-        private ButtonRedondeado btn_genrarReporte;
-        private ButtonRedondeado btn_vistaPrevia;
-        private ButtonRedondeado btn_examinar;
-        private System.Windows.Forms.DataGridView datos_vistaPrevia;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox tipo_de_reporte;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private ButtonRedondeado btn_agregar;
+        private System.Windows.Forms.BindingSource combustibleBindingSource;
+        private System.Windows.Forms.BindingSource reportecombustibleBindingSource;
     }
 }

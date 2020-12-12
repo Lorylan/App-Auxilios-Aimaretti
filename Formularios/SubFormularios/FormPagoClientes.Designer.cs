@@ -93,11 +93,11 @@
             this.datos_pago = new System.Windows.Forms.DataGridView();
             this.listado_pagos = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
-            this.pb_error = new System.Windows.Forms.PictureBox();
             this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.pb_error = new System.Windows.Forms.PictureBox();
             this.panel_CargaCliente.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -895,17 +895,6 @@
             this.txt_error.Text = "Completar campo/s faltante/s";
             this.txt_error.Visible = false;
             // 
-            // pb_error
-            // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
-            this.pb_error.Location = new System.Drawing.Point(164, 220);
-            this.pb_error.Name = "pb_error";
-            this.pb_error.Size = new System.Drawing.Size(29, 26);
-            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_error.TabIndex = 78;
-            this.pb_error.TabStop = false;
-            this.pb_error.Visible = false;
-            // 
             // btn_editar
             // 
             this.btn_editar.BackColor = System.Drawing.Color.Transparent;
@@ -1002,14 +991,25 @@
             this.btn_agregar.UseVisualStyleBackColor = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
+            // pb_error
+            // 
+            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_error.Location = new System.Drawing.Point(167, 226);
+            this.pb_error.Name = "pb_error";
+            this.pb_error.Size = new System.Drawing.Size(29, 26);
+            this.pb_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_error.TabIndex = 86;
+            this.pb_error.TabStop = false;
+            this.pb_error.Visible = false;
+            // 
             // FormPagoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1018, 1044);
-            this.Controls.Add(this.txt_error);
             this.Controls.Add(this.pb_error);
+            this.Controls.Add(this.txt_error);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.btn_cancelar);
@@ -1112,10 +1112,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label txt_error;
-        private System.Windows.Forms.PictureBox pb_error;
         private System.Windows.Forms.Label obligatorio1;
         private System.Windows.Forms.Label obligatorio;
         private System.Windows.Forms.Label obligatorio3;
         private System.Windows.Forms.Label obligatorio2;
+        private System.Windows.Forms.PictureBox pb_error;
     }
 }
