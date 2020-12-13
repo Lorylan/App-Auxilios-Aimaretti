@@ -783,7 +783,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="Desde: "First(Fields!fecha_inicio.Value, "reporte_servicios")+" , Hasta: "+First(Fields!fecha_fin.Value, "reporte_servicios")</Value>
+                  <Value>="Desde: "+First(Fields!fecha_inicio.Value, "reporte_servicios")+" , Hasta: "+First(Fields!fecha_fin.Value, "reporte_servicios")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
