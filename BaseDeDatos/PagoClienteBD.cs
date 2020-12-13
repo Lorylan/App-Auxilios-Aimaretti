@@ -54,5 +54,12 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
             DataSet data = conexion.EjecutarSentencia(sentencia);
             return data;
         }
+
+        public DataTable MostrarDesdeHasta(String desde, String hasta)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente Where FechaC >='" + desde + "' AND FechaC <='" + hasta + "'");
+            DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
+            return datos;
+        }
     }
 }

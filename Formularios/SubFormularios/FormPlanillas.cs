@@ -14,11 +14,10 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 {
     public partial class FormPlanillas : Form
     {
-        Servicio servicio;
         ServicioBD servicioBD;
         ClienteBD clienteBD;
         TarifaPactadaDB tarifaPactadaBD;
-        CombustibleBD combustibleBD;
+        ServicioBD combustibleBD;
         private void cargarOpciones()
         {
             DataSet dataset = clienteBD.MostrarInfo();
@@ -170,7 +169,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
             servicioBD = new ServicioBD();
             clienteBD = new ClienteBD();
             tarifaPactadaBD = new TarifaPactadaDB();
-            combustibleBD = new CombustibleBD();
+            combustibleBD = new ServicioBD();
             cargarOpciones();
         }
 

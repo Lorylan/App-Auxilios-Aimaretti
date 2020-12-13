@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.txt_empresa = new System.Windows.Forms.ComboBox();
             this.txt_desde = new System.Windows.Forms.DateTimePicker();
             this.txt_hasta = new System.Windows.Forms.DateTimePicker();
@@ -39,20 +43,30 @@
             this.panel_cargaReporte = new System.Windows.Forms.Panel();
             this.datosReporte = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tipo_de_reporte = new System.Windows.Forms.ComboBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.txt_tipo_de_reporte = new System.Windows.Forms.ComboBox();
+            this.reporte_combustible = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.reporte_pago_cliente = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reporte_servicio = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportecombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.combustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listcombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportepagoclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reporteserviciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listservicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listpagoclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_cargaReporte.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.combustibleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listservicioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_empresa
@@ -64,6 +78,7 @@
             this.txt_empresa.Name = "txt_empresa";
             this.txt_empresa.Size = new System.Drawing.Size(188, 28);
             this.txt_empresa.TabIndex = 44;
+            this.txt_empresa.SelectedIndexChanged += new System.EventHandler(this.txt_empresa_SelectedIndexChanged);
             // 
             // txt_desde
             // 
@@ -141,35 +156,37 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Total";
             // 
-            // tipo_de_reporte
+            // txt_tipo_de_reporte
             // 
-            this.tipo_de_reporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipo_de_reporte.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
-            this.tipo_de_reporte.FormattingEnabled = true;
-            this.tipo_de_reporte.Items.AddRange(new object[] {
+            this.txt_tipo_de_reporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_tipo_de_reporte.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
+            this.txt_tipo_de_reporte.FormattingEnabled = true;
+            this.txt_tipo_de_reporte.Items.AddRange(new object[] {
             "Servicio",
             "Combustible",
             "Pagos clientes"});
-            this.tipo_de_reporte.Location = new System.Drawing.Point(25, 147);
-            this.tipo_de_reporte.Name = "tipo_de_reporte";
-            this.tipo_de_reporte.Size = new System.Drawing.Size(188, 28);
-            this.tipo_de_reporte.TabIndex = 80;
+            this.txt_tipo_de_reporte.Location = new System.Drawing.Point(25, 147);
+            this.txt_tipo_de_reporte.Name = "txt_tipo_de_reporte";
+            this.txt_tipo_de_reporte.Size = new System.Drawing.Size(188, 28);
+            this.txt_tipo_de_reporte.TabIndex = 80;
+            this.txt_tipo_de_reporte.SelectedIndexChanged += new System.EventHandler(this.tipo_de_reporte_SelectedIndexChanged);
             // 
-            // reportViewer1
+            // reporte_combustible
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "datos_combustible";
-            reportDataSource3.Value = this.combustibleBindingSource;
-            reportDataSource4.Name = "datos_reporte";
-            reportDataSource4.Value = this.reportecombustibleBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_combustible.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(958, 1044);
-            this.reportViewer1.TabIndex = 0;
+            this.reporte_combustible.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "datos_combustible";
+            reportDataSource1.Value = this.listcombustibleBindingSource;
+            reportDataSource2.Name = "reporte_combustible";
+            reportDataSource2.Value = this.reportecombustibleBindingSource;
+            this.reporte_combustible.LocalReport.DataSources.Add(reportDataSource1);
+            this.reporte_combustible.LocalReport.DataSources.Add(reportDataSource2);
+            this.reporte_combustible.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_combustible.rdlc";
+            this.reporte_combustible.Location = new System.Drawing.Point(0, 0);
+            this.reporte_combustible.Name = "reporte_combustible";
+            this.reporte_combustible.ServerReport.BearerToken = null;
+            this.reporte_combustible.Size = new System.Drawing.Size(958, 1044);
+            this.reporte_combustible.TabIndex = 0;
+            this.reporte_combustible.Visible = false;
             // 
             // panel1
             // 
@@ -179,7 +196,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.datosReporte);
             this.panel1.Controls.Add(this.panel_cargaReporte);
-            this.panel1.Controls.Add(this.tipo_de_reporte);
+            this.panel1.Controls.Add(this.txt_tipo_de_reporte);
             this.panel1.Controls.Add(this.txt_empresa);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -237,21 +254,76 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.reportViewer1);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel2.Controls.Add(this.reporte_pago_cliente);
+            this.panel2.Controls.Add(this.reporte_servicio);
+            this.panel2.Controls.Add(this.reporte_combustible);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(342, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(958, 1044);
             this.panel2.TabIndex = 82;
             // 
+            // reporte_pago_cliente
+            // 
+            this.reporte_pago_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "dato_pago_cliente";
+            reportDataSource3.Value = this.reportepagoclienteBindingSource;
+            reportDataSource4.Name = "reporte_pagos";
+            reportDataSource4.Value = this.listpagoclienteBindingSource;
+            this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource3);
+            this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource4);
+            this.reporte_pago_cliente.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_pago_cliente.rdlc";
+            this.reporte_pago_cliente.Location = new System.Drawing.Point(0, 0);
+            this.reporte_pago_cliente.Name = "reporte_pago_cliente";
+            this.reporte_pago_cliente.ServerReport.BearerToken = null;
+            this.reporte_pago_cliente.Size = new System.Drawing.Size(958, 1044);
+            this.reporte_pago_cliente.TabIndex = 2;
+            this.reporte_pago_cliente.Visible = false;
+            // 
+            // reporte_servicio
+            // 
+            this.reporte_servicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource5.Name = "reporte_servicios";
+            reportDataSource5.Value = this.reporteserviciosBindingSource;
+            reportDataSource6.Name = "dato_servicio";
+            reportDataSource6.Value = this.listservicioBindingSource;
+            this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource5);
+            this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource6);
+            this.reporte_servicio.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_servicio.rdlc";
+            this.reporte_servicio.Location = new System.Drawing.Point(0, 0);
+            this.reporte_servicio.Name = "reporte_servicio";
+            this.reporte_servicio.ServerReport.BearerToken = null;
+            this.reporte_servicio.Size = new System.Drawing.Size(958, 1044);
+            this.reporte_servicio.TabIndex = 1;
+            this.reporte_servicio.Visible = false;
+            // 
             // reportecombustibleBindingSource
             // 
             this.reportecombustibleBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_combustible);
             // 
-            // combustibleBindingSource
+            // listcombustibleBindingSource
             // 
-            this.combustibleBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.Combustible);
+            this.listcombustibleBindingSource.DataMember = "list_combustible";
+            this.listcombustibleBindingSource.DataSource = this.reportecombustibleBindingSource;
+            // 
+            // reportepagoclienteBindingSource
+            // 
+            this.reportepagoclienteBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_pago_cliente);
+            // 
+            // reporteserviciosBindingSource
+            // 
+            this.reporteserviciosBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_servicios);
+            // 
+            // listservicioBindingSource
+            // 
+            this.listservicioBindingSource.DataMember = "list_servicio";
+            this.listservicioBindingSource.DataSource = this.reporteserviciosBindingSource;
+            // 
+            // listpagoclienteBindingSource
+            // 
+            this.listpagoclienteBindingSource.DataMember = "list_pago_cliente";
+            this.listpagoclienteBindingSource.DataSource = this.reportepagoclienteBindingSource;
             // 
             // FormReportes
             // 
@@ -273,7 +345,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.combustibleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listservicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,14 +365,20 @@
         private System.Windows.Forms.Panel panel_cargaReporte;
         private System.Windows.Forms.Label datosReporte;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox tipo_de_reporte;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.ComboBox txt_tipo_de_reporte;
+        private Microsoft.Reporting.WinForms.ReportViewer reporte_combustible;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private ButtonRedondeado btn_agregar;
-        private System.Windows.Forms.BindingSource combustibleBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reporte_servicio;
+        private Microsoft.Reporting.WinForms.ReportViewer reporte_pago_cliente;
+        private System.Windows.Forms.BindingSource listcombustibleBindingSource;
         private System.Windows.Forms.BindingSource reportecombustibleBindingSource;
+        private System.Windows.Forms.BindingSource reportepagoclienteBindingSource;
+        private System.Windows.Forms.BindingSource listpagoclienteBindingSource;
+        private System.Windows.Forms.BindingSource reporteserviciosBindingSource;
+        private System.Windows.Forms.BindingSource listservicioBindingSource;
     }
 }

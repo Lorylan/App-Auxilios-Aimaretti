@@ -993,7 +993,7 @@
             // 
             // pb_error
             // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+           
             this.pb_error.Location = new System.Drawing.Point(167, 226);
             this.pb_error.Name = "pb_error";
             this.pb_error.Size = new System.Drawing.Size(29, 26);

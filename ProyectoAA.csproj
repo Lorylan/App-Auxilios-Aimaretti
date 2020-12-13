@@ -220,9 +220,21 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reporte\reporte_combustible.rdlc" />
+    <EmbeddedResource Include="Reporte\reporte_pago_cliente.rdlc" />
+    <EmbeddedResource Include="Reporte\reporte_servicio.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.Cliente.datasource" />
     <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.Combustible.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.Encriptador.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.PagoCliente.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.Personal.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.reporte.datasource" />
     <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.reporte_combustible.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.reporte_pago_cliente.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.reporte_servicios.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.Servicio.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.TarifaPactada.datasource" />
+    <None Include="Properties\DataSources\PuebaDeDiseñoAA.Clases.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -281,7 +293,9 @@
   <ItemGroup>
     <None Include="Resources\icons8-invisible-96.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

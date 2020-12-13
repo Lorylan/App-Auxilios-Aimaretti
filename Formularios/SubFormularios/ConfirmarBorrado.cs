@@ -13,7 +13,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 {
     public partial class ConfirmarBorrado : Form
     {
-        private Personal personal;
+        
 
         public ConfirmarBorrado(string[] info)
         {

@@ -20,31 +20,34 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
 
         public bool Agregar(Combustible c)
         {
-            return conexion.ejecutarComandoSinRetorno("INSERT INTO Combustible VALUES ('"+ c.Fecha +"', '" +c.Litros+"', '"+ c.Importe +"','"+ c.Usuario +"' ,'"+c.idCliente+"')");
+            return conexion.ejecutarComandoSinRetorno("INSERT INTO Combustible VALUES ('" + c.Fecha + "', '" + c.Litros + "', '" + c.Importe + "','" + c.Usuario + "' ,'" + c.idCliente + "')");
         }
         public bool Borrar(int id)
         {
-            return conexion.ejecutarComandoSinRetorno("DELETE From Combustible WHERE Id='"+id+"'");
+            return conexion.ejecutarComandoSinRetorno("DELETE From Combustible WHERE Id='" + id + "'");
         }
         public bool Modificar(Combustible c, int id)
         {
-            return conexion.ejecutarComandoSinRetorno("UPDATE Combustible SET Fecha='"+ c.Fecha+"', Litros='"+c.Litros+"', Importe='"+c.Importe+"', idCliente ='"+ c.idCliente+"' WHERE Id='"+id+"'");
+            return conexion.ejecutarComandoSinRetorno("UPDATE Combustible SET Fecha='" + c.Fecha + "', Litros='" + c.Litros + "', Importe='" + c.Importe + "', idCliente ='" + c.idCliente + "' WHERE Id='" + id + "'");
         }
         public DataSet MostrarInfo(string idC)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where idCliente='"+idC+"'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where idCliente='" + idC + "'");
             return conexion.EjecutarSentencia(sentencia);
         }
-        public string CalcularTotal(string idC) {
-            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='"+idC+"'");
+        public string CalcularTotal(string idC)
+        {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='" + idC + "'");
         }
-        public DataTable MostrarDesdeHasta(String desde, String hasta) {
-            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where Fecha >='"+desde+"' AND Fecha <='"+hasta+"'");
+        public DataTable MostrarDesdeHasta(String desde, String hasta)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "'");
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
         }
 
-        public string CalcularSubTotal(DateTime desde, DateTime hasta) {
+        public string CalcularSubTotal(DateTime desde, DateTime hasta)
+        {
             return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE Fecha >='" + desde + "' AND Fecha <='" + hasta + "'");
         }
 

@@ -43,5 +43,12 @@ namespace PuebaDeDiseñoAA.BaseDeDatos
         {
             return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Servicio WHERE idCliente='" + idC + "'");
         }
+
+        public DataTable MostrarDesdeHasta(String desde, String hasta)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * From Servicio Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "'");
+            DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
+            return datos;
+        }
     }
 }

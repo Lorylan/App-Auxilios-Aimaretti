@@ -10,12 +10,13 @@ namespace PuebaDeDiseñoAA.Clases
     class reporte_combustible :reporte
     {
         public List<Combustible> list_combustible { get; private set; }
+        public double cant_cobustible_cargado { get; private set; }
         
-        public void createReporteCombustible(String desde, String hasta, string emp) {
+        public void createReporteCombustible(String desde, String hasta, String emp) {
             this.empresa = emp;
             this.fecha_inicio = desde;
             this.fecha_fin = hasta;
-            CombustibleBD combustibleBD = new CombustibleBD();
+            ServicioBD combustibleBD = new ServicioBD();
             list_combustible = new List<Combustible>();
             Combustible combustible_aux;
             var list_c = combustibleBD.MostrarDesdeHasta(desde, hasta);
@@ -23,6 +24,7 @@ namespace PuebaDeDiseñoAA.Clases
             string importe;
             String fecha;
             total_parcial = 0;
+            cant_cobustible_cargado = 0;
             foreach (System.Data.DataRow rows in list_c.Rows) {
                 fecha = Convert.ToString(rows[1]);
                 litros = Convert.ToString(rows[2]);
@@ -30,6 +32,7 @@ namespace PuebaDeDiseñoAA.Clases
                 combustible_aux = new Combustible(fecha,litros,importe,"");
                 list_combustible.Add(combustible_aux);
                 total_parcial += Convert.ToDouble(importe);
+                cant_cobustible_cargado += Convert.ToDouble(litros);
             }
         }
 
