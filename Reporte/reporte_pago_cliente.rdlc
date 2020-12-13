@@ -421,7 +421,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -567,7 +566,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!total_parcial.Value, "reporte_pagos")</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -600,7 +599,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!cant_pago_cliente.Value, "reporte_pagos")</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -692,7 +691,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value />
+                  <Value>="Desde: "+First(Fields!fecha_inicio.Value, "reporte_pagos")+" , Hasta: "+First(Fields!fecha_fin.Value, "reporte_pagos")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
@@ -726,7 +725,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value />
+                  <Value>="Reporte generadi para: "+First(Fields!empresa.Value, "reporte_pagos")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>

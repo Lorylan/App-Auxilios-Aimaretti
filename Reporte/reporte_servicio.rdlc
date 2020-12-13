@@ -658,7 +658,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!total_parcial.Value, "reporte_servicios")</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -691,7 +691,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!cant_servicios.Value, "reporte_servicios")</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -783,7 +783,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value />
+                  <Value>="Desde: "First(Fields!fecha_inicio.Value, "reporte_servicios")+" , Hasta: "+First(Fields!fecha_fin.Value, "reporte_servicios")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
@@ -817,7 +817,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value EvaluationMode="Constant" />
+                  <Value>="Reporte generado para: "+First(Fields!empresa.Value, "reporte_servicios")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
