@@ -16,7 +16,7 @@ namespace PuebaDeDiseñoAA.Clases
             this.empresa = emp;
             this.fecha_inicio = desde;
             this.fecha_fin = hasta;
-            ServicioBD combustibleBD = new ServicioBD();
+            CombustibleBD combustibleBD = new CombustibleBD();
             list_combustible = new List<Combustible>();
             Combustible combustible_aux;
             var list_c = combustibleBD.MostrarDesdeHasta(desde, hasta);

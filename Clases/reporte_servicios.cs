@@ -38,7 +38,7 @@ namespace PuebaDeDiseñoAA.Clases
                 desde_serv = Convert.ToString(rows[9]);
                 hasta_serv = Convert.ToString(rows[10]);
                 km = Convert.ToString(rows[12]);
-                importe = Convert.ToString(rows[14]);
+                importe = Convert.ToString(rows[13]);
                 servicio_aux = new Servicio(fecha,codigo,desde,hasta,"","","","","","",km,"","",tipo,importe);
                 list_servicio.Add(servicio_aux);
                 total_parcial += Convert.ToDouble(importe);

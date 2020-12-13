@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="datos">
+      <Tablix Name="datos_pago_cliente">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
@@ -421,7 +421,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -448,7 +447,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>datos_pago</DataSetName>
+        <DataSetName>dato_pago_cliente</DataSetName>
         <Top>2.71724cm</Top>
         <Left>1.5cm</Left>
         <Height>2.39063cm</Height>
@@ -567,7 +566,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!total_parcial.Value, "reporte_pagos_cliente")</Value>
+                <Value>=Sum(Fields!total_parcial.Value, "reporte_pagos")</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -600,7 +599,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!cant_pago_cliente.Value, "reporte_pagos_cliente")</Value>
+                <Value>=Sum(Fields!cant_pago_cliente.Value, "reporte_pagos")</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -692,7 +691,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="Desde: "+First(Fields!fecha_inicio.Value, "reporte_pagos_cliente")+" , Hasta: "+First(Fields!fecha_fin.Value, "reporte_pagos_cliente")</Value>
+                  <Value>="Desde: "+First(Fields!fecha_inicio.Value, "reporte_pagos")+" , Hasta: "+First(Fields!fecha_fin.Value, "reporte_pagos")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
@@ -726,7 +725,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="Reporte generado para: "+First(Fields!empresa.Value, "reporte_pagos_cliente")</Value>
+                  <Value>="Reporte generado para: "+First(Fields!empresa.Value, "reporte_pagos")</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
@@ -923,25 +922,11 @@
       </ConnectionProperties>
       <rd:DataSourceID>d9ed492e-9bb3-445c-a36c-970aa8638ad7</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases3">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>52e8a021-3474-4203-81d0-614661e82bb2</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases4">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>8cc2ec71-80de-4b33-bf3b-51ce9cfaa81c</rd:DataSourceID>
-    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="datos_pago">
+    <DataSet Name="dato_pago_cliente">
       <Query>
-        <DataSourceName>PuebaDeDiseñoAAClases3</DataSourceName>
+        <DataSourceName>PuebaDeDiseñoAAClases1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -997,9 +982,9 @@
         <rd:ObjectDataSourceType>PuebaDeDiseñoAA.Clases.reporte_pago_cliente, PuebaDeDiseñoAA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="reporte_pagos_cliente">
+    <DataSet Name="reporte_pagos">
       <Query>
-        <DataSourceName>PuebaDeDiseñoAAClases4</DataSourceName>
+        <DataSourceName>PuebaDeDiseñoAAClases2</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>

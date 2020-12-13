@@ -8,7 +8,7 @@ using PuebaDeDiseñoAA.Clases;
 
 namespace PuebaDeDiseñoAA.Clases
 {
-    class reporte_pago_cliente:reporte
+    class reporte_pago:reporte
     {
         public List<PagoCliente> list_pago_cliente { get; private set; }
         public double cant_pago_cliente { get; private set; }
