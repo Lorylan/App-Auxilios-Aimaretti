@@ -22,7 +22,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         {
             
         }
-        private void cargarReporteCombustible(DateTime desde, DateTime hasta, String empresa) {
+        private void cargarReporteCombustible(String desde, String hasta, String empresa) {
             reporte_combustible reporte_c = new reporte_combustible();
             reporte_c.createReporteCombustible(desde, hasta, empresa);
             reportecombustibleBindingSource.DataSource = reporte_c;
@@ -32,7 +32,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            cargarReporteCombustible(txt_desde.Value, txt_hasta.Value, "vazquez");
+
+            cargarReporteCombustible(txt_desde.Value.Date.ToString().Split(' ')[0], txt_hasta.Value.Date.ToString().Split(' ')[0], "vazquez");
         }
     }
 }

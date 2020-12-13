@@ -9,21 +9,21 @@ namespace PuebaDeDiseñoAA.Clases
 {
     class Combustible
     {
-        public DateTime Fecha { get; set; }
-        public string Litros { get; set; }
-        public string Importe { get; set; }
-        public string idCliente { get; set; }
-        public string Usuario { get; set; }
+        public String Fecha { get; set; }
+        public String Litros { get; set; }
+        public String Importe { get; set; }
+        public String idCliente { get; set; }
+        public String Usuario { get; set; }
   
         public int id;
-        public Combustible(DateTime fecha, string l, string im, string idC) {
+        public Combustible(string fecha, string l, string im, string idC) {
             Fecha = fecha;
             Importe = im;
             Litros = l;
             idCliente = idC;
             Usuario = Program.nombreUsuario;
         }
-        public Combustible(DateTime fecha, string l, string im, string idC, int i)
+        public Combustible(string fecha, string l, string im, string idC, int i)
         {
             Fecha = fecha;
             Importe = im;

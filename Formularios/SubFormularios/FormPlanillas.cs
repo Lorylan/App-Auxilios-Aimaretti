@@ -29,7 +29,7 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private Servicio RecuperarInfo()
         {
-            return new Servicio(txt_Fecha.Value,txt_codigo.Text,txt_desde.Text,txt_hasta.Text,
+            return new Servicio(txt_Fecha.Value.ToString().Split(' ')[0],txt_codigo.Text,txt_desde.Text,txt_hasta.Text,
                 txt_montoCobrado.Text,txt_observaciones.Text,txt_vehiculo.Text,txt_patente.Text,
                  txt_color.Text,txt_desperfecto.Text, txt_km.Text, txt_movil.Text,
                 txt_Empresa.Text,txt_tipo.Text,txt_Importe.Text);

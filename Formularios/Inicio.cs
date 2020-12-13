@@ -60,8 +60,11 @@ namespace PuebaDeDiseñoAA
         }
         public bool hayAlarma() {
             pagoClienteBD = new PagoClienteBD();
-            datos_pago_hoy.DataSource = pagoClienteBD.ObtenerInfoDe(DateTime.Now.Date).Tables[0];
-            datos_pago_recordatorio.DataSource = pagoClienteBD.ObtenerInfoDee(DateTime.Now.AddDays(-1).Date, DateTime.Now.AddDays(-2).Date).Tables[0];
+            string fechaHoy = DateTime.Now.Date.ToString().Split(' ')[0];
+            string fechaAyer = DateTime.Now.AddDays(-1).Date.ToString().Split(' ')[0];
+            string fechaAntesAyer = DateTime.Now.AddDays(-2).Date.ToString().Split(' ')[0];
+            datos_pago_hoy.DataSource = pagoClienteBD.ObtenerInfoDe(fechaHoy).Tables[0];
+            datos_pago_recordatorio.DataSource = pagoClienteBD.ObtenerInfoDee(fechaAyer,fechaAntesAyer).Tables[0];
             if (datos_pago_hoy.Rows.Count != 0) 
             {
                 for (int i = 0; i < datos_pago_hoy.Rows.Count; i++) {

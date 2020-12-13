@@ -99,7 +99,10 @@
     <Compile Include="Clases\Encriptador.cs" />
     <Compile Include="Clases\PagoCliente.cs" />
     <Compile Include="Clases\Personal.cs" />
+    <Compile Include="Clases\reporte.cs" />
     <Compile Include="Clases\reporte_combustible.cs" />
+    <Compile Include="Clases\reporte_pago_cliente.cs" />
+    <Compile Include="Clases\reporte_servicios.cs" />
     <Compile Include="Clases\Servicio.cs" />
     <Compile Include="Clases\TarifaPactada.cs" />
     <Compile Include="Clases\Usuario.cs" />

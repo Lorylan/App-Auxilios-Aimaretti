@@ -10,7 +10,7 @@ namespace PuebaDeDiseñoAA.Clases
 {
     class Servicio
     {
-        public DateTime Fecha { get; set; }
+        public String Fecha { get; set; }
         public string Codigo { get; set; }
         public string Desde { get; set; }
         public string Hasta { get; set; }
@@ -27,7 +27,7 @@ namespace PuebaDeDiseñoAA.Clases
         public string idTipo { get; set; }
         public string Usuario { get; set; }
 
-        public Servicio (DateTime f, string cod, string desde, string hasta, string monto, string obs,string veh,string pate,
+        public Servicio (String f, string cod, string desde, string hasta, string monto, string obs,string veh,string pate,
             string col, string des, string km, string movil,string idC, string idT, string importe){
             Fecha = f;
             Codigo = cod;

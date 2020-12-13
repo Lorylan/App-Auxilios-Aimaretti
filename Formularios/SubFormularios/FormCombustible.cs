@@ -30,8 +30,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         }
         private Combustible RecuperarInfo()
         {
-            
-            return new Combustible(txt_fecha.Value, txt_litros.Text,txt_importe.Text,txt_opciones.Text);
+            string[] fecha = txt_fecha.Value.ToString().Split(' ');
+            return new Combustible(fecha[0], txt_litros.Text,txt_importe.Text,txt_opciones.Text);
         }
         private bool InfoValida()
         {

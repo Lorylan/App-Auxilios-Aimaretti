@@ -99,13 +99,13 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         private PagoCliente RecuperarInfo() {
             if (txt_opcion_pago.Equals("Efectivo"))
             {
-                return new PagoCliente(txt_comprobante_nro.Text,txt_Fecha_c.Value,txt_monto.Text,"-","-","-",
-                    DateTime.MinValue,txt_detalle.Text,txt_Empresa.Text,"Efectivo");
+                return new PagoCliente(txt_comprobante_nro.Text,txt_Fecha_c.Value.ToString().Split(' ')[0],txt_monto.Text,"-","-","-",
+                    "-",txt_detalle.Text,txt_Empresa.Text,"Efectivo");
             }
             else {
-                return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.Date, txt_monto.Text, 
+                return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.ToString().Split(' ')[0], txt_monto.Text, 
                     txt_nro.Text,txt_banco.Text,txt_nro_cuenta.Text,
-                    txt_fecha.Value.Date, txt_detalle.Text, txt_Empresa.Text, "" +
+                    txt_fecha.Value.Date.ToString().Split(' ')[0], txt_detalle.Text, txt_Empresa.Text, "" +
                     "Transferencia bancaria");
             }
             
