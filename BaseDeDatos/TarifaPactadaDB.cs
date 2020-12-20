@@ -13,6 +13,7 @@ namespace AuxiliosAimaretti.BaseDeDatos
     {
         Conexion conexion;
         public TarifaPactadaDB()
+
         {
             conexion = new Conexion();
         }
