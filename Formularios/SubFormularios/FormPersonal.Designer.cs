@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormPersonal
     {
@@ -58,10 +58,10 @@
             this.listadoPersonal = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_editar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_borrar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             this.datosPersonal = new System.Windows.Forms.DataGridView();
             this.pb_error = new System.Windows.Forms.PictureBox();
             this.panel_cargaPersonal.SuspendLayout();
@@ -558,7 +558,7 @@
             // 
             // pb_error
             // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_error.Image = global::AuxiliosAimaretti.Properties.Resources.error;
             this.pb_error.Location = new System.Drawing.Point(199, 12);
             this.pb_error.Name = "pb_error";
             this.pb_error.Size = new System.Drawing.Size(29, 26);

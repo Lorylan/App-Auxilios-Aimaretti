@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormConfiguracionUsuario
     {
@@ -64,8 +64,8 @@
             this.pb_verContraseña = new System.Windows.Forms.PictureBox();
             this.pb_noVerRepetirContraseña = new System.Windows.Forms.PictureBox();
             this.pb_verRepetirContraseña = new System.Windows.Forms.PictureBox();
-            this.btn_crearCuenta = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cambiarContraseña = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_crearCuenta = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cambiarContraseña = new AuxiliosAimaretti.ButtonRedondeado();
             this.panel_cambiarContraseña.SuspendLayout();
             this.panel_crearCuenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_errorCcuenta)).BeginInit();
@@ -363,7 +363,7 @@
             // 
             // pb_errorCcuenta
             // 
-            this.pb_errorCcuenta.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_errorCcuenta.Image = global::AuxiliosAimaretti.Properties.Resources.error;
             this.pb_errorCcuenta.Location = new System.Drawing.Point(223, 430);
             this.pb_errorCcuenta.Name = "pb_errorCcuenta";
             this.pb_errorCcuenta.Size = new System.Drawing.Size(29, 26);
@@ -374,7 +374,7 @@
             // 
             // pb_errorCc
             // 
-            this.pb_errorCc.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_errorCc.Image = global::AuxiliosAimaretti.Properties.Resources.error;
             this.pb_errorCc.Location = new System.Drawing.Point(215, 42);
             this.pb_errorCc.Name = "pb_errorCc";
             this.pb_errorCc.Size = new System.Drawing.Size(29, 26);
@@ -385,7 +385,7 @@
             // 
             // pb_verContraseñaActual
             // 
-            this.pb_verContraseñaActual.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_eye_96;
+            this.pb_verContraseñaActual.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_eye_96;
             this.pb_verContraseñaActual.Location = new System.Drawing.Point(229, 37);
             this.pb_verContraseñaActual.Name = "pb_verContraseñaActual";
             this.pb_verContraseñaActual.Size = new System.Drawing.Size(36, 28);
@@ -396,7 +396,7 @@
             // 
             // pb_noVerContraseñaActual
             // 
-            this.pb_noVerContraseñaActual.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_invisible_96;
+            this.pb_noVerContraseñaActual.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_invisible_96;
             this.pb_noVerContraseñaActual.Location = new System.Drawing.Point(230, 37);
             this.pb_noVerContraseñaActual.Name = "pb_noVerContraseñaActual";
             this.pb_noVerContraseñaActual.Size = new System.Drawing.Size(36, 28);
@@ -407,7 +407,7 @@
             // 
             // pb_noVerNuevaContraseña
             // 
-            this.pb_noVerNuevaContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_invisible_96;
+            this.pb_noVerNuevaContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_invisible_96;
             this.pb_noVerNuevaContraseña.Location = new System.Drawing.Point(229, 109);
             this.pb_noVerNuevaContraseña.Name = "pb_noVerNuevaContraseña";
             this.pb_noVerNuevaContraseña.Size = new System.Drawing.Size(36, 28);
@@ -418,7 +418,7 @@
             // 
             // pb_verNuevaContraseña
             // 
-            this.pb_verNuevaContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_eye_96;
+            this.pb_verNuevaContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_eye_96;
             this.pb_verNuevaContraseña.Location = new System.Drawing.Point(230, 109);
             this.pb_verNuevaContraseña.Name = "pb_verNuevaContraseña";
             this.pb_verNuevaContraseña.Size = new System.Drawing.Size(36, 28);
@@ -429,7 +429,7 @@
             // 
             // pb_noVerRepetirNContraseña
             // 
-            this.pb_noVerRepetirNContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_invisible_96;
+            this.pb_noVerRepetirNContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_invisible_96;
             this.pb_noVerRepetirNContraseña.Location = new System.Drawing.Point(230, 187);
             this.pb_noVerRepetirNContraseña.Name = "pb_noVerRepetirNContraseña";
             this.pb_noVerRepetirNContraseña.Size = new System.Drawing.Size(36, 28);
@@ -440,7 +440,7 @@
             // 
             // pb_verRepetirNContraseña
             // 
-            this.pb_verRepetirNContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_eye_96;
+            this.pb_verRepetirNContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_eye_96;
             this.pb_verRepetirNContraseña.Location = new System.Drawing.Point(230, 187);
             this.pb_verRepetirNContraseña.Name = "pb_verRepetirNContraseña";
             this.pb_verRepetirNContraseña.Size = new System.Drawing.Size(36, 28);
@@ -451,7 +451,7 @@
             // 
             // pb_noVerContraseña
             // 
-            this.pb_noVerContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_invisible_96;
+            this.pb_noVerContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_invisible_96;
             this.pb_noVerContraseña.Location = new System.Drawing.Point(230, 113);
             this.pb_noVerContraseña.Name = "pb_noVerContraseña";
             this.pb_noVerContraseña.Size = new System.Drawing.Size(36, 28);
@@ -462,7 +462,7 @@
             // 
             // pb_verContraseña
             // 
-            this.pb_verContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_eye_96;
+            this.pb_verContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_eye_96;
             this.pb_verContraseña.Location = new System.Drawing.Point(230, 113);
             this.pb_verContraseña.Name = "pb_verContraseña";
             this.pb_verContraseña.Size = new System.Drawing.Size(36, 28);
@@ -473,7 +473,7 @@
             // 
             // pb_noVerRepetirContraseña
             // 
-            this.pb_noVerRepetirContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_invisible_96;
+            this.pb_noVerRepetirContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_invisible_96;
             this.pb_noVerRepetirContraseña.Location = new System.Drawing.Point(230, 189);
             this.pb_noVerRepetirContraseña.Name = "pb_noVerRepetirContraseña";
             this.pb_noVerRepetirContraseña.Size = new System.Drawing.Size(36, 28);
@@ -484,7 +484,7 @@
             // 
             // pb_verRepetirContraseña
             // 
-            this.pb_verRepetirContraseña.Image = global::PuebaDeDiseñoAA.Properties.Resources.icons8_eye_96;
+            this.pb_verRepetirContraseña.Image = global::AuxiliosAimaretti.Properties.Resources.icons8_eye_96;
             this.pb_verRepetirContraseña.Location = new System.Drawing.Point(228, 189);
             this.pb_verRepetirContraseña.Name = "pb_verRepetirContraseña";
             this.pb_verRepetirContraseña.Size = new System.Drawing.Size(36, 28);

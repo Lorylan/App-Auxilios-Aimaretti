@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using PuebaDeDiseñoAA.Clases;
+using AuxiliosAimaretti.Clases;
 
-namespace PuebaDeDiseñoAA.BaseDeDatos
+namespace AuxiliosAimaretti.BaseDeDatos
 {
     class PagoClienteBD
     {

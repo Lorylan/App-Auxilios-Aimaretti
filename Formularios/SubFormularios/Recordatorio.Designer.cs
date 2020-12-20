@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class Recordatorio
     {
@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_confirmacion = new System.Windows.Forms.Label();
-            this.btn_confirmar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_confirmar = new AuxiliosAimaretti.ButtonRedondeado();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_pagos_recordatorio = new System.Windows.Forms.Label();
             this.panel_datos = new System.Windows.Forms.Panel();

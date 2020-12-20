@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormPagoClientes
     {
@@ -93,10 +93,10 @@
             this.datos_pago = new System.Windows.Forms.DataGridView();
             this.listado_pagos = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_editar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_borrar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             this.pb_error = new System.Windows.Forms.PictureBox();
             this.panel_CargaCliente.SuspendLayout();
             this.panel8.SuspendLayout();

@@ -1,4 +1,4 @@
-﻿using PuebaDeDiseñoAA.Clases;
+﻿using AuxiliosAimaretti.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Data;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PuebaDeDiseñoAA.BaseDeDatos
+namespace AuxiliosAimaretti.BaseDeDatos
 {
     class Conexion 
     {

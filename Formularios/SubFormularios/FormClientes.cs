@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PuebaDeDiseñoAA.BaseDeDatos;
-using PuebaDeDiseñoAA.Clases;
+using AuxiliosAimaretti.BaseDeDatos;
+using AuxiliosAimaretti.Clases;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     public partial class FormClientes : Form
     {

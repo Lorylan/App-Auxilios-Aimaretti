@@ -973,21 +973,21 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="PuebaDeDiseñoAAClases">
+    <DataSource Name="AuxiliosAimarettiClases">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>27bf2dc8-a09d-4f76-84eb-fe32796b8182</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases1">
+    <DataSource Name="AuxiliosAimarettiClases1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>a020b679-dd07-4825-a3de-d2fed97e43d6</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases2">
+    <DataSource Name="AuxiliosAimarettiClases2">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
@@ -998,7 +998,7 @@
   <DataSets>
     <DataSet Name="reporte_servicios">
       <Query>
-        <DataSourceName>PuebaDeDiseñoAAClases1</DataSourceName>
+        <DataSourceName>AuxiliosAimarettiClases1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1024,14 +1024,14 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>PuebaDeDiseñoAA.Clases</rd:DataSetName>
+        <rd:DataSetName>AuxiliosAimaretti.Clases</rd:DataSetName>
         <rd:TableName>reporte_servicios</rd:TableName>
-        <rd:ObjectDataSourceType>PuebaDeDiseñoAA.Clases.reporte_servicios, PuebaDeDiseñoAA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>AuxiliosAimaretti.Clases.reporte_servicios, AuxiliosAimaretti, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="dato_servicio">
       <Query>
-        <DataSourceName>PuebaDeDiseñoAAClases2</DataSourceName>
+        <DataSourceName>AuxiliosAimarettiClases2</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1101,10 +1101,10 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>PuebaDeDiseñoAA.Clases</rd:DataSetName>
+        <rd:DataSetName>AuxiliosAimaretti.Clases</rd:DataSetName>
         <rd:TableName>reporte_servicios</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>list_servicio</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>PuebaDeDiseñoAA.Clases.reporte_servicios, PuebaDeDiseñoAA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>AuxiliosAimaretti.Clases.reporte_servicios, AuxiliosAimaretti, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

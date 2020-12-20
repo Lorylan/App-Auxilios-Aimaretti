@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EFA4502E-F4B0-437A-8E98-492EBD8ADFDF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PuebaDeDiseñoAA</RootNamespace>
-    <AssemblyName>PuebaDeDiseñoAA</AssemblyName>
+    <RootNamespace>AuxiliosAimaretti</RootNamespace>
+    <AssemblyName>AuxiliosAimaretti</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormCombustible
     {
@@ -52,10 +52,10 @@
             this.listadoCombustible = new System.Windows.Forms.Label();
             this.txt_error = new System.Windows.Forms.Label();
             this.datosCombustible = new System.Windows.Forms.DataGridView();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_editar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_borrar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             this.pb_error = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel_cargaCombustible.SuspendLayout();

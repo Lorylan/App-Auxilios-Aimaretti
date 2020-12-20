@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     public partial class Recordatorio : Form
     {

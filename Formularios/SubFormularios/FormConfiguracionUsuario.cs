@@ -1,4 +1,4 @@
-﻿using PuebaDeDiseñoAA.BaseDeDatos;
+﻿using AuxiliosAimaretti.BaseDeDatos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PuebaDeDiseñoAA.Clases;
+using AuxiliosAimaretti.Clases;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     public partial class FormConfiguracionUsuario : Form
     {

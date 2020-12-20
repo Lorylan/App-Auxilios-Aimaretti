@@ -8,14 +8,14 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PuebaDeDiseñoAA.Clases;
-using PuebaDeDiseñoAA.BaseDeDatos;
+using AuxiliosAimaretti.Clases;
+using AuxiliosAimaretti.BaseDeDatos;
 using System.Data.SqlClient;
 using System.Drawing.Text;
 using System.Runtime.CompilerServices;
 using System.Runtime.Hosting;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     public partial class FormPersonal : Form
     {

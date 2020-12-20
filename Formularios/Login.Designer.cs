@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA
+﻿namespace AuxiliosAimaretti
 {
     partial class Login
     {
@@ -41,9 +41,9 @@
             this.txt_user = new System.Windows.Forms.TextBox();
             this.photo_user = new System.Windows.Forms.PictureBox();
             this.photo_lock = new System.Windows.Forms.PictureBox();
-            this.button_salir = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.button_salir = new AuxiliosAimaretti.ButtonRedondeado();
             this.photo_logo = new System.Windows.Forms.PictureBox();
-            this.button_acceder = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.button_acceder = new AuxiliosAimaretti.ButtonRedondeado();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo_user)).BeginInit();
@@ -76,7 +76,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::PuebaDeDiseñoAA.Properties.Resources.FONDOOOO;
+            this.panel1.BackgroundImage = global::AuxiliosAimaretti.Properties.Resources.FONDOOOO;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.txt_error);
             this.panel1.Controls.Add(this.txt_pass_vacio);
@@ -164,7 +164,7 @@
             // 
             this.photo_user.BackColor = System.Drawing.Color.Transparent;
             this.photo_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.photo_user.Image = global::PuebaDeDiseñoAA.Properties.Resources.user;
+            this.photo_user.Image = global::AuxiliosAimaretti.Properties.Resources.user;
             this.photo_user.Location = new System.Drawing.Point(137, 303);
             this.photo_user.Name = "photo_user";
             this.photo_user.Size = new System.Drawing.Size(28, 28);
@@ -175,7 +175,7 @@
             // photo_lock
             // 
             this.photo_lock.BackColor = System.Drawing.Color.Transparent;
-            this.photo_lock.Image = global::PuebaDeDiseñoAA.Properties.Resources._lock;
+            this.photo_lock.Image = global::AuxiliosAimaretti.Properties.Resources._lock;
             this.photo_lock.Location = new System.Drawing.Point(137, 399);
             this.photo_lock.Name = "photo_lock";
             this.photo_lock.Size = new System.Drawing.Size(28, 30);
@@ -209,7 +209,7 @@
             // 
             // photo_logo
             // 
-            this.photo_logo.Image = global::PuebaDeDiseñoAA.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
+            this.photo_logo.Image = global::AuxiliosAimaretti.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
             this.photo_logo.Location = new System.Drawing.Point(120, 27);
             this.photo_logo.Name = "photo_logo";
             this.photo_logo.Size = new System.Drawing.Size(200, 173);

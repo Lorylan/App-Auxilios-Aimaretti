@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormClientes
     {
@@ -78,13 +78,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pb_error = new System.Windows.Forms.PictureBox();
             this.datosTarifaPactada = new System.Windows.Forms.DataGridView();
-            this.btn_cancelartp = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_editartp = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregartp = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_cancelartp = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_editartp = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_agregartp = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_editar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_borrar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datosCliente)).BeginInit();
             this.panel_CargaCliente.SuspendLayout();
             this.panel_Tp.SuspendLayout();
@@ -511,6 +513,8 @@
             // panel_Tp
             // 
             this.panel_Tp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel_Tp.Controls.Add(this.comboBox1);
+            this.panel_Tp.Controls.Add(this.label17);
             this.panel_Tp.Controls.Add(this.txt_tipo);
             this.panel_Tp.Controls.Add(this.label16);
             this.panel_Tp.Controls.Add(this.label15);
@@ -522,7 +526,7 @@
             this.panel_Tp.Controls.Add(this.txt_importe);
             this.panel_Tp.Location = new System.Drawing.Point(764, 70);
             this.panel_Tp.Name = "panel_Tp";
-            this.panel_Tp.Size = new System.Drawing.Size(252, 155);
+            this.panel_Tp.Size = new System.Drawing.Size(252, 192);
             this.panel_Tp.TabIndex = 79;
             // 
             // txt_tipo
@@ -571,7 +575,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(7, 123);
+            this.label14.Location = new System.Drawing.Point(8, 160);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(118, 20);
             this.label14.TabIndex = 70;
@@ -583,7 +587,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(188, 100);
+            this.label11.Location = new System.Drawing.Point(189, 137);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 18);
             this.label11.TabIndex = 71;
@@ -595,7 +599,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.LightGray;
-            this.label13.Location = new System.Drawing.Point(7, 98);
+            this.label13.Location = new System.Drawing.Point(8, 135);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(188, 20);
             this.label13.TabIndex = 70;
@@ -640,7 +644,7 @@
             // 
             // pb_error
             // 
-            this.pb_error.Image = global::PuebaDeDiseñoAA.Properties.Resources.error;
+            this.pb_error.Image = global::AuxiliosAimaretti.Properties.Resources.error;
             this.pb_error.Location = new System.Drawing.Point(193, 14);
             this.pb_error.Name = "pb_error";
             this.pb_error.Size = new System.Drawing.Size(29, 26);
@@ -713,7 +717,7 @@
             this.btn_cancelartp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelartp.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_cancelartp.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cancelartp.Location = new System.Drawing.Point(937, 237);
+            this.btn_cancelartp.Location = new System.Drawing.Point(937, 268);
             this.btn_cancelartp.Name = "btn_cancelartp";
             this.btn_cancelartp.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
             this.btn_cancelartp.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
@@ -737,7 +741,7 @@
             this.btn_editartp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editartp.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_editartp.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_editartp.Location = new System.Drawing.Point(861, 237);
+            this.btn_editartp.Location = new System.Drawing.Point(861, 268);
             this.btn_editartp.Name = "btn_editartp";
             this.btn_editartp.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_editartp.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -761,7 +765,7 @@
             this.btn_agregartp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregartp.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_agregartp.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_agregartp.Location = new System.Drawing.Point(773, 237);
+            this.btn_agregartp.Location = new System.Drawing.Point(773, 268);
             this.btn_agregartp.Name = "btn_agregartp";
             this.btn_agregartp.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_agregartp.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -869,6 +873,34 @@
             this.btn_agregar.UseVisualStyleBackColor = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Traslado",
+            "Mecanica",
+            "Extraccion",
+            "Servicios extras",
+            "Servicio con Km"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 98);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 26);
+            this.comboBox1.TabIndex = 84;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(15, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 20);
+            this.label17.TabIndex = 83;
+            this.label17.Text = "Crear tipo";
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -960,5 +992,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView datosTarifaPactada;
         private System.Windows.Forms.ComboBox txt_tipo;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label17;
     }
 }

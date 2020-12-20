@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormReportes
     {
@@ -52,7 +52,7 @@
             this.txt_tipo_de_reporte = new System.Windows.Forms.ComboBox();
             this.reporte_combustible = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -78,11 +78,11 @@
             // 
             // reportecombustibleBindingSource
             // 
-            this.reportecombustibleBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_combustible);
+            this.reportecombustibleBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_combustible);
             // 
             // reportepagoclienteBindingSource
             // 
-            this.reportepagoclienteBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_pago_cliente);
+            this.reportepagoclienteBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_pago_cliente);
             // 
             // listpagoclienteBindingSource
             // 
@@ -91,7 +91,7 @@
             // 
             // reporteserviciosBindingSource
             // 
-            this.reporteserviciosBindingSource.DataSource = typeof(PuebaDeDiseñoAA.Clases.reporte_servicios);
+            this.reporteserviciosBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_servicios);
             // 
             // listservicioBindingSource
             // 
@@ -209,7 +209,7 @@
             reportDataSource2.Value = this.reportecombustibleBindingSource;
             this.reporte_combustible.LocalReport.DataSources.Add(reportDataSource1);
             this.reporte_combustible.LocalReport.DataSources.Add(reportDataSource2);
-            this.reporte_combustible.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_combustible.rdlc";
+            this.reporte_combustible.LocalReport.ReportEmbeddedResource = "AuxiliosAimaretti.Reporte.reporte_combustible.rdlc";
             this.reporte_combustible.Location = new System.Drawing.Point(0, 0);
             this.reporte_combustible.Name = "reporte_combustible";
             this.reporte_combustible.ServerReport.BearerToken = null;
@@ -302,7 +302,7 @@
             reportDataSource4.Value = this.reportepagoclienteBindingSource;
             this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource3);
             this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource4);
-            this.reporte_pago_cliente.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_pago_cliente.rdlc";
+            this.reporte_pago_cliente.LocalReport.ReportEmbeddedResource = "AuxiliosAimaretti.Reporte.reporte_pago_cliente.rdlc";
             this.reporte_pago_cliente.Location = new System.Drawing.Point(0, 0);
             this.reporte_pago_cliente.Name = "reporte_pago_cliente";
             this.reporte_pago_cliente.ServerReport.BearerToken = null;
@@ -319,7 +319,7 @@
             reportDataSource6.Value = this.listservicioBindingSource;
             this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource5);
             this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource6);
-            this.reporte_servicio.LocalReport.ReportEmbeddedResource = "PuebaDeDiseñoAA.Reporte.reporte_servicio.rdlc";
+            this.reporte_servicio.LocalReport.ReportEmbeddedResource = "AuxiliosAimaretti.Reporte.reporte_servicio.rdlc";
             this.reporte_servicio.Location = new System.Drawing.Point(0, 0);
             this.reporte_servicio.Name = "reporte_servicio";
             this.reporte_servicio.ServerReport.BearerToken = null;

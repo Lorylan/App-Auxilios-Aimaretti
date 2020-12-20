@@ -1,5 +1,5 @@
-﻿using PuebaDeDiseñoAA.BaseDeDatos;
-using PuebaDeDiseñoAA.Clases;
+﻿using AuxiliosAimaretti.BaseDeDatos;
+using AuxiliosAimaretti.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     public partial class FormPagoClientes : Form{
         ClienteBD clienteBD;

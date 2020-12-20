@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PuebaDeDiseñoAA.BaseDeDatos;
-using PuebaDeDiseñoAA.Clases;
+using AuxiliosAimaretti.BaseDeDatos;
+using AuxiliosAimaretti.Clases;
 
-namespace PuebaDeDiseñoAA.Clases
+namespace AuxiliosAimaretti.Clases
 {
     class reporte_pago_cliente:reporte
     {

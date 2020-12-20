@@ -1,6 +1,6 @@
-﻿using PuebaDeDiseñoAA.Clases;
-using PuebaDeDiseñoAA.BaseDeDatos;
-using PuebaDeDiseñoAA.Formularios.SubFormularios;
+﻿using AuxiliosAimaretti.Clases;
+using AuxiliosAimaretti.BaseDeDatos;
+using AuxiliosAimaretti.Formularios.SubFormularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PuebaDeDiseñoAA
+namespace AuxiliosAimaretti
 {
     public partial class Inicio : Form
     {

@@ -6,7 +6,7 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PuebaDeDiseñoAA.Clases
+namespace AuxiliosAimaretti.Clases
 {
     class Servicio
     {

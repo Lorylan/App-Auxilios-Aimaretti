@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualBasic.Devices;
-using PuebaDeDiseñoAA.BaseDeDatos;
-using PuebaDeDiseñoAA.Clases;
+using AuxiliosAimaretti.BaseDeDatos;
+using AuxiliosAimaretti.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace PuebaDeDiseñoAA
+namespace AuxiliosAimaretti
 {
     public partial class Login : Form
     {

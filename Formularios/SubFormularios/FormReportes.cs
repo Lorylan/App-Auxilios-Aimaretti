@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PuebaDeDiseñoAA.Clases;
-using PuebaDeDiseñoAA.BaseDeDatos;
+using AuxiliosAimaretti.Clases;
+using AuxiliosAimaretti.BaseDeDatos;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     public partial class FormReportes : Form
     {

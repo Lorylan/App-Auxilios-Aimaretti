@@ -1,4 +1,4 @@
-﻿using PuebaDeDiseñoAA.Clases;
+﻿using AuxiliosAimaretti.Clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PuebaDeDiseñoAA.BaseDeDatos
+namespace AuxiliosAimaretti.BaseDeDatos
 {
     class UsuarioDB
     {

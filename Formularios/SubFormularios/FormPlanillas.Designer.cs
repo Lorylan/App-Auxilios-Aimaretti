@@ -1,4 +1,4 @@
-﻿namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+﻿namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     partial class FormPlanillas
     {
@@ -96,13 +96,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txt_por = new System.Windows.Forms.ComboBox();
-            this.btn_editar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_borrar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_agregar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado3 = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado1 = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.buttonRedondeado2 = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_editar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_borrar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.buttonRedondeado3 = new AuxiliosAimaretti.ButtonRedondeado();
+            this.buttonRedondeado1 = new AuxiliosAimaretti.ButtonRedondeado();
+            this.buttonRedondeado2 = new AuxiliosAimaretti.ButtonRedondeado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_total_servicio = new System.Windows.Forms.Label();
             this.txt_importe_servicio = new System.Windows.Forms.Label();

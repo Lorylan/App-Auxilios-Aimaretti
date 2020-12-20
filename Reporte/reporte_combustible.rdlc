@@ -695,56 +695,56 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="PuebaDeDiseñoAAClases">
+    <DataSource Name="PAuxiliosAimarettiClases">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>9180e0e6-5ae7-4bc7-8e27-e57281b27e5d</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases1">
+    <DataSource Name="AuxiliosAimarettiClases1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>09dd340d-4b0e-4b26-817f-5cc730b182a0</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases2">
+    <DataSource Name="AuxiliosAimarettiClases2">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>1c1b0482-2b04-4f83-9529-d86ff1975936</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases3">
+    <DataSource Name="AuxiliosAimarettiClases3">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>ee608dd9-1538-4ab3-8686-e376e5e17951</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases4">
+    <DataSource Name="AuxiliosAimarettiClases4">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>b4a53e23-ba6e-471e-9c43-4010ebb04421</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases5">
+    <DataSource Name="AuxiliosAimarettiClases5">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>f745629c-fa70-4863-bc28-e280f4e8e0dc</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases6">
+    <DataSource Name="AuxiliosAimarettiClases6">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>76d68bdf-5b7e-4d96-999f-1150f1ca43ef</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="PuebaDeDiseñoAAClases7">
+    <DataSource Name="AuxiliosAimarettiClases7">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
@@ -755,7 +755,7 @@
   <DataSets>
     <DataSet Name="datos_combustible">
       <Query>
-        <DataSourceName>PuebaDeDiseñoAAClases3</DataSourceName>
+        <DataSourceName>AuxiliosAimarettiClases3</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -781,15 +781,15 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>PuebaDeDiseñoAA.Clases</rd:DataSetName>
+        <rd:DataSetName>AuxiliosAimaretti.Clases</rd:DataSetName>
         <rd:TableName>reporte_combustible</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>list_combustible</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>PuebaDeDiseñoAA.Clases.reporte_combustible, PuebaDeDiseñoAA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>AuxiliosAimaretti.Clases.reporte_combustible, AuxiliosAimaretti, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="reporte_combustible">
       <Query>
-        <DataSourceName>PuebaDeDiseñoAAClases7</DataSourceName>
+        <DataSourceName>AuxiliosAimarettiClases7</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -815,9 +815,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>PuebaDeDiseñoAA.Clases</rd:DataSetName>
+        <rd:DataSetName>AuxiliosAimaretti.Clases</rd:DataSetName>
         <rd:TableName>reporte_combustible</rd:TableName>
-        <rd:ObjectDataSourceType>PuebaDeDiseñoAA.Clases.reporte_combustible, PuebaDeDiseñoAA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>AuxiliosAimaretti.Clases.reporte_combustible, AuxiliosAimaretti, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

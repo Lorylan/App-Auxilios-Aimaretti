@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PuebaDeDiseñoAA.Clases
+namespace AuxiliosAimaretti.Clases
 {
     class Combustible
     {

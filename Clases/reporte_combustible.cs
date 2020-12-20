@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PuebaDeDiseñoAA.BaseDeDatos;
+using AuxiliosAimaretti.BaseDeDatos;
 
-namespace PuebaDeDiseñoAA.Clases
+namespace AuxiliosAimaretti.Clases
 {
     class reporte_combustible :reporte
     {

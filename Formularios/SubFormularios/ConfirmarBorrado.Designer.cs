@@ -1,6 +1,6 @@
-﻿using PuebaDeDiseñoAA.Clases;
+﻿using AuxiliosAimaretti.Clases;
 
-namespace PuebaDeDiseñoAA.Formularios.SubFormularios
+namespace AuxiliosAimaretti.Formularios.SubFormularios
 {
     
     partial class ConfirmarBorrado
@@ -32,8 +32,8 @@ namespace PuebaDeDiseñoAA.Formularios.SubFormularios
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_confirmar = new PuebaDeDiseñoAA.ButtonRedondeado();
-            this.btn_cancelar = new PuebaDeDiseñoAA.ButtonRedondeado();
+            this.btn_confirmar = new AuxiliosAimaretti.ButtonRedondeado();
+            this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
             this.panel_datos = new System.Windows.Forms.Panel();
             this.txt_dato1 = new System.Windows.Forms.Label();
             this.txt_dato2 = new System.Windows.Forms.Label();

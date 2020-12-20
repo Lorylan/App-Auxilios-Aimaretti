@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace PuebaDeDiseñoAA
+namespace AuxiliosAimaretti
 {
     partial class Inicio
     {
@@ -226,7 +226,7 @@ namespace PuebaDeDiseñoAA
             // panel1
             // 
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.panel1.BackgroundImage = global::PuebaDeDiseñoAA.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
+            this.panel1.BackgroundImage = global::AuxiliosAimaretti.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.datos_pago_recordatorio);
             this.panel1.Controls.Add(this.datos_pago_hoy);
@@ -242,7 +242,7 @@ namespace PuebaDeDiseñoAA
             this.panel_separarMenuA.AutoScroll = true;
             this.panel_separarMenuA.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_separarMenuA.BackColor = System.Drawing.Color.Transparent;
-            this.panel_separarMenuA.BackgroundImage = global::PuebaDeDiseñoAA.Properties.Resources.SeparadorMEnuAriiba;
+            this.panel_separarMenuA.BackgroundImage = global::AuxiliosAimaretti.Properties.Resources.SeparadorMEnuAriiba;
             this.panel_separarMenuA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_separarMenuA.Location = new System.Drawing.Point(184, 0);
             this.panel_separarMenuA.Name = "panel_separarMenuA";
@@ -273,7 +273,7 @@ namespace PuebaDeDiseñoAA
             this.pictureBox_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_minimizar.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_minimizar.Image = global::PuebaDeDiseñoAA.Properties.Resources.Minimize_Window_2_48px;
+            this.pictureBox_minimizar.Image = global::AuxiliosAimaretti.Properties.Resources.Minimize_Window_2_48px;
             this.pictureBox_minimizar.Location = new System.Drawing.Point(1007, 12);
             this.pictureBox_minimizar.Name = "pictureBox_minimizar";
             this.pictureBox_minimizar.Size = new System.Drawing.Size(26, 25);
@@ -325,7 +325,7 @@ namespace PuebaDeDiseñoAA
             this.pictureBox_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_cerrar.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_cerrar.Image = global::PuebaDeDiseñoAA.Properties.Resources.Close_Window__2_48px;
+            this.pictureBox_cerrar.Image = global::AuxiliosAimaretti.Properties.Resources.Close_Window__2_48px;
             this.pictureBox_cerrar.Location = new System.Drawing.Point(1039, 12);
             this.pictureBox_cerrar.Name = "pictureBox_cerrar";
             this.pictureBox_cerrar.Size = new System.Drawing.Size(26, 25);
@@ -337,7 +337,7 @@ namespace PuebaDeDiseñoAA
             // panel_logo
             // 
             this.panel_logo.BackColor = System.Drawing.Color.Transparent;
-            this.panel_logo.BackgroundImage = global::PuebaDeDiseñoAA.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
+            this.panel_logo.BackgroundImage = global::AuxiliosAimaretti.Properties.Resources.WhatsApp_Image_2020_06_15_at_9_13_14_AM;
             this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel_logo.Location = new System.Drawing.Point(3, 21);
             this.panel_logo.Name = "panel_logo";
