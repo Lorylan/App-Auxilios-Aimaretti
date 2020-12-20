@@ -51,7 +51,6 @@
             this.txt_observaciones = new System.Windows.Forms.TextBox();
             this.txt_km = new System.Windows.Forms.TextBox();
             this.txt_patente = new System.Windows.Forms.TextBox();
-            this.txt_desperfecto = new System.Windows.Forms.TextBox();
             this.txt_vehiculo = new System.Windows.Forms.TextBox();
             this.km = new System.Windows.Forms.Label();
             this.vehiculo = new System.Windows.Forms.Label();
@@ -108,6 +107,7 @@
             this.txt_importe_servicio = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_desperfecto = new System.Windows.Forms.ComboBox();
             this.panel_cargaServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).BeginInit();
             this.panel1.SuspendLayout();
@@ -121,6 +121,7 @@
             // panel_cargaServicios
             // 
             this.panel_cargaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel_cargaServicios.Controls.Add(this.txt_desperfecto);
             this.panel_cargaServicios.Controls.Add(this.txt_color);
             this.panel_cargaServicios.Controls.Add(this.label16);
             this.panel_cargaServicios.Controls.Add(this.label15);
@@ -139,7 +140,6 @@
             this.panel_cargaServicios.Controls.Add(this.txt_observaciones);
             this.panel_cargaServicios.Controls.Add(this.txt_km);
             this.panel_cargaServicios.Controls.Add(this.txt_patente);
-            this.panel_cargaServicios.Controls.Add(this.txt_desperfecto);
             this.panel_cargaServicios.Controls.Add(this.txt_vehiculo);
             this.panel_cargaServicios.Controls.Add(this.km);
             this.panel_cargaServicios.Controls.Add(this.vehiculo);
@@ -378,14 +378,6 @@
             this.txt_patente.Name = "txt_patente";
             this.txt_patente.Size = new System.Drawing.Size(141, 28);
             this.txt_patente.TabIndex = 50;
-            // 
-            // txt_desperfecto
-            // 
-            this.txt_desperfecto.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_desperfecto.Location = new System.Drawing.Point(9, 135);
-            this.txt_desperfecto.Name = "txt_desperfecto";
-            this.txt_desperfecto.Size = new System.Drawing.Size(196, 28);
-            this.txt_desperfecto.TabIndex = 56;
             // 
             // txt_vehiculo
             // 
@@ -1151,6 +1143,20 @@
             this.panel4.Size = new System.Drawing.Size(272, 203);
             this.panel4.TabIndex = 103;
             // 
+            // txt_desperfecto
+            // 
+            this.txt_desperfecto.AllowDrop = true;
+            this.txt_desperfecto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_desperfecto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_desperfecto.FormattingEnabled = true;
+            this.txt_desperfecto.Items.AddRange(new object[] {
+            "Traslado",
+            "Mecanica"});
+            this.txt_desperfecto.Location = new System.Drawing.Point(7, 135);
+            this.txt_desperfecto.Name = "txt_desperfecto";
+            this.txt_desperfecto.Size = new System.Drawing.Size(196, 26);
+            this.txt_desperfecto.TabIndex = 96;
+            // 
             // FormPlanillas
             // 
             this.AllowDrop = true;
@@ -1248,7 +1254,6 @@
         private System.Windows.Forms.Label movil;
         private System.Windows.Forms.TextBox txt_km;
         private System.Windows.Forms.Label km;
-        private System.Windows.Forms.TextBox txt_desperfecto;
         private System.Windows.Forms.Label desperfecto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label txt_error;
@@ -1282,5 +1287,6 @@
         private System.Windows.Forms.Label txt_importe_servicio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox txt_desperfecto;
     }
 }
