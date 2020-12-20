@@ -44,13 +44,13 @@ namespace AuxiliosAimaretti.BaseDeDatos
         }
         public DataSet ObtenerInfoDe(String fecha)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente WHERE Fecha='"+fecha+"'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente WHERE Tipo='Cheque' AND Fecha='"+fecha+"'");
             DataSet data = conexion.EjecutarSentencia(sentencia);
             return data;
         }
         public DataSet ObtenerInfoDee(String fecha, String fecha2)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente WHERE Fecha='"+fecha +"' OR Fecha='"+fecha2+"'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente WHERE Tipo='Cheque' AND (Fecha='"+fecha +"' OR Fecha='"+fecha2+"')");
             DataSet data = conexion.EjecutarSentencia(sentencia);
             return data;
         }

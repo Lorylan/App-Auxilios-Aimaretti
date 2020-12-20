@@ -467,7 +467,9 @@
             "Mecanica",
             "Extraccion",
             "Servicios extras",
-            "Servicio con Km"});
+            "Servicio con Km",
+            "Ganc Traslado",
+            "Ganc Mecanica"});
             this.txt_tipo.Location = new System.Drawing.Point(431, 31);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(124, 28);

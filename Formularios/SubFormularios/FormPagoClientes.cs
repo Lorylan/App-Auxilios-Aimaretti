@@ -77,6 +77,11 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             {
                 return false;
             }
+            if (txt_opcion_pago.Text.Trim().Equals("Cheque") && ((txt_nro.Text.Trim().Equals("")) |
+                (txt_banco.Text.Trim().Equals("")) | (txt_nro_cuenta.Text.Trim().Equals(""))))
+            {
+                return false;
+            }
             return true;
         }
         private void cargar_datos_empresa()
@@ -102,12 +107,16 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 return new PagoCliente(txt_comprobante_nro.Text,txt_Fecha_c.Value.ToString().Split(' ')[0],txt_monto.Text,"-","-","-",
                     "-",txt_detalle.Text,txt_Empresa.Text,"Efectivo");
             }
-            else {
+            if(txt_opcion_pago.Text.Equals("Transferencua bancaria")) { 
                 return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.ToString().Split(' ')[0], txt_monto.Text, 
                     txt_nro.Text,txt_banco.Text,txt_nro_cuenta.Text,
                     txt_fecha.Value.Date.ToString().Split(' ')[0], txt_detalle.Text, txt_Empresa.Text, "" +
                     "Transferencia bancaria");
             }
+            return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.ToString().Split(' ')[0], txt_monto.Text,
+                    txt_nro.Text, txt_banco.Text, txt_nro_cuenta.Text,
+                    txt_fecha.Value.Date.ToString().Split(' ')[0], txt_detalle.Text, txt_Empresa.Text, "" +
+                    "Cheque");
             
         }
         private void vaciarTxt() {
@@ -223,6 +232,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             }
         }
 
+
         private void txt_opcion_pago_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (txt_opcion_pago.Text.Equals("Efectivo")){
@@ -281,7 +291,14 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 txt_nro.Text = datos_pago.Rows[i].Cells[3].Value.ToString();
                 txt_banco.Text = datos_pago.Rows[i].Cells[4].Value.ToString();
                 txt_nro_cuenta.Text = datos_pago.Rows[i].Cells[5].Value.ToString();
-                txt_fecha.Text = datos_pago.Rows[i].Cells[6].Value.ToString();
+                try
+                {
+                    txt_fecha.Text = datos_pago.Rows[i].Cells[6].Value.ToString();
+                }
+                catch {
+                    txt_fecha.Value = DateTime.Now;
+                }
+                
                 txt_detalle.Text = datos_pago.Rows[i].Cells[7].Value.ToString();
                 string buscar = datos_pago.Rows[i].Cells[10].Value.ToString().Trim();
                 int id_item = txt_opcion_pago.Items.IndexOf(buscar);

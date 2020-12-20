@@ -622,7 +622,8 @@
             this.txt_opcion_pago.FormattingEnabled = true;
             this.txt_opcion_pago.Items.AddRange(new object[] {
             "Efectivo",
-            "Transferencia bancaria"});
+            "Transferencia bancaria",
+            "Cheque"});
             this.txt_opcion_pago.Location = new System.Drawing.Point(466, 10);
             this.txt_opcion_pago.Name = "txt_opcion_pago";
             this.txt_opcion_pago.Size = new System.Drawing.Size(181, 26);
@@ -993,7 +994,7 @@
             // 
             // pb_error
             // 
-           
+            this.pb_error.Image = global::AuxiliosAimaretti.Properties.Resources.error;
             this.pb_error.Location = new System.Drawing.Point(167, 226);
             this.pb_error.Name = "pb_error";
             this.pb_error.Size = new System.Drawing.Size(29, 26);

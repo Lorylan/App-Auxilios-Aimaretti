@@ -67,6 +67,8 @@
             this.txt_importe = new System.Windows.Forms.TextBox();
             this.Importe = new System.Windows.Forms.Label();
             this.panel_Tp = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.txt_tipo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.btn_borrar = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datosCliente)).BeginInit();
             this.panel_CargaCliente.SuspendLayout();
             this.panel_Tp.SuspendLayout();
@@ -529,6 +529,34 @@
             this.panel_Tp.Size = new System.Drawing.Size(252, 192);
             this.panel_Tp.TabIndex = 79;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Traslado",
+            "Mecanica",
+            "Extraccion",
+            "Servicios extras",
+            "Servicio con Km"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 98);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 26);
+            this.comboBox1.TabIndex = 84;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(15, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 20);
+            this.label17.TabIndex = 83;
+            this.label17.Text = "Crear tipo";
+            // 
             // txt_tipo
             // 
             this.txt_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -539,7 +567,9 @@
             "Mecanica",
             "Extraccion",
             "Servicios extras",
-            "Servicio con Km"});
+            "Servicio con Km",
+            "Ganc Traslado",
+            "Ganc Mecanica"});
             this.txt_tipo.Location = new System.Drawing.Point(86, 9);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(124, 26);
@@ -872,34 +902,6 @@
             this.btn_agregar.TextColor = System.Drawing.Color.White;
             this.btn_agregar.UseVisualStyleBackColor = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Traslado",
-            "Mecanica",
-            "Extraccion",
-            "Servicios extras",
-            "Servicio con Km"});
-            this.comboBox1.Location = new System.Drawing.Point(101, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 26);
-            this.comboBox1.TabIndex = 84;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(15, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 20);
-            this.label17.TabIndex = 83;
-            this.label17.Text = "Crear tipo";
             // 
             // FormClientes
             // 
