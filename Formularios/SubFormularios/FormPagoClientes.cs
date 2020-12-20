@@ -97,7 +97,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             ActualizarInfoTabla();
         }
         private PagoCliente RecuperarInfo() {
-            if (txt_opcion_pago.Equals("Efectivo"))
+            if (txt_opcion_pago.Text.Equals("Efectivo"))
             {
                 return new PagoCliente(txt_comprobante_nro.Text,txt_Fecha_c.Value.ToString().Split(' ')[0],txt_monto.Text,"-","-","-",
                     "-",txt_detalle.Text,txt_Empresa.Text,"Efectivo");
