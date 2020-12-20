@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.79933cm</Width>
+              <Width>2.99143cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79933cm</Width>
+              <Width>2.99143cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79933cm</Width>
+              <Width>2.99143cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79933cm</Width>
+              <Width>2.99143cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79933cm</Width>
+              <Width>2.99143cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79933cm</Width>
+              <Width>2.99143cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -451,7 +451,7 @@
         <Top>2.71724cm</Top>
         <Left>1.5cm</Left>
         <Height>2.39063cm</Height>
-        <Width>16.79598cm</Width>
+        <Width>17.94858cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -479,7 +479,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
         <Top>0.51366cm</Top>
-        <Left>7.59412cm</Left>
+        <Left>9.31391cm</Left>
         <Height>1.31438cm</Height>
         <Width>5.90588cm</Width>
         <ZIndex>1</ZIndex>
@@ -580,7 +580,7 @@
         <Top>5.96408cm</Top>
         <Left>8.7076cm</Left>
         <Height>0.99687cm</Height>
-        <Width>9.58839cm</Width>
+        <Width>10.74096cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -613,7 +613,7 @@
         <Top>7.32531cm</Top>
         <Left>11.31145cm</Left>
         <Height>0.99687cm</Height>
-        <Width>6.98454cm</Width>
+        <Width>8.13711cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -629,10 +629,10 @@
     <Height>10cm</Height>
     <Style />
   </Body>
-  <Width>21.57667cm</Width>
+  <Width>23.34368cm</Width>
   <Page>
     <PageHeader>
-      <Height>4cm</Height>
+      <Height>5cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -640,7 +640,7 @@
           <Source>Embedded</Source>
           <Value>STK20200615WA00033</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.3055cm</Top>
+          <Top>0.59187cm</Top>
           <Left>1.5cm</Left>
           <Height>3.19179cm</Height>
           <Width>3.27271cm</Width>
@@ -670,7 +670,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.3055cm</Top>
-          <Left>5.42891cm</Left>
+          <Left>5.48035cm</Left>
           <Height>1.27769cm</Height>
           <Width>11.584cm</Width>
           <ZIndex>1</ZIndex>
@@ -704,9 +704,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>1.75958cm</Top>
-          <Left>5.42891cm</Left>
+          <Left>5.4519cm</Left>
           <Height>0.75875cm</Height>
-          <Width>12.86708cm</Width>
+          <Width>14.01965cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -739,9 +739,149 @@
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>2.69472cm</Top>
           <Left>5.42891cm</Left>
-          <Height>0.80257cm</Height>
-          <Width>12.86708cm</Width>
+          <Height>0.75875cm</Height>
+          <Width>14.01965cm</Width>
           <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Monto total:</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.78366cm</Top>
+          <Left>5.42891cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>4.25762cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!total_parcial.Value, "reporte_pagos_cliente")</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.78366cm</Top>
+          <Left>9.68653cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>3.19432cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox10">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cant.pagos:</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.78366cm</Top>
+          <Left>12.95141cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>4.1165cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox12">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!cant_pago_cliente.Value, "reporte_pagos_cliente")</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.78366cm</Top>
+          <Left>17.06791cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>2.38065cm</Width>
+          <ZIndex>7</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -832,8 +972,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.31405cm</Top>
-          <Left>10.4766cm</Left>
+          <Top>0.34051cm</Top>
+          <Left>11.62917cm</Left>
           <Height>0.70625cm</Height>
           <Width>7.81939cm</Width>
           <ZIndex>2</ZIndex>
@@ -851,8 +991,8 @@
           <Source>Embedded</Source>
           <Value>gmail</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.31405cm</Top>
-          <Left>9.72625cm</Left>
+          <Top>0.34051cm</Top>
+          <Left>10.87882cm</Left>
           <Height>0.70625cm</Height>
           <Width>0.67979cm</Width>
           <ZIndex>3</ZIndex>

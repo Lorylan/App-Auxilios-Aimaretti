@@ -22,7 +22,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>0.62703cm</Top>
+        <Top>1.18266cm</Top>
         <Left>7.59412cm</Left>
         <Height>1.31438cm</Height>
         <Width>5.90588cm</Width>
@@ -443,10 +443,10 @@
     <Height>10cm</Height>
     <Style />
   </Body>
-  <Width>21cm</Width>
+  <Width>23.34368cm</Width>
   <Page>
     <PageHeader>
-      <Height>4cm</Height>
+      <Height>5cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -470,7 +470,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.3937cm</Top>
-          <Left>6.53203cm</Left>
+          <Left>5.48035cm</Left>
           <Height>1.27769cm</Height>
           <Width>11.584cm</Width>
           <Style>
@@ -503,9 +503,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>1.84778cm</Top>
-          <Left>6.53203cm</Left>
+          <Left>5.48035cm</Left>
           <Height>0.75875cm</Height>
-          <Width>12.86708cm</Width>
+          <Width>14.01965cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -521,7 +521,7 @@
           <Source>Embedded</Source>
           <Value>STK20200615WA00033</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.3937cm</Top>
+          <Top>0.84349cm</Top>
           <Left>1.5cm</Left>
           <Height>3.19179cm</Height>
           <Width>3.27271cm</Width>
@@ -551,11 +551,151 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.78292cm</Top>
-          <Left>6.53203cm</Left>
+          <Top>2.81905cm</Top>
+          <Left>5.48035cm</Left>
           <Height>0.80257cm</Height>
-          <Width>12.86708cm</Width>
+          <Width>14.01965cm</Width>
           <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!total_parcial.Value, "reporte_combustible")</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.79801cm</Top>
+          <Left>9.76443cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>3.08849cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox7">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Importe total:</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.79801cm</Top>
+          <Left>5.50681cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>4.25762cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Total litros:</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.79801cm</Top>
+          <Left>13.00285cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>4.1165cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!cant_cobustible_cargado.Value, "reporte_combustible")</Value>
+                  <Style>
+                    <FontFamily>Consolas</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>3.79801cm</Top>
+          <Left>17.11935cm</Left>
+          <Height>0.76644cm</Height>
+          <Width>2.38065cm</Width>
+          <ZIndex>7</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
