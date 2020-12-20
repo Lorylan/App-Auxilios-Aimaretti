@@ -389,7 +389,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Desde.Value</Value>
+                              <Value>=First(Fields!Desde.Value, "dato_servicio")</Value>
                               <Style>
                                 <FontFamily>Consolas</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -422,7 +422,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Hasta.Value</Value>
+                              <Value>=First(Fields!Hasta.Value, "dato_servicio")</Value>
                               <Style>
                                 <FontFamily>Consolas</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -444,6 +444,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

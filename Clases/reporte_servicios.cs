@@ -19,7 +19,7 @@ namespace AuxiliosAimaretti.Clases
             ServicioBD servicioBD = new ServicioBD();
             list_servicio = new List<Servicio>();
             Servicio servicio_aux;
-            var list_c = servicioBD.MostrarDesdeHasta(desde, hasta);
+            var list_s = servicioBD.MostrarDesdeHasta(desde, hasta);
             total_parcial = 0;
             cant_servicios = 0;
             String fecha;
@@ -30,7 +30,7 @@ namespace AuxiliosAimaretti.Clases
             String km;
             String importe;
 
-            foreach (System.Data.DataRow rows in list_c.Rows)
+            foreach (System.Data.DataRow rows in list_s.Rows)
             {
                 fecha = Convert.ToString(rows[1]);
                 codigo = Convert.ToString(rows[2]);
@@ -39,11 +39,11 @@ namespace AuxiliosAimaretti.Clases
                 hasta_serv = Convert.ToString(rows[10]);
                 km = Convert.ToString(rows[12]);
                 importe = Convert.ToString(rows[13]);
-                servicio_aux = new Servicio(fecha,codigo,desde,hasta,"","","","","","",km,"","",tipo,importe);
+                servicio_aux = new Servicio(fecha,codigo,desde_serv,hasta_serv,"","","","","","",km,"","",tipo,importe);
                 list_servicio.Add(servicio_aux);
                 total_parcial += Convert.ToDouble(importe);
             }
-            cant_servicios = list_c.Rows.Count;
+            cant_servicios = list_s.Rows.Count;
         }
     }
 }
