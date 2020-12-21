@@ -35,6 +35,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.listcombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportecombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listpagoclienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -57,9 +58,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.reporte_liquidacion = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporte_pago_cliente = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporte_servicio = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.reporte_liquidacion = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reporte_liquidacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource1)).BeginInit();
@@ -70,6 +72,7 @@
             this.panel_cargaReporte.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listcombustibleBindingSource
@@ -301,15 +304,28 @@
             this.panel2.Size = new System.Drawing.Size(958, 1044);
             this.panel2.TabIndex = 82;
             // 
+            // reporte_liquidacion
+            // 
+            this.reporte_liquidacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "datos_liquidacion";
+            reportDataSource3.Value = this.reporte_liquidacionBindingSource;
+            this.reporte_liquidacion.LocalReport.DataSources.Add(reportDataSource3);
+            this.reporte_liquidacion.LocalReport.ReportEmbeddedResource = "AuxiliosAimaretti.Reporte.reporte_liquidacion.rdlc";
+            this.reporte_liquidacion.Location = new System.Drawing.Point(0, 0);
+            this.reporte_liquidacion.Name = "reporte_liquidacion";
+            this.reporte_liquidacion.ServerReport.BearerToken = null;
+            this.reporte_liquidacion.Size = new System.Drawing.Size(958, 1044);
+            this.reporte_liquidacion.TabIndex = 3;
+            // 
             // reporte_pago_cliente
             // 
             this.reporte_pago_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "datos_pago";
-            reportDataSource3.Value = this.listpagoclienteBindingSource1;
-            reportDataSource4.Name = "reporte_pagos_cliente";
-            reportDataSource4.Value = this.reportepagoclienteBindingSource;
-            this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource4.Name = "datos_pago";
+            reportDataSource4.Value = this.listpagoclienteBindingSource1;
+            reportDataSource5.Name = "reporte_pagos_cliente";
+            reportDataSource5.Value = this.reportepagoclienteBindingSource;
             this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource4);
+            this.reporte_pago_cliente.LocalReport.DataSources.Add(reportDataSource5);
             this.reporte_pago_cliente.LocalReport.ReportEmbeddedResource = "AuxiliosAimaretti.Reporte.reporte_pago_cliente.rdlc";
             this.reporte_pago_cliente.Location = new System.Drawing.Point(0, 0);
             this.reporte_pago_cliente.Name = "reporte_pago_cliente";
@@ -321,12 +337,12 @@
             // reporte_servicio
             // 
             this.reporte_servicio.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "reporte_servicios";
-            reportDataSource5.Value = this.reporteserviciosBindingSource;
-            reportDataSource6.Name = "dato_servicio";
-            reportDataSource6.Value = this.listservicioBindingSource;
-            this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource6.Name = "reporte_servicios";
+            reportDataSource6.Value = this.reporteserviciosBindingSource;
+            reportDataSource7.Name = "dato_servicio";
+            reportDataSource7.Value = this.listservicioBindingSource;
             this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource6);
+            this.reporte_servicio.LocalReport.DataSources.Add(reportDataSource7);
             this.reporte_servicio.LocalReport.ReportEmbeddedResource = "AuxiliosAimaretti.Reporte.reporte_servicio.rdlc";
             this.reporte_servicio.Location = new System.Drawing.Point(0, 0);
             this.reporte_servicio.Name = "reporte_servicio";
@@ -335,14 +351,9 @@
             this.reporte_servicio.TabIndex = 1;
             this.reporte_servicio.Visible = false;
             // 
-            // reporte_liquidacion
+            // reporte_liquidacionBindingSource
             // 
-            this.reporte_liquidacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reporte_liquidacion.Location = new System.Drawing.Point(0, 0);
-            this.reporte_liquidacion.Name = "reporte_liquidacion";
-            this.reporte_liquidacion.ServerReport.BearerToken = null;
-            this.reporte_liquidacion.Size = new System.Drawing.Size(958, 1044);
-            this.reporte_liquidacion.TabIndex = 3;
+            this.reporte_liquidacionBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_liquidacion);
             // 
             // FormReportes
             // 
@@ -370,6 +381,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +414,6 @@
         private System.Windows.Forms.BindingSource listservicioBindingSource;
         private System.Windows.Forms.BindingSource listpagoclienteBindingSource1;
         private Microsoft.Reporting.WinForms.ReportViewer reporte_liquidacion;
+        private System.Windows.Forms.BindingSource reporte_liquidacionBindingSource;
     }
 }

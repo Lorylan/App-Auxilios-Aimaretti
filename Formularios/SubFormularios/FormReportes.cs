@@ -61,6 +61,13 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             this.reporte_servicio.RefreshReport();
 
         }
+        private void cargarReporteLiquidacion(String desde, String hasta, String empresa) {
+            reporte_liquidacion reporte_l = new reporte_liquidacion();
+            reporte_l.createReporteLiquidacion(desde, hasta, empresa);
+            reporte_liquidacionBindingSource.DataSource = reporte_l;
+            this.reporte_liquidacion.RefreshReport();
+
+        }
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
@@ -73,18 +80,28 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 reporte_combustible.Visible = true;
                 reporte_pago_cliente.Visible = false;
                 reporte_servicio.Visible = false;
+                reporte_liquidacion.Visible = false;
             }
             if (txt_tipo_de_reporte.Text.Equals("Pagos clientes")) {
                 cargarReportePagoCliente(fecha_inicio, fecha_fin, empresa);
                 reporte_combustible.Visible = false;
                 reporte_pago_cliente.Visible = true;
                 reporte_servicio.Visible = false;
+                reporte_liquidacion.Visible = false;
             }
             if (txt_tipo_de_reporte.Text.Equals("Servicio")) {
                 cargarReporteServicio(fecha_inicio, fecha_fin, empresa);
                 reporte_combustible.Visible = false;
                 reporte_pago_cliente.Visible = false;
                 reporte_servicio.Visible = true;
+                reporte_liquidacion.Visible = false;
+            }
+            if (txt_tipo_de_reporte.Text.Equals("Liquidacion")) {
+                cargarReporteServicio(fecha_inicio, fecha_fin, empresa);
+                reporte_combustible.Visible = false;
+                reporte_pago_cliente.Visible = false;
+                reporte_liquidacion.Visible = true;
+                reporte_servicio.Visible = false;
             }
         }
         private void desactivarBoton(ButtonRedondeado b, Color c)
