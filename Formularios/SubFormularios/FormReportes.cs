@@ -97,7 +97,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 reporte_liquidacion.Visible = false;
             }
             if (txt_tipo_de_reporte.Text.Equals("Liquidacion")) {
-                cargarReporteServicio(fecha_inicio, fecha_fin, empresa);
+                cargarReporteLiquidacion(fecha_inicio, fecha_fin, empresa);
                 reporte_combustible.Visible = false;
                 reporte_pago_cliente.Visible = false;
                 reporte_liquidacion.Visible = true;
@@ -132,6 +132,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 reporte_combustible.Visible = false;
                 reporte_pago_cliente.Visible = false;
                 reporte_servicio.Visible = false;
+                reporte_liquidacion.Visible = false;
 
             }
         }

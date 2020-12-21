@@ -38,6 +38,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.listcombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportecombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reporte_liquidacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listpagoclienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.reportepagoclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reporteserviciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,9 +62,9 @@
             this.reporte_liquidacion = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporte_pago_cliente = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporte_servicio = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.reporte_liquidacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).BeginInit();
@@ -72,7 +73,6 @@
             this.panel_cargaReporte.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listcombustibleBindingSource
@@ -83,6 +83,10 @@
             // reportecombustibleBindingSource
             // 
             this.reportecombustibleBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_combustible);
+            // 
+            // reporte_liquidacionBindingSource
+            // 
+            this.reporte_liquidacionBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_liquidacion);
             // 
             // listpagoclienteBindingSource1
             // 
@@ -316,6 +320,7 @@
             this.reporte_liquidacion.ServerReport.BearerToken = null;
             this.reporte_liquidacion.Size = new System.Drawing.Size(958, 1044);
             this.reporte_liquidacion.TabIndex = 3;
+            this.reporte_liquidacion.Visible = false;
             // 
             // reporte_pago_cliente
             // 
@@ -351,10 +356,6 @@
             this.reporte_servicio.TabIndex = 1;
             this.reporte_servicio.Visible = false;
             // 
-            // reporte_liquidacionBindingSource
-            // 
-            this.reporte_liquidacionBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_liquidacion);
-            // 
             // FormReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +372,7 @@
             this.Load += new System.EventHandler(this.FormReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).EndInit();
@@ -381,7 +383,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
