@@ -32,6 +32,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             desactivarBoton(btn_agregar, Color.Silver);
             this.reporte_servicio.RefreshReport();
             this.reporte_pago_cliente.RefreshReport();
+            this.reporte_liquidacion.RefreshReport();
         }
         private void cargarReporteCombustible(String desde, String hasta, String empresa) {
             reporte_combustible reporte_c = new reporte_combustible();
