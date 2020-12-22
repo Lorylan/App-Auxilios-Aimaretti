@@ -18,6 +18,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
         ClienteBD clienteBD;
         TarifaPactadaDB tarifaPactadaBD;
         ServicioBD combustibleBD;
+        TipoBD tipoBD;
         private void cargarOpciones()
         {
             DataSet dataset = clienteBD.MostrarInfo();
@@ -25,6 +26,15 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             {
                 txt_Empresa.Items.Add((string)row["NombreEmpresa"]);
             }
+        }
+        private void cargarTipos() {
+
+            DataSet dataset = tipoBD.ObtenerTipos();
+            foreach (DataRow row in dataset.Tables[0].Rows)
+            {
+                txt_tipo.Items.Add((string)row["Nombre"]);
+            }
+            
         }
         private Servicio RecuperarInfo()
         {
@@ -170,7 +180,9 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             clienteBD = new ClienteBD();
             tarifaPactadaBD = new TarifaPactadaDB();
             combustibleBD = new ServicioBD();
+            tipoBD = new TipoBD();
             cargarOpciones();
+            cargarTipos();
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)

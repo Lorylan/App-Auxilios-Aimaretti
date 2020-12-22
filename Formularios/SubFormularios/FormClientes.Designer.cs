@@ -562,14 +562,6 @@
             this.txt_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tipo.FormattingEnabled = true;
-            this.txt_tipo.Items.AddRange(new object[] {
-            "Traslado",
-            "Mecanica",
-            "Extraccion",
-            "Servicios extras",
-            "Servicio con Km",
-            "Ganc Traslado",
-            "Ganc Mecanica"});
             this.txt_tipo.Location = new System.Drawing.Point(86, 9);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(124, 26);

@@ -121,6 +121,7 @@
     <Compile Include="BaseDeDatos\PersonalDB.cs" />
     <Compile Include="BaseDeDatos\ServicioBD.cs" />
     <Compile Include="BaseDeDatos\TarifaPactadaDB.cs" />
+    <Compile Include="BaseDeDatos\TipoBD.cs" />
     <Compile Include="BaseDeDatos\UsuarioDB.cs" />
     <Compile Include="ButtonRedondeado.cs">
       <SubType>Component</SubType>

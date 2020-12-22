@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_cargaServicios = new System.Windows.Forms.Panel();
+            this.txt_desperfecto = new System.Windows.Forms.ComboBox();
             this.txt_color = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -107,7 +108,6 @@
             this.txt_importe_servicio = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txt_desperfecto = new System.Windows.Forms.ComboBox();
             this.panel_cargaServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosServicios)).BeginInit();
             this.panel1.SuspendLayout();
@@ -165,6 +165,20 @@
             this.panel_cargaServicios.Name = "panel_cargaServicios";
             this.panel_cargaServicios.Size = new System.Drawing.Size(985, 203);
             this.panel_cargaServicios.TabIndex = 45;
+            // 
+            // txt_desperfecto
+            // 
+            this.txt_desperfecto.AllowDrop = true;
+            this.txt_desperfecto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_desperfecto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_desperfecto.FormattingEnabled = true;
+            this.txt_desperfecto.Items.AddRange(new object[] {
+            "Traslado",
+            "Mecanica"});
+            this.txt_desperfecto.Location = new System.Drawing.Point(7, 135);
+            this.txt_desperfecto.Name = "txt_desperfecto";
+            this.txt_desperfecto.Size = new System.Drawing.Size(196, 26);
+            this.txt_desperfecto.TabIndex = 96;
             // 
             // txt_color
             // 
@@ -454,14 +468,6 @@
             this.txt_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tipo.FormattingEnabled = true;
-            this.txt_tipo.Items.AddRange(new object[] {
-            "Traslado",
-            "Mecanica",
-            "Extraccion",
-            "Servicios extras",
-            "Servicio con Km",
-            "Ganc Traslado",
-            "Ganc Mecanica"});
             this.txt_tipo.Location = new System.Drawing.Point(431, 31);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(124, 28);
@@ -1142,20 +1148,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(272, 203);
             this.panel4.TabIndex = 103;
-            // 
-            // txt_desperfecto
-            // 
-            this.txt_desperfecto.AllowDrop = true;
-            this.txt_desperfecto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txt_desperfecto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_desperfecto.FormattingEnabled = true;
-            this.txt_desperfecto.Items.AddRange(new object[] {
-            "Traslado",
-            "Mecanica"});
-            this.txt_desperfecto.Location = new System.Drawing.Point(7, 135);
-            this.txt_desperfecto.Name = "txt_desperfecto";
-            this.txt_desperfecto.Size = new System.Drawing.Size(196, 26);
-            this.txt_desperfecto.TabIndex = 96;
             // 
             // FormPlanillas
             // 
