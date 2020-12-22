@@ -23,7 +23,7 @@ namespace AuxiliosAimaretti.BaseDeDatos
             return conexion.ejecutarComandoSinRetorno("INSERT INTO PagoCliente VALUES('" + pc.ComprobanteNro 
                 + "', '" + pc.FechaC + "', '" + pc.Monto + "','" + pc.Nro + "', '" + pc.Banco 
                 + "' , '" + pc.NroCuenta + "' , '" + pc.Fecha + "' , '" + pc.Detalle + "' , '" + pc.idCliente
-                + "', '" + pc.idUsuario + "' , '" + pc.Tipo+ "')" );
+                + "', '" + pc.idUsuario + "' , '" + pc.Tipo+ "'  , '" + pc.nroFactura + "')");
         }
         public bool Borrar(String comprobante)
         {
@@ -35,6 +35,7 @@ namespace AuxiliosAimaretti.BaseDeDatos
             return conexion.ejecutarComandoSinRetorno("UPDATE PagoCliente SET FechaC='" + pc.FechaC 
                 + "', Monto='" + pc.Monto + "', Nro='" + pc.Nro + "', Banco='" + pc.Banco 
                 + "', NroCuenta='" + pc.NroCuenta + "', Fecha='"+pc.Fecha+"', Detalle='"+pc.Detalle
+                +" ', nroFactura='"+pc.nroFactura+"'"
                 +"' WHERE  ComprobanteNro='" + comprobante + "'");
         }
         public DataSet MostrarInfo()

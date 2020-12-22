@@ -105,18 +105,18 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             if (txt_opcion_pago.Text.Equals("Efectivo"))
             {
                 return new PagoCliente(txt_comprobante_nro.Text,txt_Fecha_c.Value.ToString().Split(' ')[0],txt_monto.Text,"-","-","-",
-                    "-",txt_detalle.Text,txt_Empresa.Text,"Efectivo");
+                    "-",txt_detalle.Text,txt_Empresa.Text,"Efectivo",txt_nro_factura.Text);
             }
             if(txt_opcion_pago.Text.Equals("Transferencua bancaria")) { 
                 return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.ToString().Split(' ')[0], txt_monto.Text, 
                     txt_nro.Text,txt_banco.Text,txt_nro_cuenta.Text,
                     txt_fecha.Value.Date.ToString().Split(' ')[0], txt_detalle.Text, txt_Empresa.Text, "" +
-                    "Transferencia bancaria");
+                    "Transferencia bancaria",txt_nro_factura.Text);
             }
             return new PagoCliente(txt_comprobante_nro.Text, txt_Fecha_c.Value.ToString().Split(' ')[0], txt_monto.Text,
                     txt_nro.Text, txt_banco.Text, txt_nro_cuenta.Text,
                     txt_fecha.Value.Date.ToString().Split(' ')[0], txt_detalle.Text, txt_Empresa.Text, "" +
-                    "Cheque");
+                    "Cheque",txt_nro_factura.Text);
             
         }
         private void vaciarTxt() {
@@ -126,6 +126,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             txt_banco.Text = "";
             txt_nro_cuenta.Text = "";
             txt_detalle.Text = "";
+            txt_nro_factura.Text = "";
         }
         private void ActualizarInfoTabla()
         {
@@ -141,6 +142,8 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             datos_pago.Columns[8].Visible = false;
             datos_pago.Columns[9].Visible = false;
             datos_pago.Columns[10].Visible = false;
+            datos_pago.Columns[11].HeaderText = "Nro.Factura";
+            datos_pago.Columns[12].Visible = false;
         }
         private void desactivarBoton(ButtonRedondeado b, Color c)
         {
@@ -291,6 +294,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 txt_nro.Text = datos_pago.Rows[i].Cells[3].Value.ToString();
                 txt_banco.Text = datos_pago.Rows[i].Cells[4].Value.ToString();
                 txt_nro_cuenta.Text = datos_pago.Rows[i].Cells[5].Value.ToString();
+                txt_nro_factura.Text = datos_pago.Rows[i].Cells[11].Value.ToString();
                 try
                 {
                     txt_fecha.Text = datos_pago.Rows[i].Cells[6].Value.ToString();

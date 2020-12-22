@@ -98,6 +98,8 @@
             this.btn_cancelar = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             this.pb_error = new System.Windows.Forms.PictureBox();
+            this.txt_nro_factura = new System.Windows.Forms.TextBox();
+            this.nroFactura = new System.Windows.Forms.Label();
             this.panel_CargaCliente.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -155,7 +157,7 @@
             this.panel_CargaCliente.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_CargaCliente.Location = new System.Drawing.Point(45, 68);
             this.panel_CargaCliente.Name = "panel_CargaCliente";
-            this.panel_CargaCliente.Size = new System.Drawing.Size(942, 128);
+            this.panel_CargaCliente.Size = new System.Drawing.Size(961, 128);
             this.panel_CargaCliente.TabIndex = 65;
             // 
             // panel8
@@ -404,6 +406,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.txt_nro_factura);
+            this.panel1.Controls.Add(this.nroFactura);
             this.panel1.Controls.Add(this.obligatorio1);
             this.panel1.Controls.Add(this.obligatorio);
             this.panel1.Controls.Add(this.obligatorio3);
@@ -497,7 +501,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(795, 53);
+            this.label3.Location = new System.Drawing.Point(731, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 18);
             this.label3.TabIndex = 80;
@@ -509,7 +513,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(406, 49);
+            this.label2.Location = new System.Drawing.Point(371, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 18);
             this.label2.TabIndex = 79;
@@ -624,7 +628,7 @@
             "Efectivo",
             "Transferencia bancaria",
             "Cheque"});
-            this.txt_opcion_pago.Location = new System.Drawing.Point(466, 10);
+            this.txt_opcion_pago.Location = new System.Drawing.Point(191, 13);
             this.txt_opcion_pago.Name = "txt_opcion_pago";
             this.txt_opcion_pago.Size = new System.Drawing.Size(181, 26);
             this.txt_opcion_pago.TabIndex = 72;
@@ -636,7 +640,7 @@
             this.opciones_pago.BackColor = System.Drawing.Color.Transparent;
             this.opciones_pago.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opciones_pago.ForeColor = System.Drawing.Color.White;
-            this.opciones_pago.Location = new System.Drawing.Point(315, 9);
+            this.opciones_pago.Location = new System.Drawing.Point(34, 13);
             this.opciones_pago.Name = "opciones_pago";
             this.opciones_pago.Size = new System.Drawing.Size(136, 23);
             this.opciones_pago.TabIndex = 73;
@@ -748,7 +752,7 @@
             // txt_monto
             // 
             this.txt_monto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_monto.Location = new System.Drawing.Point(740, 72);
+            this.txt_monto.Location = new System.Drawing.Point(676, 81);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(172, 26);
             this.txt_monto.TabIndex = 56;
@@ -760,7 +764,7 @@
             this.monto.BackColor = System.Drawing.Color.Transparent;
             this.monto.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monto.ForeColor = System.Drawing.Color.White;
-            this.monto.Location = new System.Drawing.Point(736, 51);
+            this.monto.Location = new System.Drawing.Point(672, 60);
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(53, 20);
             this.monto.TabIndex = 55;
@@ -769,7 +773,7 @@
             // txt_Fecha_c
             // 
             this.txt_Fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fecha_c.Location = new System.Drawing.Point(354, 72);
+            this.txt_Fecha_c.Location = new System.Drawing.Point(319, 70);
             this.txt_Fecha_c.Name = "txt_Fecha_c";
             this.txt_Fecha_c.Size = new System.Drawing.Size(275, 28);
             this.txt_Fecha_c.TabIndex = 54;
@@ -780,7 +784,7 @@
             this.fecha_c.BackColor = System.Drawing.Color.Transparent;
             this.fecha_c.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_c.ForeColor = System.Drawing.Color.White;
-            this.fecha_c.Location = new System.Drawing.Point(350, 51);
+            this.fecha_c.Location = new System.Drawing.Point(315, 49);
             this.fecha_c.Name = "fecha_c";
             this.fecha_c.Size = new System.Drawing.Size(50, 20);
             this.fecha_c.TabIndex = 53;
@@ -867,7 +871,7 @@
             this.datos_pago.RowTemplate.Height = 23;
             this.datos_pago.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.datos_pago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datos_pago.Size = new System.Drawing.Size(939, 409);
+            this.datos_pago.Size = new System.Drawing.Size(939, 424);
             this.datos_pago.TabIndex = 72;
             this.datos_pago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Seleccionar);
             // 
@@ -1003,6 +1007,26 @@
             this.pb_error.TabStop = false;
             this.pb_error.Visible = false;
             // 
+            // txt_nro_factura
+            // 
+            this.txt_nro_factura.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_nro_factura.Location = new System.Drawing.Point(579, 14);
+            this.txt_nro_factura.Name = "txt_nro_factura";
+            this.txt_nro_factura.Size = new System.Drawing.Size(345, 26);
+            this.txt_nro_factura.TabIndex = 86;
+            // 
+            // nroFactura
+            // 
+            this.nroFactura.AutoSize = true;
+            this.nroFactura.BackColor = System.Drawing.Color.Transparent;
+            this.nroFactura.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nroFactura.ForeColor = System.Drawing.Color.White;
+            this.nroFactura.Location = new System.Drawing.Point(391, 19);
+            this.nroFactura.Name = "nroFactura";
+            this.nroFactura.Size = new System.Drawing.Size(182, 20);
+            this.nroFactura.TabIndex = 85;
+            this.nroFactura.Text = "Corresponde a la factura";
+            // 
             // FormPagoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1118,5 +1142,7 @@
         private System.Windows.Forms.Label obligatorio3;
         private System.Windows.Forms.Label obligatorio2;
         private System.Windows.Forms.PictureBox pb_error;
+        private System.Windows.Forms.TextBox txt_nro_factura;
+        private System.Windows.Forms.Label nroFactura;
     }
 }

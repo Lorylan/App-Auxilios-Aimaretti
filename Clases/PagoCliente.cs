@@ -20,9 +20,9 @@ namespace AuxiliosAimaretti.Clases
         public String idCliente { get; set; }
         public String idUsuario { get; set; }
 
-
+        public string nroFactura { get; set; }
         public PagoCliente(String com_nro, String fc, String m, String nro, String b,String nro_c,
-            String fecha, String d, String idC, String t) {
+            String fecha, String d, String idC, String t, String nroF) {
             idUsuario = Program.nombreUsuario;
             idCliente = idC;
             Detalle = d;
@@ -34,6 +34,7 @@ namespace AuxiliosAimaretti.Clases
             FechaC = fc;
             ComprobanteNro = com_nro;
             Tipo = t;
+            nroFactura = nroF;
         }
 
     }

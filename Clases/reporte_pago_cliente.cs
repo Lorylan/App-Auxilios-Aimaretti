@@ -31,7 +31,7 @@ namespace AuxiliosAimaretti.Clases
             String nro_cheque;
             String nro_cuenta;
             String fecha_cobro;
-
+            String nro_factura;
             foreach (System.Data.DataRow rows in list_pc.Rows)
             {
                 comprobante = Convert.ToString(rows[0]);
@@ -40,7 +40,8 @@ namespace AuxiliosAimaretti.Clases
                 nro_cheque = Convert.ToString(rows[3]);
                 nro_cuenta = Convert.ToString(rows[5]);
                 fecha_cobro = Convert.ToString(rows[6]);
-                pagoCliente_aux = new PagoCliente(comprobante,fechaEmision,monto,nro_cheque,"",nro_cuenta,fecha_cobro,"","","");
+                nro_factura = Convert.ToString(rows[11]);
+                pagoCliente_aux = new PagoCliente(comprobante,fechaEmision,monto,nro_cheque,"",nro_cuenta,fecha_cobro,"","","",nro_factura);
                 
                 list_pago_cliente.Add(pagoCliente_aux);
                 total_parcial += Convert.ToDouble(monto);
