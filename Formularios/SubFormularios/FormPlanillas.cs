@@ -338,7 +338,8 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
 
         private void txt_km_TextChanged(object sender, EventArgs e)
         {
-            if (txt_tipo.Text.Equals("Servicio con Km")) {
+            if (txt_tipo.Text.Equals("Servicio con Km"))
+            {
                 bool aux = tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, txt_tipo.Text);
                 try
                 {
@@ -351,10 +352,36 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                         txt_Importe.Text = "";
                     }
                 }
-                catch {
+                catch
+                {
                     txt_Importe.Text = "";
                 }
-               
+
+            }
+            else {
+                if ((!txt_Empresa.Text.Trim().Equals("")) && (!txt_tipo.Text.Trim().Equals(""))) {
+                    bool existe_tarifa = tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, txt_tipo.Text);
+                    if (existe_tarifa) {
+                        double importe = Convert.ToDouble(tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, txt_tipo.Text));
+
+                        if (!txt_km.Text.Trim().Equals(""))
+                        {
+                            if (tarifaPactadaBD.ExisteTarifaDe(txt_Empresa.Text, "Km"))
+                            {
+                                double precio_por_km = Convert.ToDouble(tarifaPactadaBD.BuscarTarifaDe(txt_Empresa.Text, "Km"));
+
+                                double cant_km = Convert.ToDouble(txt_km.Text);
+                                txt_Importe.Text = (importe + (precio_por_km * cant_km)).ToString();
+                            }
+
+                        }
+                        else
+                        {
+                            txt_Importe.Text = importe.ToString();
+                        }
+                    }
+
+                }
             }
         }
 
