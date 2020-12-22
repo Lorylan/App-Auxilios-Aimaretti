@@ -16,6 +16,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
     {
         ClienteBD clienteDB;
         TarifaPactadaDB tarifaPactadaDB;
+        TipoBD tipoBD;
         /*-------------------------- Mi metodos -----------------------------*/
         private void desactivarBotones(ButtonRedondeado[] botones, Color c)
         {
@@ -130,14 +131,26 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             ActualizarInfoTablaTarifaP();
         }
 
+        private void cargarTipos()
+        {
+
+            DataSet dataset = tipoBD.ObtenerTipos();
+            foreach (DataRow row in dataset.Tables[0].Rows)
+            {
+                txt_tipo.Items.Add((string)row["Nombre"]);
+            }
+
+        }
         /*------------------------------------------------------------------*/
         public FormClientes()
         {
             InitializeComponent();
             clienteDB = new ClienteBD();
             tarifaPactadaDB = new TarifaPactadaDB();
+            tipoBD = new TipoBD();
             desactivarBotones(new ButtonRedondeado[] {btn_borrar,btn_cancelar,btn_editar,btn_agregartp,btn_cancelartp,btn_editartp},Color.Silver);
             ActualizarInfoTablaCliente();
+            cargarTipos();
         }
         private void Seleccionar(object sender, DataGridViewCellEventArgs e)
         {
@@ -218,6 +231,10 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             {
                 if (InfoValidaTp())
                 {
+                    if (!tipoBD.Existe(txt_tipo.Text)) {
+                        tipoBD.Agregar(txt_tipo.Text);
+                        txt_tipo.Items.Add(txt_tipo.Text);
+                    }
                     sacarMensajeError(txt_error, pb_error);
                     tarifaPactadaDB.Agregar(RecuperarInfoTp());
                     actualizarTablaVaciarTxtTp();

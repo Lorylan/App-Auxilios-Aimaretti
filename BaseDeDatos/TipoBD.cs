@@ -27,7 +27,11 @@ namespace AuxiliosAimaretti.BaseDeDatos
             SqlCommand sentencia = new SqlCommand("SELECT * From Tipo");
             return conexion.EjecutarSentencia(sentencia);
         }
-       
+
+        public Boolean Existe(String nombre) {
+            SqlCommand sentencia = new SqlCommand("SELECT * From Tipo WHERE Nombre='"+nombre+"'");
+            return conexion.EjecutarSentencia(sentencia).Tables[0].Rows.Count == 1;
+        }
       
     }
 }

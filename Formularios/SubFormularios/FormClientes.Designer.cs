@@ -67,9 +67,6 @@
             this.txt_importe = new System.Windows.Forms.TextBox();
             this.Importe = new System.Windows.Forms.Label();
             this.panel_Tp = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txt_tipo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,6 +77,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pb_error = new System.Windows.Forms.PictureBox();
             this.datosTarifaPactada = new System.Windows.Forms.DataGridView();
+            this.txt_tipo = new System.Windows.Forms.ComboBox();
             this.btn_cancelartp = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_editartp = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_agregartp = new AuxiliosAimaretti.ButtonRedondeado();
@@ -504,7 +502,7 @@
             this.Importe.BackColor = System.Drawing.Color.Transparent;
             this.Importe.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Importe.ForeColor = System.Drawing.Color.White;
-            this.Importe.Location = new System.Drawing.Point(15, 58);
+            this.Importe.Location = new System.Drawing.Point(8, 55);
             this.Importe.Name = "Importe";
             this.Importe.Size = new System.Drawing.Size(66, 20);
             this.Importe.TabIndex = 77;
@@ -513,8 +511,6 @@
             // panel_Tp
             // 
             this.panel_Tp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel_Tp.Controls.Add(this.comboBox1);
-            this.panel_Tp.Controls.Add(this.label17);
             this.panel_Tp.Controls.Add(this.txt_tipo);
             this.panel_Tp.Controls.Add(this.label16);
             this.panel_Tp.Controls.Add(this.label15);
@@ -524,48 +520,10 @@
             this.panel_Tp.Controls.Add(this.tipo);
             this.panel_Tp.Controls.Add(this.Importe);
             this.panel_Tp.Controls.Add(this.txt_importe);
-            this.panel_Tp.Location = new System.Drawing.Point(764, 70);
+            this.panel_Tp.Location = new System.Drawing.Point(762, 67);
             this.panel_Tp.Name = "panel_Tp";
-            this.panel_Tp.Size = new System.Drawing.Size(252, 192);
+            this.panel_Tp.Size = new System.Drawing.Size(252, 150);
             this.panel_Tp.TabIndex = 79;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Traslado",
-            "Mecanica",
-            "Extraccion",
-            "Servicios extras",
-            "Servicio con Km"});
-            this.comboBox1.Location = new System.Drawing.Point(101, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 26);
-            this.comboBox1.TabIndex = 84;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(15, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 20);
-            this.label17.TabIndex = 83;
-            this.label17.Text = "Crear tipo";
-            // 
-            // txt_tipo
-            // 
-            this.txt_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tipo.FormattingEnabled = true;
-            this.txt_tipo.Location = new System.Drawing.Point(86, 9);
-            this.txt_tipo.Name = "txt_tipo";
-            this.txt_tipo.Size = new System.Drawing.Size(124, 26);
-            this.txt_tipo.TabIndex = 82;
             // 
             // label16
             // 
@@ -597,7 +555,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(8, 160);
+            this.label14.Location = new System.Drawing.Point(3, 120);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(118, 20);
             this.label14.TabIndex = 70;
@@ -609,7 +567,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(189, 137);
+            this.label11.Location = new System.Drawing.Point(184, 97);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 18);
             this.label11.TabIndex = 71;
@@ -621,7 +579,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.LightGray;
-            this.label13.Location = new System.Drawing.Point(8, 135);
+            this.label13.Location = new System.Drawing.Point(3, 95);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(188, 20);
             this.label13.TabIndex = 70;
@@ -727,6 +685,17 @@
             this.datosTarifaPactada.Size = new System.Drawing.Size(190, 250);
             this.datosTarifaPactada.TabIndex = 89;
             // 
+            // txt_tipo
+            // 
+            this.txt_tipo.AllowDrop = true;
+            this.txt_tipo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_tipo.FormattingEnabled = true;
+            this.txt_tipo.Location = new System.Drawing.Point(81, 12);
+            this.txt_tipo.Name = "txt_tipo";
+            this.txt_tipo.Size = new System.Drawing.Size(127, 26);
+            this.txt_tipo.TabIndex = 88;
+            // 
             // btn_cancelartp
             // 
             this.btn_cancelartp.BackColor = System.Drawing.Color.Transparent;
@@ -739,7 +708,7 @@
             this.btn_cancelartp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelartp.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_cancelartp.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cancelartp.Location = new System.Drawing.Point(937, 268);
+            this.btn_cancelartp.Location = new System.Drawing.Point(926, 237);
             this.btn_cancelartp.Name = "btn_cancelartp";
             this.btn_cancelartp.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(54)))), ((int)(((byte)(104)))));
             this.btn_cancelartp.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
@@ -763,7 +732,7 @@
             this.btn_editartp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editartp.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_editartp.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_editartp.Location = new System.Drawing.Point(861, 268);
+            this.btn_editartp.Location = new System.Drawing.Point(850, 237);
             this.btn_editartp.Name = "btn_editartp";
             this.btn_editartp.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_editartp.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -787,7 +756,7 @@
             this.btn_agregartp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregartp.Font = new System.Drawing.Font("Comic Sans MS", 11.25F);
             this.btn_agregartp.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_agregartp.Location = new System.Drawing.Point(773, 268);
+            this.btn_agregartp.Location = new System.Drawing.Point(762, 237);
             this.btn_agregartp.Name = "btn_agregartp";
             this.btn_agregartp.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.btn_agregartp.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -986,7 +955,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView datosTarifaPactada;
         private System.Windows.Forms.ComboBox txt_tipo;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label17;
     }
 }
