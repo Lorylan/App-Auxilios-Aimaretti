@@ -22,7 +22,7 @@ namespace AuxiliosAimaretti.Clases
             this.fecha_fin = hasta;
 
             ServicioBD servicioBD = new ServicioBD();
-            var list_s = servicioBD.MostrarDesdeHasta(desde, hasta);
+            var list_s = servicioBD.MostrarDesdeHasta(desde, hasta,empresa);
             this.total_servicios = 0;
             this.cant_servicios = 0;
             foreach (System.Data.DataRow rows in list_s.Rows)
@@ -33,7 +33,7 @@ namespace AuxiliosAimaretti.Clases
             this.cant_combustible = 0;
             this.total_combustible = 0;
             CombustibleBD combustibleBD = new CombustibleBD();
-            var list_c = combustibleBD.MostrarDesdeHasta(desde, hasta);
+            var list_c = combustibleBD.MostrarDesdeHasta(desde, hasta,empresa);
             foreach (System.Data.DataRow rows in list_c.Rows)
             {
                 

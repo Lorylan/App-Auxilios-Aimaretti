@@ -56,9 +56,9 @@ namespace AuxiliosAimaretti.BaseDeDatos
             return data;
         }
 
-        public DataTable MostrarDesdeHasta(String desde, String hasta)
+        public DataTable MostrarDesdeHasta(String desde, String hasta, string empresa)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente Where FechaC >='" + desde + "' AND FechaC <='" + hasta + "'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente Where FechaC >='" + desde + "' AND FechaC <='" + hasta + "' AND idCliente='"+empresa+"'");
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
         }

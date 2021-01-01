@@ -19,7 +19,7 @@ namespace AuxiliosAimaretti.Clases
             ServicioBD servicioBD = new ServicioBD();
             list_servicio = new List<Servicio>();
             Servicio servicio_aux;
-            var list_s = servicioBD.MostrarDesdeHasta(desde, hasta);
+            var list_s = servicioBD.MostrarDesdeHasta(desde, hasta,empresa);
             total_parcial = 0;
             cant_servicios = 0;
             String fecha;

@@ -21,7 +21,7 @@ namespace AuxiliosAimaretti.Clases
             list_pago_cliente = new List<PagoCliente>();
             PagoCliente pagoCliente_aux;
 
-            var list_pc = pagoClienteBD.MostrarDesdeHasta(desde, hasta);
+            var list_pc = pagoClienteBD.MostrarDesdeHasta(desde, hasta,empresa);
             total_parcial = 0;
             cant_pago_cliente = 0;
 

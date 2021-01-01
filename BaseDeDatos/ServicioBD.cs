@@ -44,9 +44,9 @@ namespace AuxiliosAimaretti.BaseDeDatos
             return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Servicio WHERE idCliente='" + idC + "'");
         }
 
-        public DataTable MostrarDesdeHasta(String desde, String hasta)
+        public DataTable MostrarDesdeHasta(String desde, String hasta, string empresa)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From Servicio Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From Servicio Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "' AND idCliente='"+empresa+"'");
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
         }
