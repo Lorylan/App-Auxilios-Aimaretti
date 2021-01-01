@@ -253,7 +253,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 tarifaPactadaDB.Modificar(RecuperarInfoTp(),txt_nombreEmpresa.Text, datosTarifaPactada.Rows[i].Cells[0].Value.ToString());
                 actualizarTablaVaciarTxtTp();
                 desactivarBotones(new ButtonRedondeado[] { btn_cancelartp, btn_editartp, btn_agregartp }, Color.Silver);
-               
+                activarBoton(btn_agregartp, Color.FromArgb(251, 229, 0));
             }
         }
         private void btn_cancelartp_Click(object sender, EventArgs e)
@@ -263,6 +263,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                 vaciarTxtTp();
                 desactivarBotones(new ButtonRedondeado[] { btn_cancelartp, btn_editartp, btn_agregartp }, Color.Silver);
                 actualizarTablaVaciarTxtTp();
+                activarBoton(btn_agregartp, Color.FromArgb(251, 229, 0));
             }
         }
         private void SeleccionarTp(object sender, DataGridViewCellEventArgs e)
@@ -287,6 +288,25 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void datosTarifaPactada_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                int i = e.RowIndex;
+                
+                txt_tipo.Text = datosTarifaPactada.Rows[i].Cells[0].Value.ToString();
+                desactivarBoton(btn_agregartp, Color.Silver);
+                activarBoton(btn_editartp, Color.FromArgb(251, 229, 0));
+                activarBoton(btn_cancelartp, Color.FromArgb(230, 54, 104));
+                txt_importe.Text = datosTarifaPactada.Rows[i].Cells[1].Value.ToString();
+            }
+            catch
+            {
+
             }
         }
 

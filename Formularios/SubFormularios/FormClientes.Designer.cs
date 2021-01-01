@@ -67,6 +67,7 @@
             this.txt_importe = new System.Windows.Forms.TextBox();
             this.Importe = new System.Windows.Forms.Label();
             this.panel_Tp = new System.Windows.Forms.Panel();
+            this.txt_tipo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -77,7 +78,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pb_error = new System.Windows.Forms.PictureBox();
             this.datosTarifaPactada = new System.Windows.Forms.DataGridView();
-            this.txt_tipo = new System.Windows.Forms.ComboBox();
             this.btn_cancelartp = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_editartp = new AuxiliosAimaretti.ButtonRedondeado();
             this.btn_agregartp = new AuxiliosAimaretti.ButtonRedondeado();
@@ -525,6 +525,17 @@
             this.panel_Tp.Size = new System.Drawing.Size(252, 150);
             this.panel_Tp.TabIndex = 79;
             // 
+            // txt_tipo
+            // 
+            this.txt_tipo.AllowDrop = true;
+            this.txt_tipo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.txt_tipo.FormattingEnabled = true;
+            this.txt_tipo.Location = new System.Drawing.Point(81, 12);
+            this.txt_tipo.Name = "txt_tipo";
+            this.txt_tipo.Size = new System.Drawing.Size(127, 26);
+            this.txt_tipo.TabIndex = 88;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -684,17 +695,7 @@
             this.datosTarifaPactada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datosTarifaPactada.Size = new System.Drawing.Size(190, 250);
             this.datosTarifaPactada.TabIndex = 89;
-            // 
-            // txt_tipo
-            // 
-            this.txt_tipo.AllowDrop = true;
-            this.txt_tipo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txt_tipo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
-            this.txt_tipo.FormattingEnabled = true;
-            this.txt_tipo.Location = new System.Drawing.Point(81, 12);
-            this.txt_tipo.Name = "txt_tipo";
-            this.txt_tipo.Size = new System.Drawing.Size(127, 26);
-            this.txt_tipo.TabIndex = 88;
+            this.datosTarifaPactada.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datosTarifaPactada_CellContentClick);
             // 
             // btn_cancelartp
             // 
