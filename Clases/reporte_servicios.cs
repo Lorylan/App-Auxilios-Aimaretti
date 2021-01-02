@@ -37,7 +37,7 @@ namespace AuxiliosAimaretti.Clases
                 tipo = Convert.ToString(rows[3]);
                 desde_serv = Convert.ToString(rows[9]);
                 hasta_serv = Convert.ToString(rows[10]);
-                km = Convert.ToString(rows[12]);
+                km = Convert.ToString(rows[11]);
                 importe = Convert.ToString(rows[13]);
                 servicio_aux = new Servicio(fecha,codigo,desde_serv,hasta_serv,"","","","","","",km,"","",tipo,importe);
                 list_servicio.Add(servicio_aux);

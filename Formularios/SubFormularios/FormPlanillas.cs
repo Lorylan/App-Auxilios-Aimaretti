@@ -17,7 +17,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
         ServicioBD servicioBD;
         ClienteBD clienteBD;
         TarifaPactadaDB tarifaPactadaBD;
-        ServicioBD combustibleBD;
+        CombustibleBD combustibleBD;
         TipoBD tipoBD;
         private void cargarOpciones()
         {
@@ -87,6 +87,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             datosServicios.Columns[15].Visible = false; //usuario
             datosServicios.Columns.RemoveAt(datosServicios.Columns.Count - 1);
             txt_cantidad_servicios.Text = datosServicios.Rows.Count.ToString();
+           
             string total_importe_servicio = servicioBD.CalcularTotal(txt_Empresa.Text);
             string total_importe_combustible= combustibleBD.CalcularTotal(txt_Empresa.Text);
             int total;
@@ -179,7 +180,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
             servicioBD = new ServicioBD();
             clienteBD = new ClienteBD();
             tarifaPactadaBD = new TarifaPactadaDB();
-            combustibleBD = new ServicioBD();
+            combustibleBD = new CombustibleBD();
             tipoBD = new TipoBD();
             cargarOpciones();
             cargarTipos();
