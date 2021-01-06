@@ -90,7 +90,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
            
             string total_importe_servicio = servicioBD.CalcularTotal(txt_Empresa.Text);
             string total_importe_combustible= combustibleBD.CalcularTotal(txt_Empresa.Text);
-            int total;
+            double total;
             if ((total_importe_servicio.Equals("")) & (total_importe_combustible.Equals("")))
             {
                 txt_importe_servicio.Text = "$0,00";
@@ -110,7 +110,7 @@ namespace AuxiliosAimaretti.Formularios.SubFormularios
                         txt_total_servicio.Text = "$" + total_importe_servicio;
                     }
                     else {
-                        total = int.Parse(total_importe_servicio) - int.Parse(total_importe_combustible) ;
+                        total = Convert.ToDouble(total_importe_servicio) - Convert.ToDouble(total_importe_combustible) ;
                         txt_importe_servicio.Text = "$" + total_importe_servicio;
                         txt_total_servicio.Text = "$" + total.ToString();
                     }
