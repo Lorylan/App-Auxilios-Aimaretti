@@ -43,7 +43,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Importe total</Value>
+                <Value>Importe total:   $</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -609,7 +609,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Importe total:</Value>
+                  <Value>Importe total:$</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>14pt</FontSize>

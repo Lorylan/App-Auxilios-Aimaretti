@@ -11,6 +11,7 @@ namespace AuxiliosAimaretti.Clases
     {
         public List<Servicio> list_servicio { get; private set; }
         public double cant_servicios { get; private set; }
+        
         public void createReporteServicio(String desde, String hasta, String emp)
         {
             this.empresa = emp;
@@ -20,7 +21,7 @@ namespace AuxiliosAimaretti.Clases
             list_servicio = new List<Servicio>();
             Servicio servicio_aux;
             var list_s = servicioBD.MostrarDesdeHasta(desde, hasta,empresa);
-            total_parcial = 0;
+            total_parcial = 0.00;
             cant_servicios = 0;
             String fecha;
             String codigo;
@@ -41,9 +42,10 @@ namespace AuxiliosAimaretti.Clases
                 importe = Convert.ToString(rows[13]);
                 servicio_aux = new Servicio(fecha,codigo,desde_serv,hasta_serv,"","","","","","",km,"","",tipo,importe);
                 list_servicio.Add(servicio_aux);
-                total_parcial += Convert.ToDouble(importe);
+                
             }
             cant_servicios = list_s.Rows.Count;
+            total_parcial = Convert.ToDouble(servicioBD.CalcularTotalDesdeHasta(desde,hasta,emp));
         }
     }
 }

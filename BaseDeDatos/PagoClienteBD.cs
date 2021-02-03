@@ -62,5 +62,12 @@ namespace AuxiliosAimaretti.BaseDeDatos
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
         }
+        public string CalcularMontoTotalDe(string desde,string hasta,string idC)
+        {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float, Monto)) FROM PagoCliente WHERE idCliente = '" + idC + "' AND FechaC >= '" + desde + "' AND FechaC <= '" + hasta + "'");
+
+
+        }
+
     }
 }

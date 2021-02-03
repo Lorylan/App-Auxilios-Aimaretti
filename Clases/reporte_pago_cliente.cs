@@ -24,7 +24,6 @@ namespace AuxiliosAimaretti.Clases
             var list_pc = pagoClienteBD.MostrarDesdeHasta(desde, hasta,empresa);
             total_parcial = 0;
             cant_pago_cliente = 0;
-
             String comprobante;
             String monto;
             String fechaEmision;
@@ -44,9 +43,16 @@ namespace AuxiliosAimaretti.Clases
                 pagoCliente_aux = new PagoCliente(comprobante,fechaEmision,monto,nro_cheque,"",nro_cuenta,fecha_cobro,"","","",nro_factura);
                 
                 list_pago_cliente.Add(pagoCliente_aux);
-                total_parcial += Convert.ToDouble(monto);
             }
             cant_pago_cliente = list_pc.Rows.Count;
+            try
+            {
+                total_parcial = Convert.ToDouble(pagoClienteBD.CalcularMontoTotalDe(desde, hasta, emp));
+            }
+            catch {
+                total_parcial = 0;
+            }
+            
         }
     }
 }

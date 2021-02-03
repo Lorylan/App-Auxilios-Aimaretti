@@ -92,7 +92,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total a pagar:</Value>
+                <Value>Total a pagar: $</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -669,6 +669,7 @@
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>15pt</FontSize>
+                    <Format>0.00;(0.00)</Format>
                     <Color>White</Color>
                   </Style>
                 </TextRun>

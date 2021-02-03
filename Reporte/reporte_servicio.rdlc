@@ -389,7 +389,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=First(Fields!Desde.Value, "dato_servicio")</Value>
+                              <Value>=Fields!Desde.Value</Value>
                               <Style>
                                 <FontFamily>Consolas</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -422,7 +422,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=First(Fields!Hasta.Value, "dato_servicio")</Value>
+                              <Value>=Fields!Hasta.Value</Value>
                               <Style>
                                 <FontFamily>Consolas</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -492,6 +492,7 @@
                               <Style>
                                 <FontFamily>Consolas</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -592,7 +593,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Importe total</Value>
+                <Value>Importe total: $</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -670,9 +671,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
         <Top>5.76122cm</Top>
-        <Left>8.29854cm</Left>
+        <Left>10.07125cm</Left>
         <Height>0.99687cm</Height>
-        <Width>11.16328cm</Width>
+        <Width>9.39057cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -851,7 +852,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Importe total:</Value>
+                  <Value>Importe total:$</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>14pt</FontSize>

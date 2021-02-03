@@ -23,11 +23,10 @@ namespace AuxiliosAimaretti.Clases
 
             ServicioBD servicioBD = new ServicioBD();
             var list_s = servicioBD.MostrarDesdeHasta(desde, hasta,empresa);
-            this.total_servicios = 0;
+            this.total_servicios = Convert.ToDouble(servicioBD.CalcularTotalDesdeHasta(desde,hasta,emp));
             this.cant_servicios = 0;
             foreach (System.Data.DataRow rows in list_s.Rows)
-            {
-                total_servicios += Convert.ToDouble(rows[13]);
+            { 
                 cant_servicios++;
             }
             this.cant_combustible = 0;
@@ -36,10 +35,10 @@ namespace AuxiliosAimaretti.Clases
             var list_c = combustibleBD.MostrarDesdeHasta(desde, hasta,empresa);
             foreach (System.Data.DataRow rows in list_c.Rows)
             {
-                
-                total_combustible += Convert.ToDouble(rows[3]);
+
                 cant_combustible += Convert.ToDouble(rows[2]);
             }
+            total_combustible = Convert.ToDouble(combustibleBD.CalcularTotalDesdeHasta(desde,hasta,emp));
             this.total_parcial = total_servicios - total_combustible;
 
         }

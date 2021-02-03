@@ -39,11 +39,18 @@ namespace AuxiliosAimaretti.BaseDeDatos
         {
             return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='" + idC + "'");
         }
+        public string CalcularTotalDesdeHasta(string desde, string hasta, string idC)
+        {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='" + idC + "' AND Fecha >='" + desde + "' AND Fecha<= '" + hasta + "'");
+        }
         public DataTable MostrarDesdeHasta(String desde, String hasta, string empresa)
         {
             SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "' AND idCliente = '"+empresa+"'");
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
+        }
+        public string CalcularTotalLitros(string desde,string hasta, string idC) {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Litro)) FROM Combustible WHERE idCliente='" + idC + "' AND Fecha >='"+desde+"' AND Fecha<= '"+hasta+"'");
         }
 
         public string CalcularSubTotal(DateTime desde, DateTime hasta)

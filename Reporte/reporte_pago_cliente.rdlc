@@ -43,7 +43,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Monto total</Value>
+                <Value>Monto total: $</Value>
                 <Style>
                   <FontFamily>Consolas</FontFamily>
                   <FontSize>15pt</FontSize>
@@ -850,7 +850,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Monto total:</Value>
+                  <Value>Monto total: $</Value>
                   <Style>
                     <FontFamily>Consolas</FontFamily>
                     <FontSize>14pt</FontSize>

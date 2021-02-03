@@ -31,9 +31,16 @@ namespace AuxiliosAimaretti.Clases
                 importe = Convert.ToString(rows[3]);
                 combustible_aux = new Combustible(fecha,litros,importe,"");
                 list_combustible.Add(combustible_aux);
-                total_parcial += Convert.ToDouble(importe);
-                cant_cobustible_cargado += Convert.ToDouble(litros);
             }
+            try
+            {
+                cant_cobustible_cargado = Convert.ToDouble(combustibleBD.CalcularTotalLitros(desde,hasta,emp));
+                total_parcial = Convert.ToDouble(combustibleBD.CalcularTotalDesdeHasta(desde,hasta,emp));
+            }
+            catch {
+                total_parcial = 0;
+            }
+            
         }
 
     }

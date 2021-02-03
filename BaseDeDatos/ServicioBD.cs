@@ -43,7 +43,10 @@ namespace AuxiliosAimaretti.BaseDeDatos
         {
             return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Servicio WHERE idCliente='" + idC + "'");
         }
-
+        public string CalcularTotalDesdeHasta(string desde, string hasta,string idC)
+        {
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Servicio WHERE idCliente='" + idC + "'  AND Fecha >='" + desde + "' AND Fecha<= '" + hasta + "'");
+        }
         public DataTable MostrarDesdeHasta(String desde, String hasta, string empresa)
         {
             SqlCommand sentencia = new SqlCommand("SELECT * From Servicio Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "' AND idCliente='"+empresa+"'");

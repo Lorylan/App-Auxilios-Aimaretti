@@ -771,7 +771,6 @@
             this.datosServicios.RowHeadersVisible = false;
             this.datosServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.datosServicios.RowTemplate.Height = 23;
-            this.datosServicios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.datosServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datosServicios.Size = new System.Drawing.Size(1121, 568);
             this.datosServicios.TabIndex = 72;
