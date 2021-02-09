@@ -28,7 +28,7 @@ namespace AuxiliosAimaretti.BaseDeDatos
         }
         public bool Modificar(Combustible c, int id)
         {
-            return conexion.ejecutarComandoSinRetorno("UPDATE Combustible SET Fecha='" + c.Fecha + "', Litros='" + c.Litros + "', Importe='" + c.Importe + "', idCliente ='" + c.idCliente + "' WHERE Id='" + id + "'");
+            return conexion.ejecutarComandoSinRetorno("UPDATE Combustible SET Fecha='" + c.Fecha + "', Litro='" + c.Litros + "', Importe='" + c.Importe + "', idCliente ='" + c.idCliente + "' WHERE Id='" + id + "'");
         }
         public DataSet MostrarInfo(string idC)
         {
@@ -41,22 +41,23 @@ namespace AuxiliosAimaretti.BaseDeDatos
         }
         public string CalcularTotalDesdeHasta(string desde, string hasta, string idC)
         {
-            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='" + idC + "' AND Fecha >='" + desde + "' AND Fecha<= '" + hasta + "'");
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE idCliente='" + idC + "' AND Fecha >= CONVERT(date,'" + desde + "') AND Fecha<= CONVERT(date,'" + hasta + "')");
         }
         public DataTable MostrarDesdeHasta(String desde, String hasta, string empresa)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where Fecha >='" + desde + "' AND Fecha <='" + hasta + "' AND idCliente = '"+empresa+"'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From Combustible Where Fecha >= CONVERT(date,'" + desde + "') AND Fecha <= CONVERT(date,'" + hasta + "') AND idCliente = '" + empresa+"'");
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
         }
         public string CalcularTotalLitros(string desde,string hasta, string idC) {
-            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Litro)) FROM Combustible WHERE idCliente='" + idC + "' AND Fecha >='"+desde+"' AND Fecha<= '"+hasta+"'");
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Litro)) FROM Combustible WHERE idCliente='" + idC + "' AND Fecha >= CONVERT(date,'" + desde + "') AND Fecha<= CONVERT(date,'" + hasta + "')");
         }
 
         public string CalcularSubTotal(DateTime desde, DateTime hasta)
         {
-            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE Fecha >='" + desde + "' AND Fecha <='" + hasta + "'");
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float,Importe)) FROM Combustible WHERE Fecha >= CONVERT(date,'" + desde + "') AND Fecha <= CONVERT(date,'" + hasta + "')");
         }
 
+        
     }
 }

@@ -45,7 +45,14 @@ namespace AuxiliosAimaretti.Clases
                 
             }
             cant_servicios = list_s.Rows.Count;
-            total_parcial = Convert.ToDouble(servicioBD.CalcularTotalDesdeHasta(desde,hasta,emp));
+            try
+            {
+                total_parcial = Convert.ToDouble(servicioBD.CalcularTotalDesdeHasta(desde, hasta, emp));
+            }
+            catch {
+                total_parcial = 0;
+            }
+            
         }
     }
 }

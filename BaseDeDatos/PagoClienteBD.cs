@@ -58,13 +58,13 @@ namespace AuxiliosAimaretti.BaseDeDatos
 
         public DataTable MostrarDesdeHasta(String desde, String hasta, string empresa)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente Where FechaC >='" + desde + "' AND FechaC <='" + hasta + "' AND idCliente='"+empresa+"'");
+            SqlCommand sentencia = new SqlCommand("SELECT * From PagoCliente Where FechaC >= CONVERT(date,'" + desde + "') AND FechaC <= CONVERT(date,'" + hasta + "') AND idCliente='" + empresa+"'");
             DataTable datos = conexion.EjecutarSentencia(sentencia).Tables[0];
             return datos;
         }
         public string CalcularMontoTotalDe(string desde,string hasta,string idC)
         {
-            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float, Monto)) FROM PagoCliente WHERE idCliente = '" + idC + "' AND FechaC >= '" + desde + "' AND FechaC <= '" + hasta + "'");
+            return conexion.EjecutarConsultaConRetorno("SELECT SUM(CONVERT(float, Monto)) FROM PagoCliente WHERE idCliente = '" + idC + "' AND FechaC >= CONVERT(date,'" + desde + "') AND FechaC <= CONVERT(date,'" + hasta + "')");
 
 
         }

@@ -37,11 +37,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.listcombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportecombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reporte_liquidacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listpagoclienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.reportepagoclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reporteserviciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listservicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listpagoclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txt_empresa = new System.Windows.Forms.ComboBox();
@@ -55,24 +51,28 @@
             this.txt_tipo_de_reporte = new System.Windows.Forms.ComboBox();
             this.reporte_combustible = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reporte_liquidacion = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporte_pago_cliente = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporte_servicio = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reporte_liquidacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportepagoclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reporteserviciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportecombustibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_agregar = new AuxiliosAimaretti.ButtonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listservicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource)).BeginInit();
             this.panel_cargaReporte.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listcombustibleBindingSource
@@ -80,26 +80,10 @@
             this.listcombustibleBindingSource.DataMember = "list_combustible";
             this.listcombustibleBindingSource.DataSource = this.reportecombustibleBindingSource;
             // 
-            // reportecombustibleBindingSource
-            // 
-            this.reportecombustibleBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_combustible);
-            // 
-            // reporte_liquidacionBindingSource
-            // 
-            this.reporte_liquidacionBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_liquidacion);
-            // 
             // listpagoclienteBindingSource1
             // 
             this.listpagoclienteBindingSource1.DataMember = "list_pago_cliente";
             this.listpagoclienteBindingSource1.DataSource = this.reportepagoclienteBindingSource;
-            // 
-            // reportepagoclienteBindingSource
-            // 
-            this.reportepagoclienteBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_pago_cliente);
-            // 
-            // reporteserviciosBindingSource
-            // 
-            this.reporteserviciosBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_servicios);
             // 
             // listservicioBindingSource
             // 
@@ -247,30 +231,6 @@
             this.panel1.Size = new System.Drawing.Size(336, 1044);
             this.panel1.TabIndex = 81;
             // 
-            // btn_agregar
-            // 
-            this.btn_agregar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_agregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
-            this.btn_agregar.ButtonColor = System.Drawing.Color.Black;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_agregar.FlatAppearance.BorderSize = 3;
-            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_agregar.Location = new System.Drawing.Point(73, 433);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_agregar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_agregar.Size = new System.Drawing.Size(186, 32);
-            this.btn_agregar.TabIndex = 82;
-            this.btn_agregar.Text = "Generar reporte";
-            this.btn_agregar.TextColor = System.Drawing.Color.White;
-            this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -356,6 +316,46 @@
             this.reporte_servicio.TabIndex = 1;
             this.reporte_servicio.Visible = false;
             // 
+            // reporte_liquidacionBindingSource
+            // 
+            this.reporte_liquidacionBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_liquidacion);
+            // 
+            // reportepagoclienteBindingSource
+            // 
+            this.reportepagoclienteBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_pago_cliente);
+            // 
+            // reporteserviciosBindingSource
+            // 
+            this.reporteserviciosBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_servicios);
+            // 
+            // reportecombustibleBindingSource
+            // 
+            this.reportecombustibleBindingSource.DataSource = typeof(AuxiliosAimaretti.Clases.reporte_combustible);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(0)))));
+            this.btn_agregar.ButtonColor = System.Drawing.Color.Black;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatAppearance.BorderSize = 3;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_agregar.Location = new System.Drawing.Point(73, 433);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.btn_agregar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_agregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_agregar.Size = new System.Drawing.Size(186, 32);
+            this.btn_agregar.TabIndex = 82;
+            this.btn_agregar.Text = "Generar reporte";
+            this.btn_agregar.TextColor = System.Drawing.Color.White;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
             // FormReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,11 +371,7 @@
             this.Text = "FormPlanillaVazquez";
             this.Load += new System.EventHandler(this.FormReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listcombustibleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listservicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listpagoclienteBindingSource)).EndInit();
             this.panel_cargaReporte.ResumeLayout(false);
@@ -383,6 +379,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_liquidacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportepagoclienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporteserviciosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportecombustibleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

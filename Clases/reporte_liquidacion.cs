@@ -23,22 +23,34 @@ namespace AuxiliosAimaretti.Clases
 
             ServicioBD servicioBD = new ServicioBD();
             var list_s = servicioBD.MostrarDesdeHasta(desde, hasta,empresa);
-            this.total_servicios = Convert.ToDouble(servicioBD.CalcularTotalDesdeHasta(desde,hasta,emp));
-            this.cant_servicios = 0;
-            foreach (System.Data.DataRow rows in list_s.Rows)
-            { 
-                cant_servicios++;
+            try
+            {
+                this.total_servicios = Convert.ToDouble(servicioBD.CalcularTotalDesdeHasta(desde, hasta, emp));
             }
+            catch {
+                this.total_servicios = 0;
+            }
+            this.cant_servicios = 0;
+            cant_servicios = list_s.Rows.Count;
             this.cant_combustible = 0;
             this.total_combustible = 0;
             CombustibleBD combustibleBD = new CombustibleBD();
             var list_c = combustibleBD.MostrarDesdeHasta(desde, hasta,empresa);
-            foreach (System.Data.DataRow rows in list_c.Rows)
+            try
             {
-
-                cant_combustible += Convert.ToDouble(rows[2]);
+                cant_combustible = Convert.ToDouble(combustibleBD.CalcularTotalLitros(desde, hasta, empresa));
             }
-            total_combustible = Convert.ToDouble(combustibleBD.CalcularTotalDesdeHasta(desde,hasta,emp));
+            catch {
+                cant_combustible = 0;
+            }
+            
+            try
+            {
+                total_combustible = Convert.ToDouble(combustibleBD.CalcularTotalDesdeHasta(desde, hasta, emp));
+            }
+            catch {
+                total_combustible = 0;
+            }
             this.total_parcial = total_servicios - total_combustible;
 
         }
