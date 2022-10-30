@@ -3,7 +3,7 @@ Aplicación para Auxilios Aimaretti
 </h2>
 
 ## Descripción del proyecto
-Aplicación de escritorio para la administración del inventario de una empresa de grua contruida para sastisfacer las necesidades específicas del cliente a la hora de manejar su negocio.
+Aplicación de escritorio para la administración de viajes de una empresa de grúa contruida para sastisfacer las necesidades específicas del cliente a la hora de manejar su negocio.
 
 ## Tecnologías utilizadas
 1. Visual Studio 2019, lenguaje C#.
