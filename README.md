@@ -1,5 +1,5 @@
  <h2 align="center">
-Aplicación para Todo En Uno maxikiosco
+Aplicación para Auxilios Aimaretti
 </h2>
 
 ## Descripción del proyecto
